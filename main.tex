@@ -1,0 +1,177 @@
+\documentclass[12pt,a4paper]{article}
+
+% =======================
+% PACKAGES DE BASE
+% =======================
+\usepackage[french]{babel}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{tocloft}
+\usepackage{csquotes}
+\usepackage{fontspec}
+\usepackage{needspace}
+\usepackage[table]{xcolor}
+\usepackage{amssymb} % pour \square
+
+% =======================
+% FONT (XeLaTeX)
+% =======================
+\setmainfont{TeX Gyre Termes}
+
+% =======================
+% COULEURS APHP (définies une seule fois)
+% =======================
+\definecolor{APHPblue}{RGB}{0,56,147}
+\definecolor{APHPdark}{RGB}{0,36,95}
+\definecolor{APHPgrey}{RGB}{90,90,90}
+\definecolor{APHPsoft}{RGB}{225,235,250}
+
+% =======================
+% CASES À COCHER
+% =======================
+\newcommand{\ch}{\(\square\)}
+
+% =======================
+% LISIBILITÉ / SPACINGS
+% =======================
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\titlespacing*{\section}{0pt}{18pt}{12pt}
+\titlespacing*{\subsection}{0pt}{14pt}{10pt}
+\setlist[itemize]{itemsep=6pt, topsep=6pt}
+
+% =======================
+% TITRES
+% =======================
+\titleformat{\section}{\color{APHPdark}\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\color{APHPblue}\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% TABLE DES MATIÈRES
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% =======================
+% BIBLIOGRAPHIE
+% =======================
+\usepackage[
+    backend=biber,
+    style=vancouver,
+    sorting=none,
+    useprefix=false
+]{biblatex}
+
+% empêcher les MISES EN MAJUSCULES
+\DeclareNameAlias{default}{family-given}
+\DeclareNameAlias{sortname}{family-given}
+\DeclareFieldFormat{author}{#1}
+\DeclareFieldFormat{labelname}{#1}
+
+% utiliser shortjournal
+\DeclareFieldFormat{journaltitle}{%
+  \iffieldundef{shortjournal}
+    {#1}
+    {\printfield{shortjournal}}%
+}
+
+\AtBeginBibliography{%
+  \renewcommand{\mkbibnamefamily}[1]{#1}%
+  \renewcommand{\mkbibnamegiven}[1]{#1}%
+  \renewcommand{\mkbibnameprefix}[1]{#1}%
+  \renewcommand{\mkbibnamesuffix}[1]{#1}%
+}
+
+\addbibresource{references.bib}
+
+% =======================
+% GEOMETRIE
+% =======================
+\geometry{margin=2.4cm}
+\setstretch{1.25}
+    
+% =======================
+% DOCUMENT
+% =======================
+\begin{document}
+
+% ============================
+% PAGE DE GARDE
+% ============================
+\begin{titlepage}
+\centering
+
+\vspace*{0.5cm}
+
+\begin{minipage}{0.49\textwidth}
+    \raggedright
+    \includegraphics[height=2.8cm]{logo/logo_cochin_portroyal.png}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+    \raggedleft
+    \includegraphics[height=2.6cm]{logo/LogoUPC.jpg}
+\end{minipage}
+
+\vspace{2.5cm}
+
+{\fontsize{26pt}{30pt}\selectfont\bfseries\color{APHPdark}
+Programme des Hôpitaux de Jour\\[2mm]
+Digestifs et Addictologiques}
+
+\vspace{5mm}
+
+\color{APHPblue}\rule{0.45\textwidth}{0.6pt}
+
+\vspace{4mm}
+
+{\fontsize{14pt}{18pt}\selectfont\bfseries\color{APHPgrey}
+Document de Travail — Version 1}
+
+\vfill
+
+{\Large\bfseries AP-HP — Hôpital Cochin \\[2mm]}
+{\large\bfseries DMU DIGEST}\\[6mm]
+{\large Responsable : Professeur Vincent Mallet}
+
+\end{titlepage}
+
+
+% ============================
+% TABLE DES MATIÈRES
+% ============================
+\tableofcontents
+\newpage
+
+
+% ============================
+% CHAPITRE 1 — HDJ HÉPATOMÉTABOLIQUE
+% ============================
+\section{Hôpital de Jour Hépatométabolique}
+
+\begin{refsection}
+\input{hdj/hdj_hepatometabolique}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+% ============================
+% ANNEXES — HDJ Hépatométabolique
+% ============================
+\appendix
+\section*{Annexes}
+\addcontentsline{toc}{section}{Annexes}
+
+\section{Grille échographique MASLD}
+\input{annexes/grille_echo_masld}
+
+\section{Grille diététique MASLD}
+\input{annexes/grille_dietetique_masld}
+
+\section{Grille psychologique / addictologique MASLD}
+\input{annexes/grille_psy_masld}
+
+
+\end{document}
