@@ -1,0 +1,196 @@
+% ============================================================
+% HÔPITAL DE JOUR HÉPATOMÉTABOLIQUE
+% ============================================================
+
+\subsection{Rationnel médical}
+\needspace{8\baselineskip}
+
+\begin{spacing}{1.30}
+
+L’augmentation rapide de l’obésité, du diabète de type 2 (DT2) et des maladies hépatiques métaboliques (MASLD/MASH) constitue aujourd’hui un défi majeur pour le système de santé. Dans cette population, la maladie hépatique est hautement prévalente : plus de 60\,\% des patients DT2 présentent une atteinte hépatique métabolique et 15--20\,\% une fibrose significative (F$\geq$2), les exposant à un risque accru de complications évolutives \cite{RN565}.
+
+\medskip
+
+En France, 3{,}5 à 4 millions de personnes vivent avec un DT2 selon les données récentes de Santé publique France et de l’Assurance Maladie (SNDS) \cite{SPF2021Diabete}. Cette population représente un réservoir important de patients susceptibles d’évoluer vers une maladie hépatique avancée, avec un impact croissant sur les parcours de soins et les capacités hospitalières.
+
+% \medskip
+
+% L’identification précoce des formes avancées reste difficile : les complications sévères sont rares à l’échelle populationnelle, ce qui nécessite un repérage ciblé et structuré. Dans la cohorte DT2 de l’Entrepôt de Données de Santé (EDS) de l’AP-HP (77\,368 patients), l’incidence annuelle des événements hépatiques graves n’est que de 1{,}31 pour 1\,000 patients-années.
+
+\medskip
+
+Pourtant, des interventions simples et peu coûteuses — réduction de la consommation d’alcool, perte pondérale modérée, amélioration de la qualité alimentaire — démontrent un impact tangible sur l’évolution de la maladie \cite{RN597}. Leur efficacité dépend cependant d’un repérage précoce et d’une organisation lisible du parcours.
+
+\medskip
+
+L’arrivée de nouvelles thérapeutiques (agonistes du GLP-1, resmétirom et autres agents en développement) renforce la nécessité d’un dispositif capable d’identifier, évaluer et suivre précocement les patients éligibles, tout en garantissant l’appropriation des recommandations sur le territoire.
+
+\medskip
+
+Dans ce contexte, des outils simples et robustes de stratification sont indispensables. Les biomarqueurs non invasifs constituent désormais la base du tri diagnostique dans la population DT2. Le score FIB-4, largement disponible dans les logiciels médicaux et recommandé par les sociétés savantes, permet d’exclure efficacement les formes avancées et d’orienter les patients présentant un FIB-4 $\geq$ 1{,}3 vers une évaluation spécialisée (élastométrie, imagerie) \cite{RN567,RN597}.
+
+\medskip
+
+Sur le territoire de Cochin, un flux régulier de patients à FIB-4 élevé est déjà identifié via les consultations de diabétologie, de cardiologie, les CPTS et les acteurs de premier recours. Les actions d’information menées localement et régionalement renforcent ce repérage et traduisent une dynamique territoriale structurée autour de la MASLD.
+
+\medskip
+
+Dans ce cadre, la création d’un Hôpital de Jour hépatométabolique répond à un besoin clairement identifié. Ce dispositif offre une évaluation intégrée, standardisée et rapide, combinant imagerie, exploration comportementale, évaluation nutritionnelle, activité physique adaptée et prise en charge psychologique. Il permet :
+
+\begin{itemize}
+    \item d’optimiser le triage des patients à risque ;
+    \item de réduire les retards diagnostiques ;
+    \item d’améliorer la pertinence des orientations (consultation, suivi, recherche) ;
+    \item de proposer des interventions à fort impact populationnel ;
+    \item d’inscrire le parcours dans une logique territoriale en lien avec les acteurs de premier recours.
+\end{itemize}
+
+\end{spacing}
+
+\clearpage
+
+% ============================================================
+\subsection{Objectifs}
+\needspace{6\baselineskip}
+
+\begin{center}
+\fcolorbox{APHPdark}{APHPsoft}{
+\begin{minipage}{0.92\textwidth}
+\begin{itemize}[leftmargin=1.1cm]
+    \item Dépister précocement la fibrose hépatique significative ou avancée.
+    \item Structurer une évaluation intégrée : biomarqueurs, imagerie, diététique, psychologie.
+    \item Initier une prise en charge hygiéno-diététique et comportementale.
+    \item Identifier les patients éligibles aux thérapeutiques MASLD/MASH et aux protocoles de recherche.
+\end{itemize}
+\end{minipage}}
+\end{center}
+
+\bigskip
+\bigskip
+
+% ============================================================
+\subsection{Population éligible}
+\needspace{5\baselineskip}
+
+\begin{itemize}[leftmargin=1.1cm]
+    \item Diabète de type 2 ou syndrome métabolique.
+    \item FIB-4 $\geq$ 1{,}3.
+    \item Suspicion clinique ou échographique de MASLD/MASH.
+\end{itemize}
+
+\clearpage
+
+% ============================================================
+% PARCOURS PATIENT
+% ============================================================
+
+\subsection{Parcours de soins (3--4 heures)}
+\needspace{8\baselineskip}
+
+\begin{figure}[!ht]
+\centering
+\caption{Parcours patient — HDJ Hépatométabolique}
+\vspace{0.8cm}
+
+\begin{tikzpicture}[
+    node distance=1.6cm,
+    box/.style={
+        rectangle,
+        rounded corners=3pt,
+        draw=APHPdark,
+        thick,
+        text width=9.0cm,
+        minimum height=1.2cm,
+        align=center,
+        fill=APHPsoft
+    }
+]
+\node[box] (tri) {Tri initial \\ FIB-4 $\geq$ 1{,}3};
+\node[box, below=1.4cm of tri] (entree) {Entrée en HDJ hépatométabolique};
+\node[box, below=1.4cm of entree] (echo) {Échographie abdominale + Doppler};
+\node[box, below=1.4cm of echo] (fibro) {FibroScan / élastographie};
+\node[box, below=1.4cm of fibro] (diet) {Consultation diététique};
+\node[box, below=1.4cm of diet] (psy) {Évaluation psychologique \\ (alcool / TCA)};
+\node[box, below=1.4cm of psy] (synth) {Synthèse médicale \\ Plan thérapeutique};
+
+\draw[->, thick, APHPdark] (tri) -- (entree);
+\draw[->, thick, APHPdark] (entree) -- (echo);
+\draw[->, thick, APHPdark] (echo) -- (fibro);
+\draw[->, thick, APHPdark] (fibro) -- (diet);
+\draw[->, thick, APHPdark] (diet) -- (psy);
+\draw[->, thick, APHPdark] (psy) -- (synth);
+
+\end{tikzpicture}
+\end{figure}
+
+\clearpage
+
+% ============================================================
+\subsection{Organisation}
+\needspace{5\baselineskip}
+
+\begin{itemize}[leftmargin=1.1cm]
+    \item Direction: \textbf{Docteur Lucia Parlati}
+    \item Durée : 3--4 heures.
+    \item Lieu : Secteur HDJ — Service des maladies du foie.
+    \item Ressources : médecin sénior, infirmier expert/IPA, diététicien(ne), psychologue/addictologue.
+
+\end{itemize}
+
+\bigskip
+
+% ============================================================
+\subsection{Codage et recettes prévisionnelles}
+\needspace{6\baselineskip}
+
+\begin{center}
+\begin{tabular}{lcc}
+\textbf{Nombre d’actes} & \textbf{GHS} & \textbf{Tarif 2025} \\
+\hline
+$\geq$ 4 actes & 2558 & 941 € \\
+3 actes        & 2583 & 421 € \\
+\end{tabular}
+\end{center}
+
+\medskip
+
+Actes CCAM typiques : HLQM002 (élastographie), ZCQM004 (échographie + Doppler), consultations (médicale, diététique, psychologique).
+
+\medskip
+
+La structure tarifaire des GHS permet d’adosser le financement du HDJ à une activité combinant systématiquement au moins quatre actes (imagerie, élastographie, consultation médicale, évaluation psychologique ou diététique). Le tarif de 941~€ par passage constitue ainsi la base du modèle économique.
+
+\medskip
+
+\textbf{Hypothèses volumétriques}.  
+
+\begin{itemize}
+    \item \textbf{2025 (année 1)} : 2--3 patients/semaine, soit \textasciitilde150 patients/an.
+    \item \textbf{2026 (année 2)} : 6 patients/semaine, soit \textasciitilde300 patients/an.
+    \item \textbf{2027 (année 3)} : montée en charge jusqu’à \textbf{10 patients/semaine}, soit \textasciitilde500 patients/an.
+\end{itemize}
+
+\textbf{Projection financière (GHS 2558 à 941~€).}
+
+\begin{center}
+\begin{tabular}{lcc}
+\textbf{Année} & \textbf{Volume estimé} & \textbf{Recette brute} \\
+\hline
+2026 & 150 patients & \textasciitilde141\,000 € \\
+2027 & 300 patients & \textasciitilde282\,000 € \\
+2028 & 500 patients & \textasciitilde470\,500 € \\
+\end{tabular}
+\end{center}
+
+\clearpage
+
+% ============================================================
+\subsection{Conclusion}
+\needspace{6\baselineskip}
+
+L’HDJ hépatométabolique constitue un dispositif pertinent, simple à organiser et autosoutenable. Il optimise le dépistage, l’accès aux thérapeutiques et la prise en charge multidisciplinaire des patients MASLD/MASH et DT2.
+
+\medskip
+
+Pour les supports opérationnels (échographie, évaluation diététique et psychologique), 
+voir les annexes~\ref{sec:annexe_echo}, \ref{sec:annexe_diete} et \ref{sec:annexe_psy}.

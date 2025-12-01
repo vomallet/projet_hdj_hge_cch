@@ -1,0 +1,443 @@
+% ============================================================
+% HÔPITAL DE JOUR — TITRE DE LA FICHE
+% ============================================================
+
+\subsection{Rationnel médical}
+\needspace{8\baselineskip}
+
+\begin{spacing}{1.30}
+
+% ---- TEXTE À REMPLACER ----
+% 10–15 lignes de rationnel pathologique + données épidémiologiques
+% Références { } conservées
+Votre texte ici.
+
+\end{spacing}
+
+\clearpage
+
+
+% ============================================================
+% OBJECTIFS
+% ============================================================
+
+\subsection{Objectifs}
+\needspace{6\baselineskip}
+
+\vspace{0.8em}
+\begin{center}
+\fcolorbox{APHPdark}{APHPsoft}{
+\begin{minipage}{0.95\textwidth}
+\vspace{0.9em}
+
+\begin{itemize}[leftmargin=1.1cm]
+  % ---- OBJECTIFS À ADAPTER ----
+  \item objectif 1 ;
+  \item objectif 2 ;
+  \item objectif 3 ;
+  \item objectif 4 ;
+  \item objectif 5.
+\end{itemize}
+
+\vspace{0.9em}
+\end{minipage}}
+\end{center}
+
+\bigskip
+
+
+% ============================================================
+% POPULATION ÉLIGIBLE
+% ============================================================
+
+\subsection{Population éligible}
+\needspace{6\baselineskip}
+
+\begin{itemize}[leftmargin=1.1cm]
+  % ---- POPULATION À ADAPTER ----
+  \item critère 1 ;
+  \item critère 2 ;
+  \item critère 3 ;
+  \item critère 4 ;
+  \item critère 5.
+\end{itemize}
+
+\clearpage
+
+
+% ============================================================
+% PARCOURS DE SOINS
+% ============================================================
+
+\subsection{Parcours de soins}
+\needspace{8\baselineskip}
+
+\begin{figure}[!ht]
+\centering
+\caption{Parcours patient — HDJ NOM}
+\vspace{0.8cm}
+
+\begin{tikzpicture}[
+    node distance=1.6cm,
+    box/.style={
+        rectangle,
+        rounded corners=3pt,
+        draw=APHPdark,
+        thick,
+        text width=9.0cm,
+        minimum height=1.5cm,
+        align=center,
+        fill=APHPsoft
+    }
+]
+% ---- ÉTAPES DU PARCOURS À ADAPTER ----
+\node[box] (tri) {Orientation vers l'HDJ (source 1 / source 2 / ville)};
+\node[box, below=1.4cm of tri] (etape1) {Évaluation initiale (éléments clés)};
+\node[box, below=1.4cm of etape1] (etape2) {Acte programmé : liste des actes};
+\node[box, below=1.4cm of etape2] (etape3) {Surveillance dédiée};
+\node[box, below=1.4cm of etape3] (synth) {Synthèse médicale et planification};
+
+\draw[->, thick, APHPdark] (tri) -- (etape1);
+\draw[->, thick, APHPdark] (etape1) -- (etape2);
+\draw[->, thick, APHPdark] (etape2) -- (etape3);
+\draw[->, thick, APHPdark] (etape3) -- (synth);
+
+\end{tikzpicture}
+\end{figure}
+
+\clearpage
+
+
+% ============================================================
+% CODAGE ET GHS ASSOCIÉS
+% ============================================================
+
+\subsection{Codage et GHS associés}
+\needspace{8\baselineskip}
+
+\noindent\textbf{Cadre général.}  
+% ---- TEXTE À ADAPTER ----
+Texte générique sur DP / DAS / CCAM + mention éventuelle réserve hospitalière.
+
+\medskip
+
+
+% --------------------------------------------------------
+% TABLEAU 1 — Codage & GHS (FORMAT FIXE QUI NE DÉBORDE PAS)
+% --------------------------------------------------------
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{4.3cm} p{7.3cm} c c c}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Type de séance} &
+\textbf{DP / DR / DAS} &
+\textbf{GHM} &
+\textbf{GHS} &
+\textbf{Tarif 2025} \\
+\midrule
+
+% ---- LIGNES À ADAPTER ----
+Acte 1 &
+DP / DAS appropriés &
+XXXXXX & YYYY & ZZZ~€ \\
+
+Acte 2 &
+DP / DAS appropriés &
+XXXXXX & YYYY & ZZZ~€ \\
+
+Acte 3 &
+DP / DAS appropriés &
+XXXXXX & YYYY & ZZZ~€ \\
+
+\bottomrule
+\end{tabular}
+
+\caption{Codage et GHS associés — HDJ NOM}
+\end{table}
+
+\bigskip
+
+
+% --------------------------------------------------------
+% TABLEAU 2 — Traçabilité
+% --------------------------------------------------------
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{5cm} p{9cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Intervention} & \textbf{Traçabilité requise} \\
+\midrule
+
+% ---- LIGNES À ADAPTER ----
+Acte 1 &
+Éléments de traçabilité \\
+
+Acte 2 &
+Éléments de traçabilité \\
+
+Acte 3 &
+Éléments de traçabilité \\
+
+\bottomrule
+\end{tabular}
+
+\caption{Traçabilité des interventions — HDJ NOM}
+\end{table}
+
+\clearpage
+
+
+% ============================================================
+% VOLUMÉTRIE RÉFÉRENCE
+% ============================================================
+
+\subsection{Volumétrie de référence (année N)}
+\needspace{6\baselineskip}
+
+\noindent Activité HDJ de référence :
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Type de séance} & \textbf{Volume N} & \textbf{Tarif unitaire} & \textbf{Recette estimée} \\
+\midrule
+Acte 1 & XXX & YYY~€ & ZZZZ~€ \\
+Acte 2 & XXX & YYY~€ & ZZZZ~€ \\
+Acte 3 & XXX & YYY~€ & ZZZZ~€ \\
+\midrule
+\textbf{Total} & \textbf{XXX} & -- & \textbf{ZZZZ~€} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
+
+
+% ============================================================
+% PROJECTIONS D’ACTIVITÉ
+% ============================================================
+
+\subsection{Projections d’activité et recettes prévisionnelles}
+\needspace{8\baselineskip}
+
+\noindent\textbf{Hypothèses.}  
+(Volume N → montée en charge N+1, N+2…)
+
+\medskip
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Année} & \textbf{Volume} & \textbf{Tarif moyen} & \textbf{Recette brute} \\
+\midrule
+Année 1 & XXX & YYY~€ & ZZZZ~€ \\
+Année 2 & XXX & YYY~€ & ZZZZ~€ \\
+Année 3 & XXX & YYY~€ & ZZZZ~€ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
+
+
+% ============================================================
+% CONCLUSION
+% ============================================================
+
+\subsection{Conclusion}
+\needspace{6\baselineskip}
+
+% ---- TEXTE À REMPLACER ----
+Texte conclusif (organisation, pertinence, continuité, efficience, prévention, etc.).
+
+\clearpage
+
+Les modalités techniques détaillées figurent dans les Annexes X.X à X.X.
+
+
+% ============================================================
+% VALIDATION DE LA FICHE
+% ============================================================
+
+\begin{center}
+\begin{tabular}{p{4cm} p{7cm} p{4cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Date de relecture} & \textbf{Nom du relecteur} & \textbf{Date de validation} \\
+\midrule
+01/12/2025 & Pr V. Abitbol & NA \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+
+\clearpage
+
+% ============================================================
+% CODAGE ET GHS ASSOCIÉS — HDJ ADDICTOLOGIE
+% ============================================================
+
+\subsection{Codage et GHS associés}
+
+\noindent\textbf{Cadre général.}  
+Le codage repose sur un Diagnostic Principal (DP) défini par le trouble lié à l’usage d’alcool, complété par des Diagnostics Associés Significatifs (DAS) pour les comorbidités somatiques ou psychiatriques.  
+Les Séances HDJ sont valorisées selon les Groupes Homogènes de Séjours (GHS) applicables en très courte durée.  
+Les actes techniques (CCAM) sont intégrés selon la réglementation en vigueur (imagerie, EFR, biologie).
+
+\medskip
+
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{4.3cm} p{7.3cm} c c c}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Type de séance} &
+\textbf{DP / DAS} &
+\textbf{GHM} &
+\textbf{GHS} &
+\textbf{Tarif 2025} \\
+\midrule
+
+HDJ Évaluation somatique + addictologique &
+DP: F101 (usage nocif) \newline DAS: comorbidités majeures &
+20Z051 &
+7272 &
+774~€ \\
+
+HDJ Réduction des risques et dommages &
+DP: Z714 (conseil et surveillance pour alcoolisme) \newline DAS: comorbidités majeures &
+23M06T &
+7967 &
+701~€ \\
+
+HDJ Sevrage ambulatoire &
+DP: Z502 (sevrage) ou F102 (dépendance) \newline DAS: comorbidités majeures &
+20Z04T &
+7271 &
+541~€ \\
+
+\bottomrule
+\end{tabular}
+\caption{Codage et GHS associés — HDJ Addictologie}
+\end{table}
+
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{5cm} p{9cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Intervention} & \textbf{Traçabilité requise} \\
+\midrule
+
+Évaluation somatique et addictologique &
+Anamnèse, scores (AUDIT, CIWA), comorbidités, bilans préthérapeutiques, consentement, vaccination \\
+
+Réduction des risques et dommages &
+Motifs, stratégies personnalisées, entretiens motivationnels, plan d’actions, objectifs, suivi \\
+
+Sevrage ambulatoire &
+Score CIWA quotidien, adaptation thérapeutique, incidents, paramètres vitaux, supervision médicamenteuse \\
+
+Consultations spécialisées (psychologue, diététique, AS) &
+Synthèse écrite, recommandations, suivi programmé \\
+
+Synthèse médicale &
+Plan thérapeutique, orientation, continuité ville–hôpital, alertes \\
+
+\bottomrule
+\end{tabular}
+
+\caption{Traçabilité des interventions — HDJ Addictologie}
+\end{table}
+
+
+\subsection{Volumétrie de référence (année N)}
+
+\noindent Activité HDJ addictologie — base observée : 5 patients/jour (amorce), 7 (montée), 10 (croisière).
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Type de séance} & \textbf{Volume N} & \textbf{Tarif unitaire} & \textbf{Recette estimée} \\
+\midrule
+
+HDJ Évaluation &
+893 &
+774~€ &
+693\,942~€ \\
+
+HDJ Réduction des risques &
+809 &
+701~€ &
+566\,309~€ \\
+
+HDJ Sevrage ambulatoire &
+625 &
+541~€ &
+338\,125~€ \\
+
+\midrule
+\textbf{Total} & \textbf{2\,327} & -- & \textbf{1\,598\,376~€} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+\subsection{Projections d’activité et recettes prévisionnelles}
+
+\noindent\textbf{Hypothèses.}  
+Montée en charge progressive : +30 % / +60 %.  
+Tarifs constants 2025.
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Année} & \textbf{Volume} & \textbf{Tarif moyen} & \textbf{Recette brute} \\
+\midrule
+
+Année 1 (amorce) & 2\,327 & 675~€ & 1\,598\,376~€ \\
+Année 2 (montée) & 3\,260 & 675~€ & 2\,200\,500~€ \\
+Année 3 (croisière) & 4\,655 & 675~€ & 3\,139\,125~€ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+\subsection{Conclusion}
+
+L’HDJ addictologie permet une prise en charge structurée, intensive et coordonnée des troubles liés à l’usage d’alcool.  
+Il sécurise les sevrages, optimise la réduction des risques, renforce la continuité des soins ville–hôpital et contribue directement à prévenir complications hépatiques, rechutes et hospitalisations complètes.  
+Son articulation avec l’hépatologie, la psychiatrie et la médecine interne en fait un dispositif central dans la stratégie de santé publique du GHU.
+
+\clearpage
+
+
+\begin{center}
+\begin{tabular}{p{4cm} p{7cm} p{4cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Date de relecture} & \textbf{Nom du relecteur} & \textbf{Date de validation} \\
+\midrule
+01/12/2025 & Pr V. Abitbol & NA \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage

@@ -1,0 +1,269 @@
+% ============================================================
+% HÔPITAL DE JOUR — CIRRHOSE AVANCÉE / COMPLICATIONS DE LA CIRRHOSE
+% ============================================================
+
+\subsection{Rationnel médical}
+\needspace{8\baselineskip}
+
+\begin{spacing}{1.30}
+
+L’ensemble des maladies chroniques du foie évolue progressivement vers la cirrhose et ses complications. La phase décompensée — ascite, encéphalopathie hépatique, hyponatrémie, hémorragie digestive, insuffisance rénale aiguë (AKI) ou syndrome hépatorénal (HRS) — correspond au stade terminal de la maladie, avec une mortalité annuelle souvent supérieure à 20--30\,\% \cite{EASL_DecompCirrhosis_2018,AASLD_PalliativeCirrhosis_2022}. 
+
+Malgré les progrès réalisés dans le traitement des hépatites virales, l’incidence des décompensations ne diminue pas, en lien avec l’augmentation de l’obésité, du diabète de type~2, des maladies hépatiques métaboliques (MASLD), ainsi que la persistance de la consommation d’alcool \cite{Gines_LancetCirrhosis_2021}. En France, les données PMSI/AP--HP confirment une progression des séjours liés à l’ascite, aux infections et à l’AKI, avec une mortalité hospitalière de 11--15\,\% \cite{FrenchHepaticFailure_2020}.
+
+Les complications de la cirrhose avancée requièrent des interventions répétées et accessibles rapidement : ponction d’ascite avec perfusion d’albumine, albumine au long cours (type ANSWER) \cite{Caraceni_ANSWER_2018}, fer intraveineux, transfusion de CGR et soutien nutritionnel.
+
+La structuration d’un HDJ dédié permet d’assurer ces prises en charge dans un cadre sécurisé, standardisé, pluridisciplinaire, favorisant la stabilisation, la prévention des réhospitalisations, et la préparation d’éventuelles procédures (TIPS).
+
+\end{spacing}
+
+\clearpage
+
+% ============================================================
+% OBJECTIFS
+% ============================================================
+
+\subsection{Objectifs}
+\needspace{6\baselineskip}
+
+\begin{center}
+\fcolorbox{APHPdark}{APHPsoft}{
+\begin{minipage}{0.95\textwidth}
+\vspace{0.9em}
+
+\begin{itemize}[leftmargin=1.1cm]
+  \item réduire les hospitalisations évitables liées aux complications de la cirrhose avancée ;
+  \item prévenir les décompensations sévères (AKI, HRS, ACLF) par un accès rapide aux actes nécessaires ;
+  \item proposer un dispositif de stabilisation pré-TIPS ;
+  \item regrouper en ambulatoire les actes complexes : LVP + albumine, albumine seule, fer IV, transfusion de CGR ;
+  \item renforcer la continuité entre ville, urgences, hépatologie et MCO.
+\end{itemize}
+
+\vspace{0.9em}
+\end{minipage}}
+\end{center}
+
+\bigskip
+
+% ============================================================
+% POPULATION ÉLIGIBLE
+% ============================================================
+
+\subsection{Population éligible}
+
+\begin{itemize}[leftmargin=1.1cm]
+  \item cirrhose avancée (Child B–C) avec ascite récurrente ou réfractaire ;
+  \item risque d’AKI ou HRS (hyponatrémie, insuffisance rénale fonctionnelle) ;
+  \item anémie d’hypertension portale nécessitant fer IV ou transfusion programmée ;
+  \item encéphalopathie hépatique fluctuante nécessitant surveillance rapprochée ;
+  \item dénutrition sévère ou sarcopénie ;
+  \item candidats au TIPS ou patients non éligibles nécessitant prévention des réhospitalisations.
+\end{itemize}
+
+\clearpage
+
+% ============================================================
+% PARCOURS DE SOINS
+% ============================================================
+
+\subsection{Parcours de soins}
+
+\begin{figure}[!ht]
+\centering
+\caption{Parcours patient — HDJ cirrhose avancée}
+\vspace{0.8cm}
+
+\begin{tikzpicture}[
+    node distance=1.6cm,
+    box/.style={
+        rectangle,
+        rounded corners=3pt,
+        draw=APHPdark,
+        thick,
+        text width=9.0cm,
+        minimum height=1.5cm,
+        align=center,
+        fill=APHPsoft
+    }
+]
+\node[box] (tri) {Orientation vers l'HDJ \\[3pt] (hépatologie / urgences / MCO / ville)};
+\node[box, below=1.4cm of tri] (etape1) {Évaluation clinique initiale, biologie récente, imagerie ciblée si besoin ; vérification du statut vaccinal (pneumocoque, grippe, hépatites A et B)};
+\node[box, below=1.4cm of etape1] (etape2) {Acte programmé : \\[3pt] LVP+albumine, albumine seule, fer IV, transfusion de CGR};
+\node[box, below=1.4cm of etape2] (etape3) {Surveillance spécialisée : \\[3pt] constantes, tolérance, complications};
+\node[box, below=1.4cm of etape3] (synth) {Synthèse médicale et programmation de la séance suivante};
+
+
+\draw[->, thick, APHPdark] (tri) -- (etape1);
+\draw[->, thick, APHPdark] (etape1) -- (etape2);
+\draw[->, thick, APHPdark] (etape2) -- (etape3);
+\draw[->, thick, APHPdark] (etape3) -- (synth);
+
+\end{tikzpicture}
+\end{figure}
+
+\clearpage
+
+% ============================================================
+% CODAGE ET GHS ASSOCIÉS
+% ============================================================
+
+\subsection{Codage et GHS associés}
+\needspace{8\baselineskip}
+
+\noindent\textbf{Cadre général.}  
+DP : ascite ou complication de cirrhose (R18, K76.6).  
+Albumine et fer injectable relèvent de la réserve hospitalière (instruction DGOS 10/09/2020).  
+GHM identique pour ponction, fer IV, CGR (07M14T).
+
+\medskip
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{4.3cm} p{7.3cm} c c c}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Type de séance} &
+\textbf{DP / DR / DAS} &
+\textbf{GHM} &
+\textbf{GHS} &
+\textbf{Tarif 2025} \\
+\midrule
+
+Ponction d’ascite + albumine &
+DP : R18 (Ascite) \newline
+DAS : K74.6, K76.6, ±N17.x, ±E87.1 &
+07M14T &
+2559 &
+603~€ \\
+
+Séance d’albumine seule &
+DR : Z512 (Produit réserve) \newline
+DP : R18 ou K76.6 &
+28Z17Z &
+9616 &
+440~€ \\
+
+Fer injectable (anémie HTP) &
+DP : D50.9 ou D64.9 \newline
+DAS : K74.6, K76.6 &
+07M14T &
+2559 &
+603~€ \\
+
+Transfusion de CGR &
+DP : D50.9 ou D62 \newline
+DAS : K74.6, K76.6 &
+07M14T &
+2559 &
+603~€ \\
+\bottomrule
+\end{tabular}
+
+\caption{Codage et GHS associés — HDJ Cirrhose avancée}
+\end{table}
+
+\clearpage
+
+% ============================================================
+% TRACABILITÉ
+% ============================================================
+
+\subsection{Traçabilité minimale}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{5cm} p{9cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Intervention} & \textbf{Éléments requis} \\
+\midrule
+
+Ponction d’ascite (HPHB003) &
+Fiche CCAM ; note dédiée ; volume évacué ; surveillance hémodynamique \\
+
+Perfusion d’albumine &
+Prescription ; lot ; volume ; tolérance ; feuille de suivi \\
+
+Fer injectable &
+Traçabilité du lot ; fiche perfusion ; surveillance post-acte \\
+
+Transfusion de CGR &
+Traçabilité PSL ; fiche transfusionnelle ; surveillance renforcée \\
+
+Entretien médical &
+Note dédiée (risque AKI/HRS, justification du geste) \\
+
+Surveillance spécialisée &
+Grille HDJ (constantes, neurologique, tolérance) \\
+
+Coordination / éducation &
+Note d’éducation ou fiche de liaison ville–hôpital \\
+\bottomrule
+\end{tabular}
+
+\caption{Traçabilité — HDJ Cirrhose avancée}
+\end{table}
+
+\clearpage
+
+% ============================================================
+% VOLUMÉTRIE 2024 (RÉFÉRENCE)
+% ============================================================
+
+\subsection{Volumétrie 2024 (référence HDJ hépatologie Cochin)}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Type de séance} & \textbf{Volume 2024} & \textbf{Tarif unitaire} & \textbf{Recette estimée} \\
+\midrule
+Ponction d’ascite + albumine & 139 & 603~€ & 83\,817~€ \\
+Séance d’albumine seule      & 16  & 440~€ & 7\,040~€ \\
+Fer injectable               & 109 & 603~€ & 65\,627~€ \\
+Transfusion de CGR           & 13  & 603~€ & 7\,839~€ \\
+\midrule
+\textbf{Total}               & \textbf{277} & -- & \textbf{\textasciitilde164\,300~€} \\ 
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
+
+% ============================================================
+% PROJECTIONS D’ACTIVITÉ
+% ============================================================
+
+\subsection{Projections d’activité et recettes prévisionnelles}
+
+\noindent Basé sur un tarif moyen pondéré 2024 : \textbf{\textasciitilde590 € / séance}.
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Année} & \textbf{Volume estimé} & \textbf{Tarif moyen} & \textbf{Recette brute estimée} \\
+\midrule
+2026 & 300--320 & 590~€ & 177\,000--189\,000~€ \\
+2027 & 350--400 & 590~€ & 206\,500--236\,000~€ \\
+2028 & 400--450 & 590~€ & 236\,000--265\,500~€ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
+
+% ============================================================
+% CONCLUSION
+% ============================================================
+
+\subsection{Conclusion}
+\needspace{6\baselineskip}
+
+Les HDJ dédiés à la cirrhose avancée offrent un cadre structuré pour les interventions indispensables à la stabilisation des patients les plus fragiles. En rassemblant ponctions d’ascite, albumine, fer injectable et transfusions dans un parcours sécurisé et standardisé, ils contribuent à réduire les hospitalisations évitables, à prévenir les décompensations sévères et à optimiser la continuité des soins entre ville, urgences et hépatologie.
+
+\clearpage

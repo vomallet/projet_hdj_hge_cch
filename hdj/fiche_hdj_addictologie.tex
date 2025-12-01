@@ -1,0 +1,417 @@
+% ============================================================
+% HÔPITAL DE JOUR — ADDICTOLOGIE (HDJA)
+% ============================================================
+
+\subsection{Rationnel médical}
+\begin{spacing}{1.30}
+
+L’alcool demeure un déterminant majeur de morbi-mortalité évitable en France, responsable d’environ 41\,000 décès annuels\cite{Guerin2013AlcoolMortalite}
+(16\,000 cancers, 9\,900 maladies cardiovasculaires, 6\,800 maladies digestives, 5\,400 causes externes), pour un coût social estimé à 118 milliards d’euros par an.\cite{Kopp2015CoutSocial}
+
+Il constitue la première cause identifiable de démence précoce (<65 ans)\cite{Schwarzinger2018AlcoholDementia}, et réduit en moyenne l’espérance de vie de 10 à 13 ans.\cite{Schwarzinger2017ChronicDisease}
+
+Dans la population générale, 23.6\,\% des adultes dépassent les repères de consommation à faible risque\cite{Richard2019AlcoolSPF}, proportion nettement plus élevée en milieu hospitalier (hépatologie, oncologie, diabétologie, psychiatrie).
+
+L’alcool accélère la progression des maladies chroniques du foie, y compris à des niveaux modérés, et représente le principal déterminant de progression vers les complications sévères chez les patients atteints de diabète de type~2.\cite{Mallet2022T2DLiverBurden}
+
+L’abstinence est le déterminant pronostique le plus puissant des maladies alcooliques du foie : elle améliore la survie après hépatite alcoolique aiguë\cite{Louvet2008AHA, Parlati2025RehabAH} et réduit les décompensations de la cirrhose.\cite{Addolorato_Baclofen_2007, Loomba_AlcoholAbstinence_2020}
+
+La réhabilitation addictologique réduit également l’incidence des cancers attribuables à l’alcool.\cite{Schwarzinger2024RehabCancer}
+
+Ainsi, un HDJ addictologie structuré permet une intervention précoce, intensive et coordonnée, intégrée aux parcours hépatologiques, médicaux et psychiatriques du GHU.
+
+\end{spacing}
+\clearpage
+
+
+% ============================================================
+% OBJECTIFS
+% ============================================================
+
+\subsection{Objectifs}
+\begin{center}
+\fcolorbox{APHPdark}{APHPsoft}{
+\begin{minipage}{0.95\textwidth}
+\vspace{0.7em}
+\begin{itemize}[leftmargin=1.1cm]
+\item Réaliser une évaluation somatique et addictologique complète ;
+\item Réduire les risques et dommages liés à l’alcool ;
+\item Stabiliser la trajectoire hépatologique et prévenir les décompensations ;
+\item Accompagner la réduction ou l’arrêt des consommations ;
+\item Renforcer l’autonomie et la continuité des soins ville–hôpital.
+\end{itemize}
+\vspace{0.7em}
+\end{minipage}}
+\end{center}
+\clearpage
+
+
+% ============================================================
+% POPULATION ÉLIGIBLE
+% ============================================================
+
+\subsection{Population éligible}
+\begin{itemize}[leftmargin=1.1cm]
+\item Trouble de l’usage d’alcool (usage nocif ou dépendance) ;
+\item Pathologies hépatiques alcool-attribuables (HAA, cirrhose stabilisée, MetALD) ;
+\item Indication d’une évaluation somatique–addictologique conjointe ;
+\item Objectif d’abstinence, de réduction des risques ou de stabilisation ;
+\item Fragilités psychosociales et/ou cognitives nécessitant un suivi structuré.
+\end{itemize}
+\clearpage
+
+
+% ============================================================
+% PARCOURS DE SOINS — FIGURES
+% ============================================================
+
+\setcounter{figure}{0}
+\subsection{Parcours de soins}
+
+% ============================================================
+% FIGURE 1 — HDJ Évaluation addictologique et somatique
+% ============================================================
+
+\begin{figure}[h!]
+\centering
+\caption{Parcours HDJ Addictologie (1) — Évaluation addictologique et somatique}
+\vspace{0.8cm}
+
+\begin{tikzpicture}[
+    node distance=1.8cm,
+    box/.style={
+        rectangle, rounded corners=3pt,
+        draw=APHPdark, thick,
+        text width=10cm, minimum height=1.7cm,
+        align=center, fill=APHPsoft
+    }
+]
+
+\node[box] (ori) {Orientation vers l’HDJ \\
+\small médecin traitant, ELSA, CSAPA, psychiatrie, hépatologie, consultations d’addictologie};
+
+\node[box, below=1.5cm of ori] (eval) {Évaluation médicale et infirmière \\
+\small consultation addictologie, consultation hépatologie, entretien IDE};
+
+\node[box, below=1.5cm of eval] (neuro) {Évaluations psychologique et neurocognitive \\
+\small psychologue ; MOCA / BEARNI};
+
+\node[box, below=1.5cm of neuro] (som) {Bilan somatique \\
+\small ECG, EFR, scanner thoracique, biologie, échographie, Fibroscan};
+
+\node[box, below=1.5cm of som] (synth) {Synthèse pluridisciplinaire \\
+\small orientation : HDJ réduction / HDJ sevrage / hospitalisation complète};
+
+\draw[->, thick, APHPdark] (ori) -- (eval);
+\draw[->, thick, APHPdark] (eval) -- (neuro);
+\draw[->, thick, APHPdark] (neuro) -- (som);
+\draw[->, thick, APHPdark] (som) -- (synth);
+
+\end{tikzpicture}
+\end{figure}
+% ============================================================
+% FIGURE 2 — HDJ Réduction des risques et dommages
+% ============================================================
+
+\begin{figure}[h!]
+\centering
+\caption{Parcours HDJ Addictologie (2) — Réduction des risques et dommages}
+\vspace{0.8cm}
+
+\begin{tikzpicture}[
+    node distance=1.8cm,
+    box/.style={
+        rectangle, rounded corners=3pt,
+        draw=APHPdark, thick,
+        text width=10cm, minimum height=1.7cm,
+        align=center, fill=APHPsoft
+    }
+]
+
+\node[box] (ori) {Orientation vers l’HDJ \\
+\small patients souhaitant réduire leur consommation sans objectif de sevrage complet};
+
+\node[box, below=1.5cm of ori] (med) {Suivi médical et paramédical renforcé \\
+\small addictologie, IDE, psychologue};
+
+\node[box, below=1.5cm of med] (medias) {Thérapies par médiation \\
+\small APA, socio-esthétique, art-thérapie, revue de presse, écriture, groupes de parole};
+
+\node[box, below=1.5cm of medias] (social) {Accompagnement social \\
+\small démarches administratives, insertion, gestion de crise sociale};
+
+\node[box, below=1.5cm of social] (synth) {Synthèse pluridisciplinaire \\
+\small adaptation du programme, continuité des soins};
+
+\draw[->, thick, APHPdark] (ori) -- (med);
+\draw[->, thick, APHPdark] (med) -- (medias);
+\draw[->, thick, APHPdark] (medias) -- (social);
+\draw[->, thick, APHPdark] (social) -- (synth);
+
+\end{tikzpicture}
+\end{figure}
+
+
+\clearpage
+
+% ============================================================
+% FIGURE 3 — HDJ Sevrage ambulatoire
+% ============================================================
+
+\begin{figure}[h!]
+\centering
+\caption{Parcours HDJ Addictologie (3) — Sevrage ambulatoire}
+\vspace{0.8cm}
+
+\begin{tikzpicture}[
+    node distance=1.8cm,
+    box/.style={
+        rectangle, rounded corners=3pt,
+        draw=APHPdark, thick,
+        text width=10cm, minimum height=1.7cm,
+        align=center, fill=APHPsoft
+    }
+]
+
+\node[box] (indi) {Indication de sevrage ambulatoire \\
+\small critères de sécurité, absence de CI, environnement compatible};
+
+\node[box, below=1.5cm of indi] (med) {Évaluation et suivi médical \\
+\small addictologie, IDE, monitorage CIWA quotidien};
+
+\node[box, below=1.5cm of med] (psy) {Suivi psychologique \\
+\small soutien, renforcement motivationnel};
+
+\node[box, below=1.5cm of psy] (medias) {Thérapies par médiation \\
+\small APA, art-thérapie, socio-esthétique, revue de presse, groupes};
+
+\node[box, below=1.5cm of medias] (soc) {Accompagnement social \\
+\small démarches, stabilisation du cadre de vie};
+
+\node[box, below=1.5cm of soc] (synth) {Synthèse pluridisciplinaire \\
+\small plan de continuité, prévention des rechutes};
+
+\draw[->, thick, APHPdark] (indi) -- (med);
+\draw[->, thick, APHPdark] (med) -- (psy);
+\draw[->, thick, APHPdark] (psy) -- (medias);
+\draw[->, thick, APHPdark] (medias) -- (soc);
+\draw[->, thick, APHPdark] (soc) -- (synth);
+
+\end{tikzpicture}
+\end{figure}
+
+% ============================================================
+% FIGURE 4 — HDJ Consolidation de sevrage
+% ============================================================
+
+\begin{figure}[h!]
+\centering
+\caption{Parcours HDJ Addictologie (4) — Consolidation de sevrage}
+\vspace{0.8cm}
+
+\begin{tikzpicture}[
+    node distance=1.8cm,
+    box/.style={
+        rectangle, rounded corners=3pt,
+        draw=APHPdark, thick,
+        text width=10cm, minimum height=1.7cm,
+        align=center, fill=APHPsoft
+    }
+]
+
+\node[box] (ori) {Public concerné \\
+\small patients en post-sevrage ambulatoire ou résidentiel ; attente SSR ; retours de SSR};
+
+\node[box, below=1.5cm of ori] (med) {Suivi médical et paramédical structuré \\
+\small addictologie ; IDE ; psychologue};
+
+\node[box, below=1.5cm of med] (medias) {Thérapies par médiation \\
+\small APA, socio-esthétique, art-thérapie, revue de presse, écriture, groupes};
+
+\node[box, below=1.5cm of medias] (reinser) {Accompagnement social et réinsertion \\
+\small démarches ; soutien au retour au domicile ; reprise des activités};
+
+\node[box, below=1.5cm of reinser] (synth) {Synthèse pluridisciplinaire \\
+\small consolidation du sevrage ; prévention des rechutes};
+
+\draw[->, thick, APHPdark] (ori) -- (med);
+\draw[->, thick, APHPdark] (med) -- (medias);
+\draw[->, thick, APHPdark] (medias) -- (reinser);
+\draw[->, thick, APHPdark] (reinser) -- (synth);
+
+\end{tikzpicture}
+\end{figure}
+
+\clearpage
+
+% ============================================================
+% TRAÇABILITÉ
+% ============================================================
+
+\subsection{Traçabilité des interventions}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{5cm} p{9.2cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Intervention} & \textbf{Traçabilité requise} \\
+\midrule
+
+Évaluation somatique et addictologique &
+Anamnèse ; scores AUDIT et CIWA ; comorbidités ; bilans pré-thérapeutiques ; évaluations IDE, psychologue et neurocognition ; consultations spécialisées ; synthèse médicale ; plan de soins. \\
+
+Réduction des risques et dommages &
+Objectifs personnalisés ; prévention ; entretiens motivationnels ; ateliers éducatifs ; participation aux activités listées en Annexe~1 ; réévaluation hebdomadaire médico-psycho-sociale. \\
+
+Sevrage ambulatoire &
+Scores CIWA répétés ; adaptation thérapeutique ; supervision médicamenteuse ; paramètres vitaux ; activités psychologiques, sociales et de médiation (Annexe~1) ; incidents ; synthèse médicale de fin de cure. \\
+
+Consultations spécialisées &
+Synthèse écrite obligatoire : objectifs, évolution, recommandations ; documentation des activités individuelles correspondantes (Annexe~1). \\
+
+Synthèse médicale / médico-psycho-sociale &
+Analyse intégrée ; adaptation du plan thérapeutique ; évaluation motivationnelle ; décision d’orientation ; coordination ville–hôpital. \\
+\bottomrule
+\end{tabular}
+
+\caption{Traçabilité des interventions — HDJ Addictologie}
+\end{table}
+
+\clearpage
+
+
+% ============================================================
+% REGLES DE CODAGE
+% ============================================================
+
+\subsection{Règles de codage}
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{4.6cm} p{7.2cm} c c c}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Type de séance} &
+\textbf{DP / DAS attendus} &
+\textbf{GHM} &
+\textbf{GHS} &
+\textbf{Tarif 2025} \\
+\midrule
+
+HDJ Évaluation somatique + addictologique &
+DP : \textbf{F101} — Usage nocif de l’alcool \newline
+DAS : comorbidités majeures &
+\textbf{20Z051} &
+\textbf{7272} &
+\textbf{774~€} \\
+
+HDJ Réduction des risques et dommages &
+DP : \textbf{Z714} — Conseil et surveillance pour alcoolisme \newline
+DAS : comorbidités majeures &
+\textbf{23M06T} &
+\textbf{7967} &
+\textbf{701~€} \\
+
+HDJ Sevrage ambulatoire / consolidation &
+DP : \textbf{F102} — Dépendance à l'alcool \newline
+ou \textbf{Z502} — Sevrage d’alcool \newline
+DAS : comorbidités majeures &
+\textbf{20Z04T} &
+\textbf{7271} &
+\textbf{541~€} \\
+\bottomrule
+\end{tabular}
+
+\caption{Règles de codage et valorisation — HDJ Addictologie}
+\end{table}
+
+% ============================================================
+% PROJECTIONS D’ACTIVITÉ (1 → 3 → 5 / j ; 3 j/sem ; 47 sem/an)
+% ============================================================
+\definecolor{aphpbleu}{HTML}{005AA3}
+
+\clearpage
+\subsection{Projections d’activité et recettes prévisionnelles}
+
+\begin{table}[h!]
+\centering
+
+% Titre table
+{\large\textcolor{aphpbleu}{\textbf{Activité prévisionnelle et recettes associées}}}
+
+\vspace{0.5em}
+
+\begin{tabular}{lccc}
+\toprule
+\textbf{Année} &
+\textbf{Patients/an} &
+\textbf{Séances/an} &
+\textbf{Recettes totales/an} \\
+\midrule
+Année 1 — Amorce (1/j) &
+141 &
+141 &
+96\,703~€ \\
+Année 2 — Montée (3/j) &
+423 &
+423 &
+289\,936~€ \\
+Année 3 — Croisière (5/j) &
+705 &
+705 &
+483\,269~€ \\
+\midrule
+\textbf{TOTAL 3 ans} &
+1\,269 &
+1\,269 &
+\textbf{869\,908~€} \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+
+\noindent\textcolor{aphpbleu}{\textbf{Hypothèses volumétriques et tarifaires (2025).}}  
+\begin{itemize}
+    \item 1, puis 3, puis 5 patients/jour ; 3 jours/semaine ; 47 semaines/an.
+    \item Tarifs 2025 : 774~€ (évaluation), 701~€ (réduction des risques), 541~€ (sevrage).
+    \item Recettes annuelles = somme des trois types d’actes pondérés par leur fréquence moyenne observée.
+\end{itemize}
+
+\end{table}
+
+
+
+
+% ============================================================
+% CONCLUSION
+% ============================================================
+\clearpage
+\subsection{Conclusion}
+
+L’HDJ addictologie constitue un dispositif structurant permettant une intervention précoce, intensive et coordonnée pour les patients présentant un trouble de l’usage d’alcool. Il améliore la sécurité du sevrage, la réduction des risques, la stabilité hépatique, et réduit les hospitalisations complètes non programmées. Son positionnement transversal dans le GHU en fait un outil central de prévention secondaire et de santé publique.
+
+
+
+
+% ============================================================
+% VALIDATION
+% ============================================================
+
+\begin{center}
+\begin{tabular}{p{4cm} p{7cm} p{4cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Date de relecture} & \textbf{Nom du relecteur} & \textbf{Date de validation} \\
+\midrule
+01/12/2025 & Dr S.\,Bouam & NA \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage

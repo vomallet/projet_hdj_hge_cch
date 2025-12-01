@@ -1,0 +1,312 @@
+% ============================================================
+% HÔPITAL DE JOUR — MICI (Maladies Inflammatoires Chroniques de l’Intestin)
+% ============================================================
+
+\setcounter{table}{0}
+\setcounter{figure}{0}
+
+\subsection{Rationnel médical}
+\needspace{8\baselineskip}
+
+\begin{spacing}{1.30}
+
+Les maladies inflammatoires chroniques de l’intestin (MICI) — maladie de Crohn et rectocolite hémorragique — sont des affections évoluant par poussées inflammatoires, responsables d’un retentissement fonctionnel important, d’une altération de la qualité de vie et d’un risque de complications sévères (abcès, sténoses, fistules, colites aiguës graves), avec risques de sepsis et de recours urgent à la chirurgie.
+
+En France, les MICI concernent près de 300\,000 personnes, avec une incidence et une prévalence en croissance régulière de 3 à 4~\% par an.\cite{Ng_LancetGlobalIBD_2017,Richard_EpidemioPresseMed_2025} L’Europe compte parmi les régions les plus touchées, avec une prévalence avoisinant 0.5~\% de la population adulte. L’incidence augmente de façon marquée dans la population pédiatrique.
+
+Un traitement précoce et adapté — notamment par biothérapie — réduit significativement le risque de complications, d’hospitalisations et de recours à la chirurgie, tout en améliorant la qualité de vie. Les biothérapies (anti-TNF, vedolizumab, ustekinumab, risankizumab) et traitements ciblés ont transformé le pronostic, mais nécessitent une organisation rigoureuse : perfusions intraveineuses, initiations sous-cutanées encadrées, bilans pré-thérapeutiques, éducation thérapeutique, surveillance de tolérance et prise en charge coordonnée des comorbidités (anémie, nutrition, santé mentale).\cite{HAS_AntiTNF_2019}
+
+L’hôpital de jour spécialisé permet de regrouper en une séquence unique : perfusion de biothérapie, surveillance infirmière MICI, évaluation clinique inter-cure, éducation thérapeutique, vaccinations, coordination ville–hôpital et planification thérapeutique individualisée. Ce format constitue l’organisation recommandée pour sécuriser et optimiser l’utilisation des biothérapies dans les MICI. Le dispositif offre également un cadre privilégié pour identifier les patients éligibles aux essais cliniques et aux cohortes observationnelles, en cohérence avec les missions universitaires du GHU.
+
+À Cochin, le recrutement provient des correspondants médicaux, des services d’urgences, de la pédiatrie et de la filière de transition organisée avec Necker. 
+
+
+\end{spacing}
+
+
+\clearpage
+
+
+% ============================================================
+% OBJECTIFS
+% ============================================================
+
+\subsection{Objectifs}
+\needspace{6\baselineskip}
+
+\vspace{0.8em}
+\begin{center}
+\fcolorbox{APHPdark}{APHPsoft}{
+\begin{minipage}{0.95\textwidth}
+\vspace{0.9em}
+
+\begin{itemize}[leftmargin=1.1cm]
+  \item assurer un accès sécurisé aux biothérapies intraveineuses ;
+  \item organiser les évaluations inter-cures ;
+  \item proposer une prise en charge pluridisciplinaire : IDE MICI, diététique, psychologie, ETP, vaccinations ;
+  \item réduire les hospitalisations complètes non programmées et optimiser le suivi treat-to-target ;
+  \item structurer la coordination ville–hôpital et la traçabilité des décisions (consultation, RCP MICI) ;
+  \item participer au repérage des patients éligibles à la recherche clinique (cohortes, essais thérapeutiques).
+\end{itemize}
+
+\vspace{0.9em}
+\end{minipage}}
+\end{center}
+
+\bigskip
+
+
+% ============================================================
+% POPULATION ÉLIGIBLE
+% ============================================================
+
+\subsection{Population éligible}
+\needspace{6\baselineskip}
+
+\begin{itemize}[leftmargin=1.1cm]
+  \item maladie de Crohn ou rectocolite hémorragique relevant d’une biothérapie IV ;
+  \item première injection SC (infliximab, anti-TNF) nécessitant apprentissage, supervision et surveillance dédiée ;
+  \item perfusion de fer injectable dans le cadre d’une anémie ferriprive associée aux MICI ;
+  \item réévaluation inter-cure incluant ≥3 interventions (gastroentérologue, infectiologue, psychologue, IDE MICI, diététique, ETP) ;
+  \item patients adressés en RCP MICI pour initiation, switch ou optimisation de biothérapie ;
+  \item parcours de transition pédiatrie (Necker) → adulte (Cochin).
+\end{itemize}
+
+\clearpage
+
+
+% ============================================================
+% PARCOURS DE SOINS
+% ============================================================
+
+\subsection{Parcours de soins}
+\needspace{8\baselineskip}
+
+\begin{figure}[!ht]
+\centering
+\caption{Parcours patient — HDJ MICI}
+\vspace{0.8cm}
+
+\begin{tikzpicture}[
+    node distance=1.6cm,
+    box/.style={
+        rectangle,
+        rounded corners=3pt,
+        draw=APHPdark,
+        thick,
+        text width=9.0cm,
+        minimum height=1.55cm,
+        align=center,
+        fill=APHPsoft
+    }
+]
+
+\node[box] (tri) {Orientation vers l’HDJ \\ 
+\small Consultations MICI, RCP, médecine de ville, urgences, transition NCK→CCH};
+
+\node[box, below=1.4cm of tri] (etape1) {Évaluation initiale IDE MICI \\ 
+\small Bilans pré-thérapeutiques, critères de \\sécurité, calprotectine, dépistage comorbidités};
+
+\node[box, below=1.4cm of etape1] (etape2) {Acte thérapeutique programmé \\ 
+\small perfusion biothérapie IV/initiation SC encadrée/fer injectable};
+
+\node[box, below=1.4cm of etape2] (etape3) {Surveillance clinique et éducative \\ 
+\small tolérance, observance, statut\\vaccinal, conseils pratiques, ETP MICI};
+
+\node[box, below=1.4cm of etape3] (synth) {Synthèse médicale et coordination \\ 
+\small évaluation inter-cure, ajustement thérapeutique, lien ville–hôpital};
+
+\draw[->, thick, APHPdark] (tri) -- (etape1);
+\draw[->, thick, APHPdark] (etape1) -- (etape2);
+\draw[->, thick, APHPdark] (etape2) -- (etape3);
+\draw[->, thick, APHPdark] (etape3) -- (synth);
+
+\end{tikzpicture}
+\end{figure}
+
+
+\clearpage
+
+
+% --------------------------------------------------------
+% TABLEAU 1 — Codage & GHS (MÀJ 2025)
+% --------------------------------------------------------
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{4.3cm} p{7.3cm} c c c}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Type de séance} &
+\textbf{DP / DR / DAS} &
+\textbf{GHM} &
+\textbf{GHS} &
+\textbf{Tarif 2025} \\
+\midrule
+
+Biothérapie IV MICI &
+DP : Z51.2 \newline DR : K50.x/K51.x &
+28Z17Z & 9616 & 440~€ \\
+
+Première injection SC (surveillance) + ETP &
+DP : K50.x/K51.x \newline DAS : Z71.9 &
+06M07T & 2152 & 655~€ \\
+
+Évaluation inter-cure (≥ 4 interventions) &
+DP : Z09.2 \newline DR : MICI \newline DAS : anémie / nutrition / psy &
+06M16Z & 2186 & 1\,071~€ \\
+
+Évaluation inter-cure (= 3 interventions) &
+DP : Z09.2 \newline DR : MICI \newline DAS : anémie / nutrition / psy &
+06M16Z & 5059 & 360~€ \\
+
+\bottomrule
+\end{tabular}
+
+\caption{Codage et GHS associés — HDJ MICI}
+\end{table}
+
+
+% --------------------------------------------------------
+% TABLEAU 2 — Traçabilité
+% --------------------------------------------------------
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{5cm} p{9cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Intervention} & \textbf{Traçabilité requise} \\
+\midrule
+
+Biothérapie IV 
+& protocole et dose ; voie d’administration ; surveillance per-cure ; effets indésirables ; décision de poursuite \\
+
+1\textsuperscript{re} injection SC (infliximab/anti-TNF) 
+& éducation à l’auto-injection ; vérification des pré-requis de sécurité ; tolérance immédiate ; planification des injections suivantes \\
+
+Évaluation infirmière MICI 
+& paramètres cliniques ; bilans réalisés ; statut vaccinal ; observance déclarée ; comorbidités associées \\
+
+Biologie de suivi 
+& indication ; résultats clés ; interprétation clinique ; conduite à tenir (adaptation thérapeutique) \\
+
+Consultation diététique / psychologique 
+& synthèse des évaluations ; recommandations ; objectifs fixés ; suivi prévu \\
+
+Synthèse médicale inter-cure 
+& évaluation réponse ; décisions thérapeutiques ; prochaine cure ; coordination ville–hôpital \\
+
+Vaccinologie 
+& statut vaccinal documenté ; rappels effectués (grippe, pneumocoque, covid, hépatites) ; recommandations données \\
+
+Éligibilité recherche clinique 
+& critères repérés ; information patient ; orientation vers essais / cohortes ; contact recherche \\
+
+\bottomrule
+\end{tabular}
+
+
+\caption{Traçabilité des interventions — HDJ MICI}
+\end{table}
+
+\clearpage
+
+
+% ============================================================
+% VOLUMÉTRIE
+% ============================================================
+
+\subsection{Volumétrie de référence (année N)}
+\needspace{6\baselineskip}
+
+\begin{table}[h!]
+\centering
+\caption{Volumétrie HDJ MICI — Activité réelle (040J)}
+
+\begin{tabular}{lccc}
+\toprule
+\textbf{Année} & \textbf{Volume} & \textbf{Tarif unitaire (GHS 2025)} & \textbf{Recette estimée} \\
+\midrule
+2022 & 937  & 320~€ & 300\,000~€ \\
+2023 & 1\,241 & 320~€ & 397\,000~€ \\
+2024 & 1\,346 & 320~€ & 431\,000~€ \\
+2025 (proj.) & 1\,320 & 320~€ & 422\,000~€ \\
+\midrule
+\textbf{Total (4 ans)} & -- & -- & \textbf{≈ 1,55 M€} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.4em}
+\begin{minipage}{0.9\textwidth}
+\small\textit{
+Capacité actuelle : 2 patients par fauteuil et par jour, 8 fauteuils, 2 jours par semaine 
+(≈ 32 patients / semaine, hors fermetures et contraintes médicales).
+}
+\end{minipage}
+
+\end{table}
+
+% ============================================================
+% PROJECTIONS D’ACTIVITÉ
+% ============================================================
+
+\subsection{Projections d’activité et recettes prévisionnelles}
+\needspace{8\baselineskip}
+
+\noindent\textbf{Hypothèses.}  
+Progression régulière de la file active ; élargissement des indications thérapeutiques ;  
+augmentation estimée : \textbf{+100 HDJ MICI / an} à partir du volume projeté 2025.
+
+\medskip
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Année} & \textbf{Volume projeté} & \textbf{Tarif moyen} & \textbf{Recette brute} \\
+\midrule
+Amorce & 1\,420 & 320~€ & 454\,000~€ \\
+Montée en Charge & 1\,520 & 320~€ & 486\,000~€ \\
+Croisière & 1\,620 & 320~€ & 518\,000~€ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
+
+
+% ============================================================
+% CONCLUSION
+% ============================================================
+
+\subsection{Conclusion}
+\needspace{6\baselineskip}
+
+L’HDJ MICI constitue un dispositif structurant, assurant une administration sécurisée des biothérapies et une surveillance « treat-to-target » conforme aux recommandations internationales. Il permet une prise en charge intégrée — médicale, infirmière, éducative et psychosociale — adaptée à la complexité croissante des parcours MICI.
+Dans un contexte d’augmentation continue de la prévalence des MICI, l’HDJ garantit efficience organisationnelle, continuité des soins et réduction des hospitalisations complètes non programmées. L’activité est en progression régulière depuis la création du HDJ MICI en 2019.
+
+% ============================================================
+% VALIDATION DE LA FICHE
+% ============================================================
+
+\begin{center}
+\begin{tabular}{p{4cm} p{7cm} p{4cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Date de relecture} & \textbf{Nom du relecteur} & \textbf{Date de validation} \\
+\midrule
+01/12/2025 & Pr V. Abitbol & NA \\
+01/12/2025 & Dr S. Bouam & NA \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+
+\clearpage

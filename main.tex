@@ -15,6 +15,7 @@
 \usetikzlibrary{positioning}
 \usepackage{tocloft}
 \usepackage{csquotes}
+\usepackage{booktabs}
 \usepackage{fontspec}
 \usepackage{needspace}
 \usepackage[table]{xcolor}
@@ -26,7 +27,7 @@
 \setmainfont{TeX Gyre Termes}
 
 % =======================
-% COULEURS APHP (définies une seule fois)
+% COULEURS APHP
 % =======================
 \definecolor{APHPblue}{RGB}{0,56,147}
 \definecolor{APHPdark}{RGB}{0,36,95}
@@ -36,7 +37,7 @@
 % =======================
 % CASES À COCHER
 % =======================
-\newcommand{\ch}{\(\square\)}
+\newcommand{\ch}{\(\square\)\hspace{0.25em}}
 
 % =======================
 % LISIBILITÉ / SPACINGS
@@ -66,17 +67,12 @@
     useprefix=false
 ]{biblatex}
 
-% empêcher les MISES EN MAJUSCULES
 \DeclareNameAlias{default}{family-given}
 \DeclareNameAlias{sortname}{family-given}
 \DeclareFieldFormat{author}{#1}
 \DeclareFieldFormat{labelname}{#1}
-
-% utiliser shortjournal
 \DeclareFieldFormat{journaltitle}{%
-  \iffieldundef{shortjournal}
-    {#1}
-    {\printfield{shortjournal}}%
+  \iffieldundef{shortjournal}{#1}{\printfield{shortjournal}}%
 }
 
 \AtBeginBibliography{%
@@ -93,7 +89,7 @@
 % =======================
 \geometry{margin=2.4cm}
 \setstretch{1.25}
-    
+
 % =======================
 % DOCUMENT
 % =======================
@@ -139,39 +135,154 @@ Document de Travail — Version 1}
 
 \end{titlepage}
 
-
 % ============================
 % TABLE DES MATIÈRES
 % ============================
 \tableofcontents
 \newpage
 
-
-% ============================
-% CHAPITRE 1 — HDJ HÉPATOMÉTABOLIQUE
-% ============================
-\section{Hôpital de Jour Hépatométabolique}
+% ===============================================
+% CHAPITRE 0: Introduction
+% ===============================================
+\clearpage
+\section*{Introduction Générale}
 
 \begin{refsection}
-\input{hdj/hdj_hepatometabolique}
+\input{introduction}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+
+% ===============================================
+% CHAPITRE 1: Evaluation de la Fibrose Hépatiaque
+% ===============================================
+\clearpage
+\section{HDJ Biopsies du Foie}
+
+\begin{refsection}
+\input{hdj/fiche_hdj_pbh}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 
 % ============================
-% ANNEXES — HDJ Hépatométabolique
+% CHAPITRE 2: Evaluation des Cirrhoses
 % ============================
+\clearpage
+\section{HDJ Evaluation des Cirrhoses}
+
+\begin{refsection}
+\input{hdj/fiche_hdj_evalutation_cirrhoses}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+% ============================
+% CHAPITRE 3: Prise en Charge des Cirrhoses Terminales
+% ============================
+\clearpage
+\section{HDJ Cirrhoses Terminales}
+
+\begin{refsection}
+\input{hdj/fiche_hdj_cirrhose_terminale}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+% ============================
+% CHAPITRE 4: Hépatométabolique
+% ============================
+\clearpage
+\section{HDJ Maladies du Foie Métaboliques}
+
+\begin{refsection}
+\input{hdj/fiche_hdj_hepatometabolique}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+% ============================
+% CHAPITRE 5: MICI
+% ============================
+\clearpage
+\section{HDJ MICI}
+
+\begin{refsection}
+\input{hdj/fiche_hdj_mici}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+% ============================
+% CHAPITRE 6: Addictologie
+% ============================
+\clearpage
+\section{Hôpital de Jour Addictologie}
+
+\begin{refsection}
+\input{hdj/fiche_hdj_addictologie}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+% ==========================================
+% CHAPITRE 7: Radiologie Interventionnelles
+% ==========================================
+\clearpage
+\section{Hôpital de Jour\\Radiologie Interventionnelle}
+
+\begin{refsection}
+\input{}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+% ========================================
+% CHAPITRE 8: Chimiothérapies des Cancers
+% ========================================
+\clearpage
+\section{Hôpital de Jour\\Chimiothérapie des Cancers}
+
+\begin{refsection}
+\input{hdj/fiche_hdj_mici}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+% ================================
+% ANNEXES A — Hépatométabolique
+% ================================
+\clearpage
 \appendix
-\section*{Annexes}
-\addcontentsline{toc}{section}{Annexes}
+\renewcommand{\thesection}{A.\arabic{section}}
+\setcounter{section}{0}
 
 \section{Grille échographique MASLD}
+\addcontentsline{toc}{section}{Annexe A.1 — Grille échographique MASLD}
 \input{annexes/grille_echo_masld}
+\clearpage
 
 \section{Grille diététique MASLD}
+\addcontentsline{toc}{section}{Annexe A.2 — Grille diététique MASLD}
 \input{annexes/grille_dietetique_masld}
+\clearpage
 
 \section{Grille psychologique / addictologique MASLD}
+\addcontentsline{toc}{section}{Annexe A.3 — Grille psy / addictologie MASLD}
 \input{annexes/grille_psy_masld}
+\clearpage
 
+% ============================================
+% ANNEXES B — Cirrhose avancée (à compléter)
+% ============================================
+\renewcommand{\thesection}{B.\arabic{section}}
+\setcounter{section}{0}
+
+\section{Fiche HDJ — Ponction d’ascite + albumine}
+\addcontentsline{toc}{section}{Annexe B.1 — Ponction d’ascite + albumine}
+\input{annexes/ponction_ascite_perfusion_albumine}
+\clearpage
+
+\section{Fiche HDJ — Fer injectable}
+\addcontentsline{toc}{section}{Annexe B.2 — Fer injectable}
+\input{annexes/fer_injectable}
+\clearpage
+
+\section{Fiche HDJ — Transfusion de CGR}
+\addcontentsline{toc}{section}{Annexe B.3 — Transfusion de CGR}
+\input{annexes/transfusion_sanguine}
+\clearpage
 
 \end{document}
