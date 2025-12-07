@@ -128,46 +128,80 @@ L’hôpital de jour spécialisé permet de regrouper en une séquence unique : 
 \clearpage
 
 
-% --------------------------------------------------------
-% TABLEAU 1 — Codage & GHS (MÀJ 2025)
-% --------------------------------------------------------
+% ============================================================
+% Organisation et ressources nécessaires
+% ============================================================
+
+\subsection{Organisation}
+\needspace{5\baselineskip}
+
+\begin{itemize}[leftmargin=1.1cm]
+    \item Direction: \textbf{Docteur Remplaçant Pr. V. Abitbol}
+    \item Durée : 6-8 heures.
+    \item Lieu : Secteur HDJ — Service de gastroentérologie et d'oncologie digestive.
+    \item Ressources : médecin sénior, infirmier expert/IPA, psychologue/addictologue.
+
+\end{itemize}
+    
+\bigskip
+
+% ============================================================
+% CODAGE & GHS — MICI (version épurée)
+% ============================================================
+
+\subsection{Codage et GHS associés — MICI}
 
 \begin{table}[h!]
 \centering
 \renewcommand{\arraystretch}{1.25}
 \rowcolors{2}{APHPsoft}{white}
 
-\begin{tabular}{p{4.3cm} p{7.3cm} c c c}
+\begin{tabularx}{\textwidth}{
+>{\raggedright\arraybackslash}p{3.8cm}  % Type de séance
+>{\raggedright\arraybackslash}X         % DP/DR/DAS
+>{\centering\arraybackslash}p{2.6cm}    % Gradation
+>{\centering\arraybackslash}p{1.6cm}    % GHM
+>{\centering\arraybackslash}p{1.8cm}}   % GHS
 \toprule
 \rowcolor{APHPsoft}
 \textbf{Type de séance} &
 \textbf{DP / DR / DAS} &
+\textbf{Gradation} &
 \textbf{GHM} &
-\textbf{GHS} &
-\textbf{Tarif 2025} \\
+\textbf{GHS} \\
 \midrule
 
 Biothérapie IV MICI &
 DP : Z51.2 \newline DR : K50.x/K51.x &
-28Z17Z & 9616 & 440~€ \\
+Aucune &
+28Z17Z &
+9\,616 \\
 
-Première injection SC (surveillance) + ETP &
+Première injection SC (surveillance, ETP) &
 DP : K50.x/K51.x \newline DAS : Z71.9 &
-06M07T & 2152 & 655~€ \\
+Surveillance &
+06M07T &
+2\,152 \\
 
-Évaluation inter-cure (≥ 4 interventions) &
+Évaluation inter-cure ($\geq$4 interventions) &
 DP : Z09.2 \newline DR : MICI \newline DAS : anémie / nutrition / psy &
-06M16Z & 2186 & 1\,071~€ \\
+$>$3 interventions &
+06M16Z &
+2\,186 \\
 
-Évaluation inter-cure (= 3 interventions) &
+Évaluation inter-cure (=3 interventions) &
 DP : Z09.2 \newline DR : MICI \newline DAS : anémie / nutrition / psy &
-06M16Z & 5059 & 360~€ \\
-
+3 interventions &
+06M16Z &
+5\,059 \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 
-\caption{Codage et GHS associés — HDJ MICI}
+\caption{Codage et GHM/GHS — HDJ MICI}
 \end{table}
+
+\clearpage
+
 
 
 % --------------------------------------------------------
@@ -218,67 +252,87 @@ Vaccinologie
 
 \clearpage
 
-
+% ============================================================ 
+% VOLUMÉTRIE 2024 (RÉFÉRENCE)
 % ============================================================
-% VOLUMÉTRIE
-% ============================================================
 
-\subsection{Volumétrie de référence (année N)}
-\needspace{6\baselineskip}
+\subsection{Volumétrie 2024 (référence HDJ MICI)}
 
 \begin{table}[h!]
 \centering
-\caption{Volumétrie HDJ MICI — Activité réelle (040J)}
+\renewcommand{\arraystretch}{1.25}
 
 \begin{tabular}{lccc}
 \toprule
-\textbf{Année} & \textbf{Volume} & \textbf{Tarif unitaire (GHS 2025)} & \textbf{Recette estimée} \\
+\textbf{Type de séance} &
+\textbf{Volume 2024} &
+\textbf{Tarif unitaire} &
+\textbf{Recette estimée} \\
 \midrule
-2022 & 937  & 320~€ & 300\,000~€ \\
-2023 & 1\,241 & 320~€ & 397\,000~€ \\
-2024 & 1\,346 & 320~€ & 431\,000~€ \\
-2025 (proj.) & 1\,320 & 320~€ & 422\,000~€ \\
+
+Biothérapie IV MICI &
+1469 &
+440~€ &
+646\,360~€ \\
+
+Première injection SC (surveillance ETP) &
+0 &
+655~€ &
+0~€ \\
+
+Évaluation inter-cure ($\geq$4 interventions) &
+14 &
+1\,071~€ &
+14\,994~€ \\
+
+Évaluation inter-cure (=3 interventions) &
+2 &
+360~€ &
+720~€ \\
 \midrule
-\textbf{Total (4 ans)} & -- & -- & \textbf{≈ 1,55 M€} \\
+
+\textbf{Total} &
+\textbf{1485} &
+-- &
+\textbf{\textasciitilde 662\,074~€} \\
 \bottomrule
 \end{tabular}
 
-\vspace{0.4em}
-\begin{minipage}{0.9\textwidth}
-\small\textit{
-Capacité actuelle : 2 patients par fauteuil et par jour, 8 fauteuils, 2 jours par semaine 
-(≈ 32 patients / semaine, hors fermetures et contraintes médicales).
-}
-\end{minipage}
-
+\caption{Volumétrie HDJ MICI — Détail par type de séance}
 \end{table}
+
+\clearpage
+
+
 
 % ============================================================
 % PROJECTIONS D’ACTIVITÉ
 % ============================================================
 
 \subsection{Projections d’activité et recettes prévisionnelles}
-\needspace{8\baselineskip}
+\needspace{6\baselineskip}
 
 \noindent\textbf{Hypothèses.}  
-Progression régulière de la file active ; élargissement des indications thérapeutiques ;  
-augmentation estimée : \textbf{+100 HDJ MICI / an} à partir du volume projeté 2025.
+Base d’activité 2024 : \textbf{1\,485 HDJ}.  
+Projection d’une croissance régulière de \textbf{+100 HDJ par an}.  
+Tarif moyen pondéré calculé : \textbf{446~€ / séance}.
 
 \medskip
 
 \begin{center}
 \begin{tabular}{lccc}
 \toprule
-\textbf{Année} & \textbf{Volume projeté} & \textbf{Tarif moyen} & \textbf{Recette brute} \\
+\textbf{Année} & \textbf{Volume projeté} & \textbf{Tarif moyen} & \textbf{Recette brute estimée} \\
 \midrule
-Amorce & 1\,420 & 320~€ & 454\,000~€ \\
-Montée en Charge & 1\,520 & 320~€ & 486\,000~€ \\
-Croisière & 1\,620 & 320~€ & 518\,000~€ \\
+Amorce & 1\,485 & 446~€ & 662\,110~€ \\
+Montée en charge & 1\,585 & 446~€ & 706\,110~€ \\
+Croisière & 1\,685 & 446~€ & 751\,110~€ \\
 \bottomrule
 \end{tabular}
 \end{center}
 
 \clearpage
+
 
 
 % ============================================================
@@ -301,8 +355,10 @@ Dans un contexte d’augmentation continue de la prévalence des MICI, l’HDJ g
 \rowcolor{APHPsoft}
 \textbf{Date de relecture} & \textbf{Nom du relecteur} & \textbf{Date de validation} \\
 \midrule
-01/12/2025 & Pr V. Abitbol & NA \\
-01/12/2025 & Dr S. Bouam & NA \\
+NA & Pr R.\,Coriat & NA \\
+01/12/2025 & Pr V.\,Abitbol & 01/12/2025 \\
+03/12/2025 & Dr S.\,Bouam & NA \\
+01/12/2025 & Pr V.\,Mallet & 03/12/2026 \\
 \bottomrule
 \end{tabular}
 \end{center}

@@ -1,0 +1,268 @@
+% ============================================================
+% HÔPITAL DE JOUR — BIOPSIE HÉPATIQUE (PBH)
+% ============================================================
+
+\subsection{Rationnel médical}
+\needspace{8\baselineskip}
+
+\begin{spacing}{1.30}
+
+La biopsie hépatique (PBH) demeure l’examen de référence pour le diagnostic, la classification et le suivi histologique de nombreuses maladies du foie. Malgré les progrès des outils non invasifs, elle reste indispensable dans plusieurs situations cliniques complexes où seule l’analyse tissulaire permet une caractérisation fine et reproductible des lésions.
+
+Elle est essentielle dans les maladies hépatiques rares (hépatites auto-immunes, cholangites, granulomatoses), en particulier lorsque les présentations cliniques ou immunologiques sont atypiques, discordantes ou insuffisamment discriminantes. Dans les toxicités médicamenteuses, notamment celles induites par les immunothérapies (anti–PD-1/PD-L1, anti–CTLA-4) ou certaines thérapies ciblées, la PBH est un examen clé permettant de distinguer des lésions auto-immunes, granulomateuses, cholestatiques ou toxiques. Elle occupe une place centrale dans les algorithmes diagnostiques et décisionnels  \cite{Peeraphatdit_ImmuneHepatitis_2020, DeMartin_IOHepatitis_2020}.
+
+La PBH est également incontournable pour évaluer la réponse aux traitements dans les maladies chroniques du foie. La régression de la fibrose et de la cirrhose constitue un critère pronostique majeur et un objectif essentiel des essais thérapeutiques contemporains. Aucune méthode non invasive ne permet aujourd’hui d’attester la réorganisation architecturale du foie : seule la PBH peut documenter de manière standardisée une réversion histologique, ce qui en fait l’examen de référence dans les études sur la MASLD/NASH et dans les essais visant à démontrer une amélioration de la fibrose \cite{Friedman_FibrosisRegression_2023}.
+
+La PBH conserve une utilité en oncologie hépatique pour caractériser certaines lésions bénignes ou malignes lorsque la confirmation histologique conditionne la prise en charge. En maladies infectieuses, elle peut être indispensable pour rechercher des agents pathogènes difficiles à isoler. En hématologie (SMD, aplasie, LAM), la présence d’une fibrose constitue un facteur pronostique majeur avant allogreffe.
+
+L’Hôpital de Jour fournit un cadre sécurisé : protocole décisionnel, guidage échographique (HLHJ003/HLHJ006), surveillance spécialisée, traçabilité, continuité ville–hôpital.
+
+\end{spacing}
+
+\clearpage
+
+% ============================================================
+% OBJECTIFS
+% ============================================================
+
+\subsection{Objectifs}
+\needspace{6\baselineskip}
+
+\vspace{0.8em}
+\begin{center}
+\fcolorbox{APHPdark}{APHPsoft}{
+\begin{minipage}{0.95\textwidth}
+\vspace{0.9em}
+
+\begin{itemize}[leftmargin=1.1cm]
+  \item obtenir un diagnostic histologique précis dans les maladies du foie complexes ou atypiques ;
+  \item documenter les toxicités médicamenteuses, notamment sous immunothérapie ;
+  \item évaluer la fibrose et la réversion structurale dans les protocoles thérapeutiques ;
+  \item caractériser des lésions tumorales bénignes ou malignes lorsque cela conditionne la stratégie ;
+  \item explorer des atteintes infectieuses hépatiques rares (hépatocultures) ;
+  \item réaliser l’examen dans un cadre sécurisé, standardisé et traçable en HDJ.
+\end{itemize}
+
+\vspace{0.9em}
+\end{minipage}}
+\end{center}
+
+\clearpage
+
+% ============================================================
+% POPULATION ÉLIGIBLE
+% ============================================================
+
+\subsection{Population éligible}
+\needspace{6\baselineskip}
+
+\begin{itemize}[leftmargin=1.1cm]
+  \item maladie chronique du foie ;
+  \item suspicion de maladie auto-immune ou cholestatique avec bilan discordant ;
+  \item toxicité médicamenteuse sévère ou atypique, notamment sous immunothérapie ;
+  \item protocoles de recherche nécessitant une évaluation histologique ;
+  \item exploration des lésions tumorales primitives ou secondaires ;
+  \item suspicion d’hépatite infectieuse atypique ou d’infection profonde ;
+  \item évaluation pré-allogreffe en hématologie (SMD, aplasie, LAM).
+\end{itemize}
+
+\clearpage
+
+% ============================================================
+% PARCOURS DE SOINS
+% ============================================================
+
+\subsection{Parcours de soins}
+\needspace{8\baselineskip}
+
+\begin{figure}[!ht]
+\centering
+\caption{Parcours patient — PBH en Hôpital de Jour}
+\vspace{0.8cm}
+
+\begin{tikzpicture}[
+    node distance=1.6cm,
+    box/.style={
+        rectangle,
+        rounded corners=3pt,
+        draw=APHPdark,
+        thick,
+        text width=8.6cm,
+        minimum height=1.5cm,
+        align=center,
+        fill=APHPsoft
+    }
+]
+\node[box] (tri) {Orientation vers l’HDJ (hépatologie / MCO / ville)};
+\node[box, below=1.4cm of tri] (e1) {Évaluation initiale : coagulation, imagerie, consentement};
+\node[box, below=1.4cm of e1] (e2) {Biopsie sous guidage échographique (HLHJ003/HLHJ006)};
+\node[box, below=1.4cm of e2] (e3) {Surveillance spécialisée 6 heures : constantes, douleur, saignement};
+\node[box, below=1.4cm of e3] (syn) {Compte-rendu, consignes et coordination ville–hôpital};
+
+\draw[->, thick, APHPdark] (tri) -- (e1);
+\draw[->, thick, APHPdark] (e1) -- (e2);
+\draw[->, thick, APHPdark] (e2) -- (e3);
+\draw[->, thick, APHPdark] (e3) -- (syn);
+
+\end{tikzpicture}
+\end{figure}
+
+\clearpage
+
+% ============================================================
+% PANORAMA CODAGE + VOLUMÉTRIE 2024
+% ============================================================
+
+\begin{sidewaystable}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{
+p{5.2cm}
+p{2.6cm}
+p{1.8cm}
+p{1.8cm}
+>{\centering\arraybackslash}p{2.0cm}
+>{\centering\arraybackslash}p{2.2cm}
+>{\centering\arraybackslash}p{3.0cm}
+}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Type de séance} &
+\textbf{DP / DR / DAS} &
+\textbf{GHM} &
+\textbf{GHS} &
+\textbf{Tarif 2025} &
+\textbf{Volume 2024} &
+\textbf{Recette 2024} \\
+\midrule
+
+Fibrose / MASLD &
+K74.0 / K76.0 \newline DAS comorbidités majeures &
+07M08T & 2538 & 1\,238~€ & 41 & 50\,758~€ \\
+
+CHC / tumeur maligne &
+C22.0 \newline DAS comorbidités &
+07M06T & 2528 & 1\,061~€ & 23 & 24\,403~€ \\
+
+Cirrhose alcoolique &
+K70.2 &
+07M07T & 2533 & 840~€ & 5 & 4\,200~€ \\
+
+HAI / tumeur bénigne &
+K75.4 / D13.4 &
+07M04T & 2523 & 919~€ & 35 & 32\,165~€ \\
+
+Normale ou histologie\\non disponible &
+R93.2 &
+07M14T & 2559 & 603~€ & 144 & 86\,832~€ \\
+
+\midrule
+\textbf{TOTAL} & -- & -- & -- & -- & \textbf{248} & \textbf{198\,358~€} \\
+\bottomrule
+\end{tabular}
+
+\caption{Panorama PBH HDJ — Codage, volumétrie et recettes (2024)}
+\end{sidewaystable}
+
+\clearpage
+
+% ============================================================
+% TRACABILITÉ
+% ============================================================
+
+\subsection{Traçabilité minimale}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{5cm} p{9cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Intervention} & \textbf{Traçabilité requise} \\
+\midrule
+Biopsie hépatique &
+Fiche d’acte, repérage échographique, nombre de carottes, longueur, calibre \\
+Surveillance spécialisée &
+Feuille pluri-horaire (6h), douleur, tension, saignement local \\
+Entretien médical &
+Indication, consentement, comorbidités, risque hémorragique \\
+Examens complémentaires &
+Imageries et bilans pré-biopsie \\
+Coordination &
+Compte-rendu structuré, consignes, liaison ville–hôpital \\
+\bottomrule
+\end{tabular}
+
+\caption{Traçabilité — PBH en HDJ}
+\end{table}
+
+\clearpage
+
+% ============================================================
+% PROJECTIONS D’ACTIVITÉ
+% ============================================================
+
+\subsection{Projections d’activité et recettes prévisionnelles}
+
+\noindent Référence 2024 : \textbf{248 PBH}, soit \textbf{198\,400~€} (tarif moyen 800~€). \\
+Hypothèse de croissance : \textbf{+25 actes / an}. \\
+Tarif moyen stable : \textbf{800~€ / séance}.
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.20}
+\rowcolors{2}{APHPsoft}{white}
+\begin{tabular}{
+p{4.3cm}
+>{\centering\arraybackslash}p{2.2cm}
+>{\centering\arraybackslash}p{2.3cm}
+>{\centering\arraybackslash}p{3.0cm}
+}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Phase} & \textbf{Volume estimé} & \textbf{Tarif moyen} & \textbf{Recette brute} \\
+\midrule
+Amorce        & 273 & 800~€ & 218\,400~€ \\
+Montée        & 298 & 800~€ & 238\,400~€ \\
+Croisière     & 323 & 800~€ & 258\,400~€ \\
+\bottomrule
+\end{tabular}
+\caption{Projections d’activité et recettes prévisionnelles — PBH HDJ (à partir de 2024)}
+\end{table}
+
+
+% ============================================================
+% CONCLUSION
+% ============================================================
+
+\subsection{Conclusion}
+
+La biopsie hépatique en Hôpital de Jour s’intègre dans un parcours sécurisé et standardisé, essentiel pour la prise en charge des maladies hépatiques rares, des toxicités médicamenteuses complexes et des programmes thérapeutiques nécessitant une évaluation histologique. Elle constitue un outil majeur pour la décision clinique et la stratification pronostique.
+
+\clearpage
+
+% ============================================================
+% VALIDATION
+% ============================================================
+
+\begin{center}
+\begin{tabular}{p{4cm} p{7cm} p{4cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Date d'envoi} & \textbf{Relecteur} & \textbf{Validation} \\
+\midrule
+03/12/2025 & Pr V.\,Mallet & 07/12/2025 \\
+03/12/2025 & Dr S.\,Bouam & 07/12/2025 \\
+NA & Dr V.\,D'Halluin & NA \\
+NA & Pr R.\,Coriat & NA \\
+
+
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage

@@ -1,0 +1,225 @@
+% ============================================================
+% HÔPITAL DE JOUR — CHIMIOTHÉRAPIE
+% ============================================================
+
+\subsection{Rationnel médical}
+\needspace{8\baselineskip}
+\begin{spacing}{1.30}
+La chimiothérapie intraveineuse des cancers digestifs est aujourd’hui majoritairement administrée en HDJ, conformément aux référentiels organisationnels nationaux. Le document de l’AP–HP dédié à la sécurisation des chimiothérapies injectables et le référentiel organisationnel publié par l’Institut national du cancer (INCa) sur la sécurisation médicamenteuse des patients traités par anticancéreux injectables en hôpital de jour d’oncologie-hématologie définissent l’HDJ comme la modalité privilégiée d’administration des anticancéreux, en raison de son niveau élevé de structuration, de coordination interprofessionnelle et de maîtrise du risque iatrogène \cite{APHP2020, ONC2021,INCa2025_SECUMED}. 
+
+Ce modèle permet la mise en œuvre sécurisée des principaux protocoles utilisés en oncologie digestive (FOLFOX, FOLFIRI, FOLFIRINOX, CAPOX, gemcitabine–platine, immunothérapies, thérapies ciblées injectables), en intégrant une évaluation pré-cycle systématique, le contrôle des toxicités précédentes, la conciliation médicamenteuse, ainsi que la traçabilité complète du processus de préparation, de délivrance et d’administration.
+
+La sélection des patients repose sur leur stabilité clinique (état général compatible, absence de complication aiguë telle qu’occlusion, déshydratation ou sepsis), la faisabilité thérapeutique en ambulatoire (durée d’infusion, absence de nécessité de surveillance prolongée), et des conditions sociales adaptées au retour à domicile. L’usage des pompes externes pour les perfusions prolongées et l’optimisation de la prophylaxie antiémétique et hématologique renforcent encore la sécurité du parcours.
+
+Les données internationales confirment que l’administration ambulatoire des chimiothérapies digestives est sûre lorsque ces filières sont structurées. Les taux de recours non programmés (urgences ou réhospitalisations) varient entre 4 et 20~\%, selon les protocoles et les stades tumoraux, tout en restant maîtrisés dans les équipes spécialisées \cite{Prince2019}. 
+
+L’hôpital de jour de chimiothérapie digestive permet ainsi d’assurer une continuité thérapeutique optimale, de réduire le recours à l’hospitalisation conventionnelle, d’améliorer l’expérience patient (maintien des activités quotidiennes, limitation des déplacements), et de garantir un haut niveau de qualité et de sécurité grâce à l’expertise des équipes pluridisciplinaires, à la standardisation des procédures et à l’existence de circuits d’escalade en cas de complication.
+
+
+\end{spacing}
+\clearpage
+
+% ============================================================
+% OBJECTIFS
+% ============================================================
+
+\subsection{Objectifs}
+\needspace{6\baselineskip}
+\vspace{0.8em}
+\begin{center}
+\fcolorbox{APHPdark}{APHPsoft}{
+\begin{minipage}{0.95\textwidth}
+\vspace{0.9em}
+\begin{itemize}[leftmargin=1.1cm]
+\item sécuriser l’administration ambulatoire des chimiothérapies injectables ;
+\item standardiser l’évaluation pré-cycle et la surveillance immédiate ;
+\item réduire les hospitalisations non programmées liées aux toxicités aiguës ;
+\item optimiser l’organisation du parcours patient et la coordination ville–hôpital ;
+\item améliorer l’expérience patient et la continuité des soins oncologiques.
+\end{itemize}
+\vspace{0.9em}
+\end{minipage}}
+\end{center}
+\bigskip
+
+% ============================================================
+% POPULATION ÉLIGIBLE
+% ============================================================
+
+\subsection{Population éligible}
+\needspace{6\baselineskip}
+\begin{itemize}[leftmargin=1.1cm]
+\item patients en état général compatible (ECOG 0–2), stables cliniquement ;
+\item absence de complication aiguë : fièvre, déshydratation, syndrome tumoral évolutif ;
+\item biologie pré-cycle conforme aux seuils décisionnels du protocole ;
+\item schéma thérapeutique réalisable en ambulatoire (durée compatible, absence de surveillance prolongée) ;
+\item autonomie suffisante et présence d’un accompagnant pour le retour.
+\end{itemize}
+\clearpage
+
+% ============================================================
+% PARCOURS DE SOINS
+% ============================================================
+
+\subsection{Parcours de soins}
+\needspace{8\baselineskip}
+
+\begin{figure}[!ht]
+\centering
+\caption{Parcours patient — HDJ Chimiothérapie}
+\vspace{0.8cm}
+
+\begin{tikzpicture}[
+node distance=1.6cm,
+box/.style={
+    rectangle, rounded corners=3pt,
+    draw=APHPdark, thick,
+    text width=9.0cm,
+    minimum height=1.5cm,
+    align=center, fill=APHPsoft
+}]
+
+\node[box] (tri) {Orientation (oncologie médicale / hématologie / ville)};
+\node[box, below=1.4cm of tri] (etape1) {Évaluation pré-cycle : examen clinique, biologie, consentement, toxicités précédentes};
+\node[box, below=1.4cm of etape1] (etape2) {Administration : prémédication, préparation pharmaceutique, perfusion supervisée};
+\node[box, below=1.4cm of etape2] (etape3) {Surveillance immédiate : constantes, réactions d’hypersensibilité, gestion des NAUS/VOC};
+\node[box, below=1.4cm of etape3] (synth) {Synthèse médicale, éducation thérapeutique, planification du cycle suivant};
+
+\draw[->, thick, APHPdark] (tri) -- (etape1);
+\draw[->, thick, APHPdark] (etape1) -- (etape2);
+\draw[->, thick, APHPdark] (etape2) -- (etape3);
+\draw[->, thick, APHPdark] (etape3) -- (synth);
+
+\end{tikzpicture}
+\end{figure}
+
+\clearpage
+
+
+% ============================================================
+% Organisation et ressources nécessaires
+% ============================================================
+
+\subsection{Organisation}
+\needspace{5\baselineskip}
+
+\begin{itemize}[leftmargin=1.1cm]
+    \item Direction: \textbf{Docteur Anna Pellat}
+    \item Durée : 6-8 heures.
+    \item Lieu : Secteur HDJ — Service de gastroentérologie et d'oncologie digestive.
+    \item Ressources : médecin sénior, infirmier expert/IPA, psychologue/nutritionniste.
+
+\end{itemize}
+    
+\bigskip
+
+% ============================================================
+% CODAGE ET GHS ASSOCIÉS
+% ============================================================
+
+\subsection{Codage et GHS associés}
+
+\medskip
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+\begin{tabular}{p{4.3cm} p{7.3cm} c c c}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Type de séance} & \textbf{DP / DAS} & \textbf{GHM} & \textbf{GHS} & \textbf{Tarif 2025} \\
+\midrule
+Chimiothérapie cytotoxique IV & DP : Cxx.x ; DAS selon comorbidités & 28Z07Z & 9616 & 495~€ \\
+Immunothérapie / Thérapies ciblées & DP : Cxx.x ; DAS pertinents & 28Z17Z & 9616 & 440~€ \\
+Perfusion courte avec surveillance & DP : Cxx.x & 28Z17Z & 9616 & 440~€ \\
+\bottomrule
+\end{tabular}
+\caption{Codage et GHS associés — HDJ Chimiothérapie}
+\end{table}
+
+\bigskip
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+\begin{tabular}{p{5cm} p{9cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Intervention} & \textbf{Traçabilité requise} \\
+\midrule
+Évaluation pré-cycle & Examen clinique, biologie, toxicités CTCAE, décision de poursuite \\
+Administration & Lot des produits, prémédications, incidents, durée d’infusion \\
+Surveillance immédiate & Paramètres vitaux, réactions allergiques, gestion antiémétique \\
+Voie veineuse & État du PAC, complications locales, perméabilité \\
+Synthèse & Tolerance, recommandations, RDV prochain cycle \\
+\bottomrule
+\end{tabular}
+\caption{Traçabilité des interventions — HDJ Chimiothérapie}
+\end{table}
+
+\clearpage
+
+% ============================================================
+% VOLUMÉTRIE DE RÉFÉRENCE
+% ============================================================
+
+\subsection{Volumétrie de référence (année N)}
+
+\noindent Activité HDJ observée : 10 patients/semaine en oncologie digestive, soit environ 520 séances/an.
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Type de séance} & \textbf{Volume N} & \textbf{Tarif unitaire} & \textbf{Recette estimée} \\
+\midrule
+Chimiothérapie cytotoxique & XXX & 612~€ & ZZZZ~€ \\
+Immunothérapie & XXX & 745~€ & ZZZZ~€ \\
+Anticorps monoclonaux (thérapies ciblées IV) & XXX & 489~€ & ZZZZ~€ \\
+\midrule
+\textbf{Total} & \textbf{520} & -- & \textbf{322\,400~€} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
+
+
+\clearpage
+
+% ============================================================
+% PROJECTIONS
+% ============================================================
+
+\subsection{Projections d’activité et recettes prévisionnelles}
+
+\noindent\textbf{Hypothèses.}  
+Montée en charge progressive liée à l’augmentation des indications (immunothérapie, anticorps monoclonaux), optimisation des flux et coordination ville–hôpital. Volume annuel estimé sur la base de 52 semaines/an.
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Phase} & \textbf{Volume (séances/an)} & \textbf{Tarif moyen} & \textbf{Recette brute} \\
+\midrule
+Amorce & 520  & 620~€ & 322\,400~€ \\
+Montée & 780  & 620~€ & 483\,600~€ \\
+Croisière & 1\,040 & 620~€ & 644\,800~€ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
+
+
+\clearpage
+
+% ============================================================
+% CONCLUSION
+% ============================================================
+
+\subsection{Conclusion}
+
+L’hôpital de jour de chimiothérapie constitue un pilier de l’organisation oncologique moderne. Il permet une administration sûre et standardisée des traitements anticancéreux, réduit le recours à l’hospitalisation complète et favorise la qualité de vie des patients. La structuration des parcours — évaluation pré-cycle, gestion des toxicités, surveillance immédiate et coordination avec la ville — assure un haut niveau de sécurité et contribue à l’efficience globale du dispositif de soins.
+
+\clearpage

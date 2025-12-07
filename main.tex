@@ -3,6 +3,8 @@
 % =======================
 % PACKAGES DE BASE
 % =======================
+\usepackage{url}
+\usepackage{xurl} % permet la coupure automatique des longues URL
 \usepackage[french]{babel}
 \usepackage{setspace}
 \usepackage{geometry}
@@ -20,6 +22,12 @@
 \usepackage{needspace}
 \usepackage[table]{xcolor}
 \usepackage{amssymb} % pour \square
+\usepackage{tabularx}
+\usepackage{pdflscape}
+\usepackage{rotating}
+
+
+
 
 % =======================
 % FONT (XeLaTeX)
@@ -66,6 +74,20 @@
     sorting=none,
     useprefix=false
 ]{biblatex}
+
+% Coupure agressive des URL longues dans la bibliographie
+\setcounter{biburlnumpenalty}{1}
+\setcounter{biburlucpenalty}{1}
+\setcounter{biburllcpenalty}{1}
+
+% Style des URL plus compact
+\renewcommand*{\UrlFont}{\small\ttfamily}
+
+% Forcer les URL à se mettre sur une nouvelle ligne si nécessaire
+\DeclareFieldFormat{url}{\newline\url{#1}}
+
+% Empêche les débordements dans les références longues
+\AtBeginBibliography{\sloppy}
 
 \DeclareNameAlias{default}{family-given}
 \DeclareNameAlias{sortname}{family-given}
@@ -154,35 +176,35 @@ Document de Travail — Version 1}
 
 
 % ===============================================
-% CHAPITRE 1: Evaluation de la Fibrose Hépatiaque
+% CHAPITRE 1: PBH
 % ===============================================
 \clearpage
-\section{HDJ Biopsies du Foie}
+\section{HDJ PBH}
 
 \begin{refsection}
-\input{hdj/fiche_hdj_pbh}
+\input{hdj/1_fiche_hdj_pbh}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 
-% ============================
+% ======================================
 % CHAPITRE 2: Evaluation des Cirrhoses
-% ============================
+% ======================================
 \clearpage
 \section{HDJ Evaluation des Cirrhoses}
 
 \begin{refsection}
-\input{hdj/fiche_hdj_evalutation_cirrhoses}
+\input{hdj/2_fiche_hdj_evalutation_cirrhoses}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 
-% ============================
+% ======================================================
 % CHAPITRE 3: Prise en Charge des Cirrhoses Terminales
-% ============================
+% ======================================================
 \clearpage
-\section{HDJ Cirrhoses Terminales}
+\section{HDJ Traitement des Cirrhoses Terminales}
 
 \begin{refsection}
-\input{hdj/fiche_hdj_cirrhose_terminale}
+\input{hdj/3_fiche_hdj_cirrhose_terminale}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 
@@ -190,54 +212,55 @@ Document de Travail — Version 1}
 % CHAPITRE 4: Hépatométabolique
 % ============================
 \clearpage
-\section{HDJ Maladies du Foie Métaboliques}
+\section{HDJ Hépatométabolique}
 
 \begin{refsection}
-\input{hdj/fiche_hdj_hepatometabolique}
+\input{hdj/4_fiche_hdj_hepatometabolique}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 
 % ============================
-% CHAPITRE 5: MICI
+% CHAPITRE 5: Addictologie
+% ============================
+\clearpage
+\section{HDJ Addictologie}
+
+\begin{refsection}
+\input{hdj/5_fiche_hdj_addictologie}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+% ============================
+% CHAPITRE 6: MICI
 % ============================
 \clearpage
 \section{HDJ MICI}
 
 \begin{refsection}
-\input{hdj/fiche_hdj_mici}
+\input{hdj/6_fiche_hdj_mici}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 
-% ============================
-% CHAPITRE 6: Addictologie
-% ============================
+
+% ========================================
+% CHAPITRE 7: Chimiothérapies des Cancers
+% ========================================
 \clearpage
-\section{Hôpital de Jour Addictologie}
+\section{HDJ Chimiothérapie des Cancers Digestifs}
 
 \begin{refsection}
-\input{hdj/fiche_hdj_addictologie}
+\input{hdj/7_fiche_hdj_chimiotherapies}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 
 % ==========================================
-% CHAPITRE 7: Radiologie Interventionnelles
+% CHAPITRE 8: Radiologie Interventionnelles
 % ==========================================
 \clearpage
-\section{Hôpital de Jour\\Radiologie Interventionnelle}
+\section{HDJ Radiologie Interventionnelle}
 
 \begin{refsection}
-\input{}
-\printbibliography[heading=subbibliography,title={Références}]
-\end{refsection}
-
-% ========================================
-% CHAPITRE 8: Chimiothérapies des Cancers
-% ========================================
-\clearpage
-\section{Hôpital de Jour\\Chimiothérapie des Cancers}
-
-\begin{refsection}
-\input{hdj/fiche_hdj_mici}
+\input{hdj/8_fiche_hdj_radiologie_interventionnelle}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 

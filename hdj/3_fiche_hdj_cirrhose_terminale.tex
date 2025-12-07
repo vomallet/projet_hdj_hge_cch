@@ -111,9 +111,9 @@ La structuration d’un HDJ dédié permet d’assurer ces prises en charge dans
 \needspace{8\baselineskip}
 
 \noindent\textbf{Cadre général.}  
-DP : ascite ou complication de cirrhose (R18, K76.6).  
-Albumine et fer injectable relèvent de la réserve hospitalière (instruction DGOS 10/09/2020).  
-GHM identique pour ponction, fer IV, CGR (07M14T).
+Codage conforme aux avis DIM 2024–2025.  
+Les actes d’albumine et de fer injectable relèvent de la réserve hospitalière (Z512).  
+Les hémogrammes post-transfusion nécessitent un codage distinct (Z5130).
 
 \medskip
 
@@ -122,50 +122,46 @@ GHM identique pour ponction, fer IV, CGR (07M14T).
 \renewcommand{\arraystretch}{1.25}
 \rowcolors{2}{APHPsoft}{white}
 
-\begin{tabular}{p{4.3cm} p{7.3cm} c c c}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.8cm} 
+                                >{\raggedright\arraybackslash}X 
+                                >{\centering\arraybackslash}p{1.8cm}
+                                >{\centering\arraybackslash}p{1.8cm}
+                                >{\centering\arraybackslash}p{2cm}}
 \toprule
 \rowcolor{APHPsoft}
-\textbf{Type de séance} &
-\textbf{DP / DR / DAS} &
-\textbf{GHM} &
-\textbf{GHS} &
-\textbf{Tarif 2025} \\
+\textbf{Type de séance} & \textbf{DP / DR / DAS} & \textbf{GHM} & \textbf{GHS} & \textbf{Tarif 2025} \\
 \midrule
 
 Ponction d’ascite + albumine &
-DP : R18 (Ascite) \newline
+DP : R18 (ascite) \newline
 DAS : K74.6, K76.6, ±N17.x, ±E87.1 &
-07M14T &
-2559 &
-603~€ \\
+07M14T & 2559 & 603~€ \\
 
 Séance d’albumine seule &
-DR : Z512 (Produit réserve) \newline
-DP : R18 ou K76.6 &
-28Z17Z &
-9616 &
-440~€ \\
+DP : Z512 (réserve) \newline
+DR : R18 ou K76.6 &
+28Z17Z & 9616 & 440~€ \\
 
 Fer injectable (anémie HTP) &
-DP : D50.9 ou D64.9 \newline
+DP : Z512 \newline
+DR : D50.8 ou D64.9 \newline
 DAS : K74.6, K76.6 &
-07M14T &
-2559 &
-603~€ \\
+28Z17Z & 9616 & 440~€ \\
 
 Transfusion de CGR &
-DP : D50.9 ou D62 \newline
+DP : Z5130 \newline
+DR : D50.8 ou D62 \newline
 DAS : K74.6, K76.6 &
-07M14T &
-2559 &
-603~€ \\
+28Z14Z & 9613 & 791~€ \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 
-\caption{Codage et GHS associés — HDJ Cirrhose avancée}
+\caption{Codage et GHS associés — HDJ Cirrhoses Terminales}
 \end{table}
 
+
 \clearpage
+
 
 % ============================================================
 % TRACABILITÉ
@@ -185,32 +181,49 @@ DAS : K74.6, K76.6 &
 \midrule
 
 Ponction d’ascite (HPHB003) &
-Fiche CCAM ; note dédiée ; volume évacué ; surveillance hémodynamique \\
+Fiche CCAM ; volume évacué ; repérage écho ; surveillance 4~h ; douleur ; hypotension ; biologie pré-acte \\
 
 Perfusion d’albumine &
-Prescription ; lot ; volume ; tolérance ; feuille de suivi \\
+Prescription ; indication ; traçabilité du lot ; volume perfusé ; surveillance hémodynamique \\
 
 Fer injectable &
-Traçabilité du lot ; fiche perfusion ; surveillance post-acte \\
+Indication (anémie HTP) ; traçabilité lot ; protocole perfusion ; surveillance immédiate et retardée \\
 
 Transfusion de CGR &
-Traçabilité PSL ; fiche transfusionnelle ; surveillance renforcée \\
+Traçabilité PSL ; groupage ; concordance ; surveillance renforcée ; incidents transfusionnels \\
 
 Entretien médical &
-Note dédiée (risque AKI/HRS, justification du geste) \\
+Justification ; risque HRS/AKI ; bilan clinique ; adaptation thérapeutique \\
 
 Surveillance spécialisée &
-Grille HDJ (constantes, neurologique, tolérance) \\
+Constantes ; EVA douleur ; hémodynamique ; reins ; drainage post-ponction \\
 
 Coordination / éducation &
-Note d’éducation ou fiche de liaison ville–hôpital \\
+Fiche de liaison ville–hôpital ; conseils HTP ; éducation sur signes d’alerte \\
 \bottomrule
 \end{tabular}
 
-\caption{Traçabilité — HDJ Cirrhose avancée}
+\caption{Traçabilité — HDJ Cirrhose terminale}
 \end{table}
 
 \clearpage
+
+% ============================================================
+% Organisation et ressources nécessaires
+% ============================================================
+
+\subsection{Organisation}
+\needspace{5\baselineskip}
+
+\begin{itemize}[leftmargin=1.1cm]
+    \item Direction: \textbf{Docteur Valérie D'Halluin-Venier}
+    \item Durée : 3--4 heures.
+    \item Lieu : Secteur HDJ — Service des maladies du foie.
+    \item Ressources : médecin sénior, infirmier expert/IPA, diététicien(ne), psychologue/addictologue.
+
+\end{itemize}
+
+\bigskip
 
 % ============================================================
 % VOLUMÉTRIE 2024 (RÉFÉRENCE)
@@ -225,15 +238,16 @@ Note d’éducation ou fiche de liaison ville–hôpital \\
 \midrule
 Ponction d’ascite + albumine & 139 & 603~€ & 83\,817~€ \\
 Séance d’albumine seule      & 16  & 440~€ & 7\,040~€ \\
-Fer injectable               & 109 & 603~€ & 65\,627~€ \\
-Transfusion de CGR           & 13  & 603~€ & 7\,839~€ \\
+Fer injectable               & 109 & 440~€ & 47\,960~€ \\
+Transfusion de CGR           & 13  & 791~€ & 10\,283~€ \\
 \midrule
-\textbf{Total}               & \textbf{277} & -- & \textbf{\textasciitilde164\,300~€} \\ 
+\textbf{Total}               & \textbf{277} & -- & \textbf{\textasciitilde149\,100~€} \\ 
 \bottomrule
 \end{tabular}
 \end{center}
 
 \clearpage
+
 
 % ============================================================
 % PROJECTIONS D’ACTIVITÉ
@@ -241,21 +255,24 @@ Transfusion de CGR           & 13  & 603~€ & 7\,839~€ \\
 
 \subsection{Projections d’activité et recettes prévisionnelles}
 
-\noindent Basé sur un tarif moyen pondéré 2024 : \textbf{\textasciitilde590 € / séance}.
+\noindent Basé sur un tarif moyen pondéré : \textbf{\textasciitilde540 € / séance}.  
+Hypothèse : \textbf{+50 patients par pallier} à partir de la volumétrie 2024 (277 actes).
 
 \begin{center}
 \begin{tabular}{lccc}
 \toprule
 \textbf{Année} & \textbf{Volume estimé} & \textbf{Tarif moyen} & \textbf{Recette brute estimée} \\
 \midrule
-2026 & 300--320 & 590~€ & 177\,000--189\,000~€ \\
-2027 & 350--400 & 590~€ & 206\,500--236\,000~€ \\
-2028 & 400--450 & 590~€ & 236\,000--265\,500~€ \\
+Amorce    & 327 & 540~€ & 176\,580~€ \\
+Montée    & 377 & 540~€ & 203\,580~€ \\
+Croisière & 427 & 540~€ & 230\,580~€ \\
 \bottomrule
 \end{tabular}
 \end{center}
 
 \clearpage
+
+
 
 % ============================================================
 % CONCLUSION
@@ -266,4 +283,23 @@ Transfusion de CGR           & 13  & 603~€ & 7\,839~€ \\
 
 Les HDJ dédiés à la cirrhose avancée offrent un cadre structuré pour les interventions indispensables à la stabilisation des patients les plus fragiles. En rassemblant ponctions d’ascite, albumine, fer injectable et transfusions dans un parcours sécurisé et standardisé, ils contribuent à réduire les hospitalisations évitables, à prévenir les décompensations sévères et à optimiser la continuité des soins entre ville, urgences et hépatologie.
 
+% ============================================================
+% VALIDATION
+% ============================================================
+
+\begin{center}
+\begin{tabular}{p{4cm} p{7cm} p{4cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Date d'envoie} & \textbf{Nom du relecteur} & \textbf{Date de validation} \\
+\midrule
+03/12/2025 & Pr V.\,Mallet & 03/12/2025 \\
+03/12/2025 & Dr S.\,Bouam & NA \\
+03/12/2025 & Dr V.\,D'Halluin & NA \\
+NA & Pr R.\,Coriat & NA \\
+\bottomrule
+\end{tabular}
+\end{center}
+
 \clearpage
+

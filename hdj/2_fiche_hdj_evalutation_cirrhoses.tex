@@ -1,0 +1,295 @@
+% ============================================================
+% HÔPITAL DE JOUR — ÉVALUATION DES CIRRHOSES ET HTP CLINIQUE
+% ============================================================
+
+\subsection{Rationnel médical}
+\needspace{8\baselineskip}
+
+\begin{spacing}{1.28}
+
+L’incidence des cirrhoses continue de progresser en Europe, portée par l’augmentation des hépatopathies métaboliques (MASLD), du diabète de type 2, de l’obésité et de la consommation d’alcool. La prévalence des formes compensées croît en moyenne de 3 à 5\,\% par an \cite{EASL_DecompCirrhosis_2018}. En France, les données PMSI et SNDS confirment également une hausse régulière des hospitalisations liées aux maladies hépatiques chroniques \cite{RN597}.
+
+L’évolution de la fibrose vers la cirrhose s’accompagne d’une élévation du gradient porto-systémique (HVPG). Une valeur $>$\,10\,mmHg définit l’hypertension portale cliniquement significative (CSPH), étape pivot à partir de laquelle survient la première décompensation \cite{EASL_DecompCirrhosis_2018}. Les recommandations de Baveno\,VII permettent d’identifier la CSPH par des critères non invasifs :
+\begin{itemize}
+  \item élasticité hépatique (LSM) $\geq 25$\,kPa, ou
+  \item LSM de 20--25\,kPa avec plaquettes $<$\,150\,G/L \cite{RN597}.
+\end{itemize}
+
+Chez ces patients, l’introduction précoce d’un bêtabloquant non sélectif (carvédilol) réduit l’HVPG, prévient la première décompensation et améliore la survie, y compris en l’absence de varices œsophagiennes.
+
+Plusieurs facteurs aggravants doivent être systématiquement évalués :
+\begin{itemize}
+  \item consommation d’alcool ; l’abstinence améliore la survie \cite{Loomba_AlcoholAbstinence_2020,Addolorato_AlcoholCirrhosis_2016} ;
+  \item sarcopénie (30--70\,\%) \cite{Tantai_Sarcopenia_2022} ;
+  \item dénutrition, risque infectieux et complications extra-hépatiques.
+\end{itemize}
+
+L’évaluation annuelle d’une cirrhose compensée avancée requiert une approche multidimensionnelle combinant LSM hépato-splénique, imagerie, évaluation nutritionnelle et psychologique/addictologique, bilan vaccinal et décision endoscopique selon Baveno\,VII.
+
+Un HDJ dédié permet de regrouper ces évaluations en une séance unique, standardisée et conforme aux recommandations tout en garantissant la réalisation d’au moins trois interventions valorisantes.
+
+\end{spacing}
+
+\clearpage
+
+% ============================================================
+% OBJECTIFS
+% ============================================================
+
+\subsection{Objectifs}
+\needspace{6\baselineskip}
+
+\begin{center}
+\fcolorbox{APHPdark}{APHPsoft}{
+\begin{minipage}{0.95\textwidth}
+\vspace{0.9em}
+
+\begin{itemize}[leftmargin=1cm]
+  \item identifier la CSPH par critères non invasifs (Baveno\,VII) ;
+  \item concentrer en une séance l’ensemble des évaluations clés : LSM, échographie, nutrition, psychologue/addictologue ;
+  \item initier ou ajuster le carvédilol en conditions sécurisées ;
+  \item structurer un parcours annuel de prévention (HTP, alcool, sarcopénie) ;
+  \item actualiser le statut vaccinal ;
+  \item produire une synthèse médicale facilitant la coordination ville–hôpital.
+\end{itemize}
+
+\vspace{0.9em}
+\end{minipage}}
+\end{center}
+
+\clearpage
+
+% ============================================================
+% POPULATION ÉLIGIBLE
+% ============================================================
+
+\subsection{Population éligible}
+\needspace{6\baselineskip}
+
+\begin{itemize}[leftmargin=1cm]
+  \item cirrhose compensée (Child\,A) ou stabilité post-décompensation ;
+  \item LSM $\geq$\,15\,kPa, thrombopénie $<$\,150\,G/L ou facteurs de risque de CSPH ;
+  \item consommation d’alcool active ou récente ;
+  \item sarcopénie ou risque nutritionnel ;
+  \item besoin d’une requalification annuelle selon Baveno\,VII.
+\end{itemize}
+
+\clearpage
+
+% ============================================================
+% PARCOURS DE SOINS
+% ============================================================
+
+\subsection{Parcours de soins}
+\needspace{8\baselineskip}
+
+\begin{figure}[!ht]
+\centering
+\caption{Parcours patient — HDJ cirrhose / HTP clinique}
+\vspace{0.7cm}
+
+\begin{tikzpicture}[
+    node distance=1.5cm,
+    box/.style={
+        rectangle,
+        rounded corners=3pt,
+        draw=APHPdark,
+        thick,
+        text width=9cm,
+        minimum height=1.4cm,
+        align=center,
+        fill=APHPsoft
+    }
+]
+
+\node[box] (tri) {Orientation vers l’HDJ : hépatologie, ville, MCO};
+\node[box, below=1.3cm of tri] (e1) {Évaluation initiale : LSM hépato-splénique, biologie, plaquettes};
+\node[box, below=1.3cm of e1] (e2) {Échographie hépatique, évaluation nutritionnelle, psychologue/addictologue, vaccinations};
+\node[box, below=1.3cm of e2] (e3) {Décisions : indication FOGD (Baveno\,VII), initiation du carvédilol si LSM $\geq 25$\,kPa};
+\node[box, below=1.3cm of e3] (syn) {Synthèse médicale structurée et plan annuel};
+
+\draw[->, thick, APHPdark] (tri) -- (e1);
+\draw[->, thick, APHPdark] (e1) -- (e2);
+\draw[->, thick, APHPdark] (e2) -- (e3);
+\draw[->, thick, APHPdark] (e3) -- (syn);
+
+\end{tikzpicture}
+\end{figure}
+
+\clearpage
+
+% ============================================================
+% CODAGE ET GHS ASSOCIÉS
+% ============================================================
+
+\subsection{Codage et GHS associés}
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.20}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{4.6cm} p{6.8cm} c c c}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Type de séance} & \textbf{DP / DR / DAS} & \textbf{GHM} & \textbf{GHS} & \textbf{Tarif} \\
+\midrule
+Évaluation complète (≥4) & 
+DP: Z098\newline DR: K74.6\newline DAS: R18, K76.6, E44.x, F10.x &
+07M13Z & 9616 & 941~€ \\
+
+Évaluation complète (=3) & 
+DP: Z098\newline DR: K74.6\newline DAS: R18, K76.6, E44.x, F10.x &
+07M13Z & 9616 & 420~€ \\
+
+LSM + échographie (≥4) &
+DP: Z098\newline DR: K74.6\newline DAS: R16.1, K76.6, R18 &
+07M13Z & 9616 & 941~€ \\
+
+LSM + échographie (=3) &
+DP: Z098\newline DR: K74.6\newline DAS: R16.1, K76.6, R18 &
+07M13Z & 9616 & 420~€ \\
+
+Nutrition + psychologue (≥4) &
+DP: Z098\newline DR: K74.6\newline DAS: E43--E46, F10.x, R18 &
+07M13Z & 9613 & 941~€ \\
+
+Nutrition + psychologue (=3) &
+DP: Z098\newline DR: K74.6\newline DAS: E43--E46, F10.x, R18 &
+07M13Z & 9613 & 420~€ \\
+\bottomrule
+\end{tabular}
+
+\caption{Codage et GHS associés — HDJ cirrhose}
+\end{table}
+
+\clearpage
+
+
+% ============================================================
+% TRACABILITÉ
+% ============================================================
+\needspace{8\baselineskip}   
+\subsection{Traçabilité minimale}
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.20}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{p{4.5cm} p{8.1cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Intervention} & \textbf{Éléments requis} \\
+\midrule
+LSM hépato-splénique & Critères qualité, IQR/med, validation, seuils Baveno~VII, message décisionnel \\
+Échographie hépatique & CHC, HTP, flux portal, signes indirects, mesure splénique \\
+Nutrition / sarcopénie & IMC, perte pondérale, dynamométrie, plan nutritionnel \\
+Psychologie / alcool & Évaluation motivationnelle, repérage, orientation \\
+FOGD & Indications Baveno~VII, résultats, calendrier \\
+Décision carvédilol & Dose initiale, titration, objectifs tensionnels, suivi IDE \\
+Vaccinations & Pneumocoque, grippe, COVID, VHA/VHB \\
+Synthèse médicale & Classification Baveno, plan thérapeutique, coordination \\
+\bottomrule
+\end{tabular}
+
+\caption{Traçabilité — HDJ cirrhose}
+\end{table}
+
+\clearpage
+
+% ============================================================
+% Organisation
+% ============================================================
+
+\subsection{Organisation}
+\needspace{5\baselineskip}
+
+\begin{itemize}[leftmargin=1.1cm]
+  \item Direction : \textbf{Dr Lucia Parlati}
+  \item Durée : 3--4~heures
+  \item Lieu : Secteur HDJ — Service des maladies du foie
+  \item Ressources : médecin sénior, infirmier expert/IPA, diététicien(ne), psychologue/addictologue
+\end{itemize}
+
+\clearpage
+
+% ============================================================
+% VOLUMÉTRIE DE RÉFÉRENCE
+% ============================================================
+
+\subsection{Volumétrie de référence}
+\needspace{6\baselineskip}
+
+\noindent File active annuelle : 7\,500 patients.  
+Prévalence estimée de la cirrhose : 21\,\% → \textbf{1\,575 patients}.  
+Taux de recours HDJ cible : \textbf{40\,\%} → environ \textbf{630 séances/an}.
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Séance} & \textbf{Volume} & \textbf{Tarif moyen} & \textbf{Recette annuelle} \\
+\midrule
+Évaluation complète (≥3–4 interv.) & 190 & 690~€ & 131\,000~€ \\
+LSM + échographie                    & 285 & 690~€ & 197\,000~€ \\
+Nutrition + psychologue              & 155 & 690~€ & 107\,000~€ \\
+\midrule
+\textbf{Total}                       & \textbf{630} & -- & \textbf{435\,000~€} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
+
+% ============================================================
+% PROJECTIONS
+% ============================================================
+
+\subsection{Projections d’activité}
+\needspace{6\baselineskip}
+
+\noindent Hypothèse : progression du recours HDJ de 40\,\% à 60\,\% de la file active.
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Année} & \textbf{Volume estimé} & \textbf{Tarif moyen} & \textbf{Recette brute} \\
+\midrule
+Amorce   & 630 & 690~€ & 435\,000~€ \\
+Montée   & 790 & 690~€ & 545\,000~€ \\
+Croisière & 945 & 690~€ & 652\,000~€ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
+
+% ============================================================
+% Conclusion
+% ============================================================
+
+\subsection{Conclusion}
+
+L’HDJ dédié à l’évaluation des cirrhoses offre une organisation intégrée, conforme à Baveno\,VII, regroupant LSM, imagerie, évaluation nutritionnelle, repérage addictologique et initiation du carvédilol lorsque indiqué. Cette approche coordonnée renforce la prévention des décompensations, améliore la qualité du dépistage du CHC et fluidifie les parcours entre l’hépatologie et la médecine de ville.
+
+\clearpage
+
+% ============================================================
+% VALIDATION
+% ============================================================
+
+\begin{center}
+\begin{tabular}{p{4cm} p{7cm} p{4cm}}
+\toprule
+\rowcolor{APHPsoft}
+\textbf{Date} & \textbf{Relecteur} & \textbf{Validation} \\
+\midrule
+
+03/12/2025   & Pr V.\,Mallet  & 03/12/2025 \\
+NA           & Dr L.\,Parlati  & NA \\
+03/12/2025   & Dr S.\,Bouam   & NA \\
+NA           & Pr R.\,Coriat  & NA \\
+
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
