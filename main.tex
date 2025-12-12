@@ -163,6 +163,19 @@ Document de Travail — Version 1}
 \tableofcontents
 \newpage
 
+
+% ==========================================
+% CHAPITRE X: Conclusion Générale
+% ==========================================
+\clearpage
+\section{Executive Summary}
+
+\begin{refsection}
+\input{e_summary}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+
 % ===============================================
 % CHAPITRE 0: Introduction
 % ===============================================
@@ -264,6 +277,18 @@ Document de Travail — Version 1}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 
+% ==========================================
+% CHAPITRE X: Conclusion Générale
+% ==========================================
+\clearpage
+\section{Conclusion Générale}
+
+\begin{refsection}
+\input{conclusion}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+
 % ================================
 % ANNEXES A — Hépatométabolique
 % ================================
@@ -273,39 +298,73 @@ Document de Travail — Version 1}
 \setcounter{section}{0}
 
 \section{Grille échographique MASLD}
+\label{sec:annexe_echo}
 \addcontentsline{toc}{section}{Annexe A.1 — Grille échographique MASLD}
 \input{annexes/grille_echo_masld}
-\clearpage
+
 
 \section{Grille diététique MASLD}
+\label{sec:annexe_diete}
 \addcontentsline{toc}{section}{Annexe A.2 — Grille diététique MASLD}
 \input{annexes/grille_dietetique_masld}
-\clearpage
+
 
 \section{Grille psychologique / addictologique MASLD}
+\label{sec:annexe_psy}
 \addcontentsline{toc}{section}{Annexe A.3 — Grille psy / addictologie MASLD}
 \input{annexes/grille_psy_masld}
-\clearpage
+
 
 % ============================================
-% ANNEXES B — Cirrhose avancée (à compléter)
+% ANNEXES B — Cirrhose avancée
 % ============================================
 \renewcommand{\thesection}{B.\arabic{section}}
 \setcounter{section}{0}
 
-\section{Fiche HDJ — Ponction d’ascite + albumine}
+% --- B.1 Ponction d’ascite + albumine ---
+\section{Fiche HDJ — Ponction d’ascite + perfusion d’albumine}
+\label{sec:annexe_ascite}
 \addcontentsline{toc}{section}{Annexe B.1 — Ponction d’ascite + albumine}
 \input{annexes/ponction_ascite_perfusion_albumine}
-\clearpage
 
+% --- B.2 Fer injectable ---
 \section{Fiche HDJ — Fer injectable}
+\label{sec:annexe_fer}
 \addcontentsline{toc}{section}{Annexe B.2 — Fer injectable}
 \input{annexes/fer_injectable}
-\clearpage
 
+% --- B.3 Transfusion de CGR ---
 \section{Fiche HDJ — Transfusion de CGR}
+\label{sec:annexe_cgr}
 \addcontentsline{toc}{section}{Annexe B.3 — Transfusion de CGR}
 \input{annexes/transfusion_sanguine}
+
+% ================================
+% ANNEXES C — Addictologie
+% ================================
 \clearpage
+\renewcommand{\thesection}{C.\arabic{section}}
+\setcounter{section}{0}
+
+\section{Grille d’évaluation somatique–addictologique}
+\addcontentsline{toc}{section}{Annexe C.1 — Grille d’évaluation somatique–addictologique}
+\input{annexes/annexe_activites_addictologie}
+
+\section{Grille des programmes de médiation}
+\addcontentsline{toc}{section}{Annexe C.2 — Grille des médiations addictologie}
+\input{annexes/annexe_fiche_traçabilite}
+
+% ================================
+% ANNEXES D — Addictologie
+% ================================
+\clearpage
+\renewcommand{\thesection}{C.\arabic{section}}
+\setcounter{section}{0}
+
+\section{Fiche évaluation des cirrhoses}
+\addcontentsline{toc}{section}{Annexe D.1 — Fiche évaluation des cirrhoses}
+\input{annexes/evaluation_des_cirrhoses}
+
 
 \end{document}
+

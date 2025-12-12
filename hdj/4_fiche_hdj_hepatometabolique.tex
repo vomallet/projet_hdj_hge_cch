@@ -3,6 +3,8 @@
 % ============================================================
 
 \subsection{Rationnel médical}
+\setcounter{table}{0}
+\setcounter{figure}{0}
 \needspace{8\baselineskip}
 
 \begin{spacing}{1.30}
@@ -13,21 +15,17 @@ L’augmentation rapide de l’obésité, du diabète de type 2 (DT2) et des mal
 
 En France, 3{,}5 à 4 millions de personnes vivent avec un DT2 selon les données récentes de Santé publique France et de l’Assurance Maladie (SNDS) \cite{SPF2021Diabete}. Cette population représente un réservoir important de patients susceptibles d’évoluer vers une maladie hépatique avancée, avec un impact croissant sur les parcours de soins et les capacités hospitalières.
 
-% \medskip
-
-% L’identification précoce des formes avancées reste difficile : les complications sévères sont rares à l’échelle populationnelle, ce qui nécessite un repérage ciblé et structuré. Dans la cohorte DT2 de l’Entrepôt de Données de Santé (EDS) de l’AP-HP (77\,368 patients), l’incidence annuelle des événements hépatiques graves n’est que de 1{,}31 pour 1\,000 patients-années.
-
 \medskip
 
 Pourtant, des interventions simples et peu coûteuses — réduction de la consommation d’alcool, perte pondérale modérée, amélioration de la qualité alimentaire — démontrent un impact tangible sur l’évolution de la maladie \cite{RN597}. Leur efficacité dépend cependant d’un repérage précoce et d’une organisation lisible du parcours.
 
 \medskip
 
-L’arrivée de nouvelles thérapeutiques (agonistes du GLP-1, resmétirom et autres agents en développement) renforce la nécessité d’un dispositif capable d’identifier, évaluer et suivre précocement les patients éligibles, tout en garantissant l’appropriation des recommandations sur le territoire.
+L’arrivée de nouvelles thérapeutiques (agonistes du GLP-1, resmétirom et autres agents en développement) renforce la nécessité d’un dispositif capable d’identifier, d’évaluer et de suivre précocement les patients éligibles, tout en garantissant l’appropriation des recommandations sur le territoire.
 
 \medskip
 
-Dans ce contexte, des outils simples et robustes de stratification sont indispensables. Les biomarqueurs non invasifs constituent désormais la base du tri diagnostique dans la population DT2. Le score FIB-4, largement disponible dans les logiciels médicaux et recommandé par les sociétés savantes, permet d’exclure efficacement les formes avancées et d’orienter les patients présentant un FIB-4 $\geq$ 1{,}3 vers une évaluation spécialisée (élastométrie, imagerie) \cite{RN597,EASL2024MASLD} .
+Dans ce contexte, des outils simples et robustes de stratification sont indispensables. Les biomarqueurs non invasifs constituent désormais la base du tri diagnostique dans la population DT2. Le score FIB-4, largement disponible dans les logiciels médicaux et recommandé par les sociétés savantes, permet d’exclure efficacement les formes avancées et d’orienter les patients présentant un FIB-4 $\geq$ 1{,}3 vers une évaluation spécialisée (élastométrie, imagerie) \cite{RN597,EASL2024MASLD}.
 
 \medskip
 
@@ -89,7 +87,7 @@ Dans ce cadre, la création d’un Hôpital de Jour hépatométabolique répond 
 
 \begin{figure}[!ht]
 \centering
-\caption{Parcours patient — HDJ Hépatométabolique}
+\caption{Parcours patient — HDJ Hépatométabolique\footnotemark}
 \vspace{0.8cm}
 
 \begin{tikzpicture}[
@@ -100,11 +98,12 @@ Dans ce cadre, la création d’un Hôpital de Jour hépatométabolique répond 
         draw=APHPdark,
         thick,
         text width=9.0cm,
-        minimum height=1.2cm,
+        minimum height=1.35cm,
         align=center,
         fill=APHPsoft
     }
 ]
+
 \node[box] (tri) {Tri initial \\ FIB-4 $\geq$ 1{,}3};
 \node[box, below=1.4cm of tri] (entree) {Entrée en HDJ hépatométabolique};
 \node[box, below=1.4cm of entree] (echo) {Échographie abdominale + Doppler};
@@ -123,86 +122,98 @@ Dans ce cadre, la création d’un Hôpital de Jour hépatométabolique répond 
 \end{tikzpicture}
 \end{figure}
 
+\footnotetext{
+\textbf{FIB-4} : Fibrosis-4 Index ; 
+\textbf{HDJ} : hôpital de jour ; 
+\textbf{TCA} : troubles du comportement alimentaire.
+}
+
 \clearpage
 
+
 % ============================================================
-% Organisation et ressources nécessaires
+% Organisation
 % ============================================================
 
 \subsection{Organisation}
 \needspace{5\baselineskip}
 
 \begin{itemize}[leftmargin=1.1cm]
-    \item Direction: \textbf{Docteur Lucia Parlati}
+    \item Direction : \textbf{Docteur Lucia Parlati}
     \item Durée : 3--4 heures.
     \item Lieu : Secteur HDJ — Service des maladies du foie.
     \item Ressources : médecin sénior, infirmier expert/IPA, diététicien(ne), psychologue/addictologue.
-
 \end{itemize}
 
 \bigskip
+
 % ============================================================
-% CODAGE ET GHS ASSOCIÉS
+% SYNTHÈSE — CODAGE, VOLUMÉTRIE ET RECETTES (PIVOTÉE)
 % ============================================================
 
-\subsection{Codage et GHS associés}
-\needspace{6\baselineskip}
+\subsection{Synthèse codage–volumétrie–recettes}
 
-\noindent\textbf{Cadre général.}  
-Suspicion de MASLD/MASH avec FIB-4 ≥1,3 requérant un HDJ intégrant : élastographie, échographie, consultation médicale, évaluation diététique ou psychologique.  
-Codage conforme aux avis DIM 2024–2025 (DP R945 ; DAS E11.98).
-
-\medskip
-
-\begin{table}[h!]
+\begin{sidewaystable}[p]
 \centering
-\renewcommand{\arraystretch}{1.25}
+\renewcommand{\arraystretch}{1.22}
 \rowcolors{2}{APHPsoft}{white}
 
 \begin{tabularx}{\textwidth}{
->{\raggedright\arraybackslash}p{4.8cm}
->{\raggedright\arraybackslash}X
->{\centering\arraybackslash}p{2cm}
+p{4.5cm}
+X
 >{\centering\arraybackslash}p{1.8cm}
->{\centering\arraybackslash}p{2.2cm}}
+>{\centering\arraybackslash}p{1.7cm}
+>{\centering\arraybackslash}p{1.7cm}
+>{\centering\arraybackslash}p{2.6cm}
+}
 \toprule
 \rowcolor{APHPsoft}
 \textbf{Type de séance} &
 \textbf{DP / DR / DAS} &
 \textbf{GHM} &
 \textbf{GHS} &
-\textbf{Tarif 2025} \\
+\textbf{Volume annuel} &
+\textbf{Recette estimée} \\
 \midrule
 
-Suspicion MASLD/MASH (≥4 interventions) &
-DP : R945 \newline
+Suspicion MASLD/MASH \textbf{≥4 interventions} &
+DP : R945\newline
 DAS : E11.98 &
 07M14T &
-2559 &
-603~€ \\
+2559 (603~€) &
+120 &
+72\,360~€ \\
 
-Suspicion MASLD/MASH (=3 interventions) &
-DP : R945 \newline
+Suspicion MASLD/MASH \textbf{=3 interventions} &
+DP : R945\newline
 DAS : E11.98 &
 07M14T &
-2584 &
-298~€ \\
+2584 (298~€) &
+30 &
+8\,940~€ \\
+
+\midrule
+\textbf{TOTAL} & -- & -- & -- &
+\textbf{150} &
+\textbf{\textasciitilde81\,300~€} \\
 \bottomrule
 \end{tabularx}
 
-\caption{Codage et GHS associés — HDJ Maladies du Foie Métaboliques}
-\end{table}
+\caption{Synthèse pivotée — Codage, volumétrie et recettes estimées (HDJ MASLD/MASH)}
+\end{sidewaystable}
 
-\medskip
-
-\noindent Actes CCAM typiques : HLQM002 (élastographie), ZCQM004 (échographie–Doppler), consultations médicale/diététique/psychologique.
+\footnotetext{
+Activité nouvelle structurée en 2025 : montée en charge progressive prévue,
+volumétrie et recettes susceptibles d’augmenter sur 2025--2027.
+}
 
 \clearpage
 
-% --------------------------------------------------------
-% TABLEAU 2 — Traçabilité (VERSION SPÉCIFIQUE MASLD/MASH)
-% --------------------------------------------------------
 
+% --------------------------------------------------------
+% TABLEAU — Traçabilité MASLD/MASH
+% --------------------------------------------------------
+\subsection{Traçabilité minimale}
 \begin{table}[h!]
 \centering
 \renewcommand{\arraystretch}{1.25}
@@ -215,50 +226,27 @@ DAS : E11.98 &
 \midrule
 
 Consultation médicale de synthèse &
-Motif, anamnèse ciblée (métabolique, hépatique, cardiovasculaire), facteurs de risque, résultats clés (FIB-4, LSM, biologie), diagnostic de probabilité MASLD/MASH, décision thérapeutique, critères d'orientation, messages ville–hôpital. \\
+Motif, anamnèse ciblée (métabolique, hépatique, cardiovasculaire), facteurs de risque, résultats clés (FIB-4, LSM, biologie), diagnostic de probabilité MASLD/MASH, décision thérapeutique, critères d’orientation, messages ville–hôpital. \\
 
 Évaluation diététique &
 Analyse des apports, structure des repas, comportements alimentaires, objectifs pondéraux, sarcopénie/dénutrition éventuelle, recommandations personnalisées, plan nutritionnel réaliste, critères de suivi. \\
 
 Évaluation psychologique / addictologique (alcool, TCA) &
-Repérage des consommations (auditif/alcohol), screening TCA, analyse motivationnelle, facteurs émotionnels contextuels, ressources disponibles, recommandations ciblées, orientation éventuelle vers un suivi spécialisé. \\
+Repérage des consommations, screening TCA, analyse motivationnelle, facteurs émotionnels, ressources, recommandations ciblées, orientation éventuelle. \\
 
-Consultations spécialisées (cardiovasculaire, diabétologie...) &
-Paramètres cardio-métaboliques (TA, PA, IMC, tour de taille), dépistage du risque cardiovasculaire, évaluation diabète/pré-diabète, recommandations et coordination des prises en charge. \\
+Consultations spécialisées &
+Paramètres cardio–métaboliques (TA, PA, IMC, tour de taille), dépistage du risque cardiovasculaire, évaluation diabète/pré-diabète, coordination du suivi. \\
 
-Actes techniques (élastographie, échographie) &
-Compte rendu normalisé en annexe \\
+Actes techniques &
+Compte rendu normalisé (élastographie, échographie). \\
 
-Courrier de sortie (obligatoire) &
-Synthèse intégrée : diagnostic MASLD/MASH probable ou confirmé, niveau de risque cardio-métabolique, interventions réalisées, décisions thérapeutiques, calendrier de suivi, messages clefs pour le médecin traitant. \\
-
+Courrier de sortie &
+Diagnostic MASLD/MASH, niveau de risque, interventions réalisées, décisions thérapeutiques, calendrier de suivi, messages au médecin traitant. \\
+\bottomrule
 \end{tabular}
 
 \caption{Traçabilité des interventions — HDJ MASLD/MASH}
 \end{table}
-
-\clearpage
-
-% ============================================================
-% VOLUMÉTRIE (RÉFÉRENCE)
-% ============================================================
-
-\subsection{Volumétrie de référence}
-
-\noindent HDJ MASLD/MASH — estimations selon montée en charge prévue.
-
-\begin{center}
-\begin{tabular}{lccc}
-\toprule
-\textbf{Type de séance} & \textbf{Volume annuel} & \textbf{Tarif unitaire} & \textbf{Recette estimée} \\
-\midrule
-≥4 interventions (GHS 2559) & 120 & 603~€ & 72\,360~€ \\
-3 interventions (GHS 2584)  & 30  & 298~€ & 8\,940~€ \\
-\midrule
-\textbf{Total} & \textbf{150} & -- & \textbf{\textasciitilde81\,300~€} \\
-\bottomrule
-\end{tabular}
-\end{center}
 
 \clearpage
 
@@ -271,23 +259,32 @@ Synthèse intégrée : diagnostic MASLD/MASH probable ou confirmé, niveau de ri
 
 \noindent Basé sur un tarif moyen pondéré : \textbf{\textasciitilde540~€ / séance}.
 
-\begin{center}
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.20}
+\rowcolors{2}{APHPsoft}{white}
+
 \begin{tabular}{lccc}
 \toprule
+\rowcolor{APHPsoft}
 \textbf{Année} & \textbf{Volume estimé} & \textbf{Tarif moyen} & \textbf{Recette brute estimée} \\
 \midrule
-Amorce   & 150 & 540~€ & 81\,000~€ \\
-Montée   & 300 & 540~€ & 162\,000~€ \\
-Croisière & 500 & 540~€ & 270\,000~€ \\
+Amorce        & 150 & 540~€ & 81\,000~€ \\
+Montée        & 300 & 540~€ & 162\,000~€ \\
+Croisière     & 500 & 540~€ & 270\,000~€ \\
 \bottomrule
 \end{tabular}
-\end{center}
+
+\caption{Prévisions d’activité et recettes prévisionnelles }
+\end{table}
 
 \clearpage
 
+
 % ============================================================
-% Conclusions
+% Conclusion
 % ============================================================
+
 \subsection{Conclusion}
 \needspace{6\baselineskip}
 
@@ -298,6 +295,8 @@ L’HDJ hépatométabolique constitue un dispositif pertinent, simple à organis
 Pour les supports opérationnels (échographie, évaluation diététique et psychologique), 
 voir les annexes~\ref{sec:annexe_echo}, \ref{sec:annexe_diete} et \ref{sec:annexe_psy}.
 
+\clearpage
+
 
 % ============================================================
 % VALIDATION
@@ -307,9 +306,8 @@ voir les annexes~\ref{sec:annexe_echo}, \ref{sec:annexe_diete} et \ref{sec:annex
 \begin{tabular}{p{4cm} p{7cm} p{4cm}}
 \toprule
 \rowcolor{APHPsoft}
-\textbf{Date d'envoie} & \textbf{Nom du relecteur} & \textbf{Date de validation} \\
+\textbf{Date d’envoi} & \textbf{Nom du relecteur} & \textbf{Date de validation} \\
 \midrule
-
 03/12/2025 & Pr V.\,Mallet & 03/12/2025 \\
 05/12/2025 & Dr L.\,Parlati & NA \\
 03/12/2025 & Dr S.\,Bouam & NA \\

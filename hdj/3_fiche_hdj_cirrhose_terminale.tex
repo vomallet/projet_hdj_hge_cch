@@ -1,19 +1,21 @@
 % ============================================================
-% HÔPITAL DE JOUR — CIRRHOSE AVANCÉE / COMPLICATIONS DE LA CIRRHOSE
+% HÔPITAL DE JOUR — CIRRHOSE AVANCÉE / COMPLICATIONS DE LA CIRRHOS...
 % ============================================================
 
 \subsection{Rationnel médical}
 \needspace{8\baselineskip}
+\setcounter{table}{0}
+\setcounter{figure}{0}
 
 \begin{spacing}{1.30}
 
-L’ensemble des maladies chroniques du foie évolue progressivement vers la cirrhose et ses complications. La phase décompensée — ascite, encéphalopathie hépatique, hyponatrémie, hémorragie digestive, insuffisance rénale aiguë (AKI) ou syndrome hépatorénal (HRS) — correspond au stade terminal de la maladie, avec une mortalité annuelle souvent supérieure à 20--30\,\% \cite{EASL_DecompCirrhosis_2018,AASLD_PalliativeCirrhosis_2022}. 
+L’ensemble des maladies chroniques du foie évolue progressivement vers la cirrh\-ose et ses complications. La phase décompensée — ascite, encéphalopathie hépatique, hyponatrémie, hémorragie digestive, insuffisance rénale aiguë (AKI) ou syndrome hépato\-rénal (HRS) — correspond au stade terminal de la maladie, avec une mortalité annuelle souvent supérieure à 20--30\,\% \cite{EASL_DecompCirrhosis_2018,AASLD_PalliativeCirrhosis_2022}. 
 
 Malgré les progrès réalisés dans le traitement des hépatites virales, l’incidence des décompensations ne diminue pas, en lien avec l’augmentation de l’obésité, du diabète de type~2, des maladies hépatiques métaboliques (MASLD), ainsi que la persistance de la consommation d’alcool \cite{Gines_LancetCirrhosis_2021}. En France, les données PMSI/AP--HP confirment une progression des séjours liés à l’ascite, aux infections et à l’AKI, avec une mortalité hospitalière de 11--15\,\% \cite{FrenchHepaticFailure_2020}.
 
-Les complications de la cirrhose avancée requièrent des interventions répétées et accessibles rapidement : ponction d’ascite avec perfusion d’albumine, albumine au long cours (type ANSWER) \cite{Caraceni_ANSWER_2018}, fer intraveineux, transfusion de CGR et soutien nutritionnel.
+Les complications de la cirrh\-ose avancée requièrent des interventions répétées et accessibles rapidement : ponction d’ascite avec perfusion d’albumine, albumine au long cours (type ANSWER) \cite{Caraceni_ANSWER_2018}, fer intraveineux, transfusion de CGR et soutien nutritionnel.
 
-La structuration d’un HDJ dédié permet d’assurer ces prises en charge dans un cadre sécurisé, standardisé, pluridisciplinaire, favorisant la stabilisation, la prévention des réhospitalisations, et la préparation d’éventuelles procédures (TIPS).
+La structuration d’un HDJ dédié permet d’assurer ces prises en charge dans un cadre sécurisé, standardisé et pluridisciplinaire, favorisant la stabilisation, la prévention des réhospitalisations et la préparation d’éventuelles procédures (TIPS).
 
 \end{spacing}
 
@@ -32,9 +34,9 @@ La structuration d’un HDJ dédié permet d’assurer ces prises en charge dans
 \vspace{0.9em}
 
 \begin{itemize}[leftmargin=1.1cm]
-  \item réduire les hospitalisations évitables liées aux complications de la cirrhose avancée ;
+  \item réduire les hospitalisations évitables liées aux complications de la cirrh\-ose avancée ;
   \item prévenir les décompensations sévères (AKI, HRS, ACLF) par un accès rapide aux actes nécessaires ;
-  \item proposer un dispositif de stabilisation pré-TIPS ;
+  \item proposer un dispositif de stabilisation pré--TIPS ;
   \item regrouper en ambulatoire les actes complexes : LVP + albumine, albumine seule, fer IV, transfusion de CGR ;
   \item renforcer la continuité entre ville, urgences, hépatologie et MCO.
 \end{itemize}
@@ -52,12 +54,12 @@ La structuration d’un HDJ dédié permet d’assurer ces prises en charge dans
 \subsection{Population éligible}
 
 \begin{itemize}[leftmargin=1.1cm]
-  \item cirrhose avancée (Child B–C) avec ascite récurrente ou réfractaire ;
+  \item cirr\-hose avancée (Child B–C) avec ascite récurrente ou réfractaire ;
   \item risque d’AKI ou HRS (hyponatrémie, insuffisance rénale fonctionnelle) ;
   \item anémie d’hypertension portale nécessitant fer IV ou transfusion programmée ;
   \item encéphalopathie hépatique fluctuante nécessitant surveillance rapprochée ;
   \item dénutrition sévère ou sarcopénie ;
-  \item candidats au TIPS ou patients non éligibles nécessitant prévention des réhospitalisations.
+  \item candidats au TIPS ou non éligibles nécessitant prévention des réhospitalisations.
 \end{itemize}
 
 \clearpage
@@ -70,7 +72,7 @@ La structuration d’un HDJ dédié permet d’assurer ces prises en charge dans
 
 \begin{figure}[!ht]
 \centering
-\caption{Parcours patient — HDJ cirrhose avancée}
+\caption{Parcours patient — HDJ cirrhose avancée\footnotemark}
 \vspace{0.8cm}
 
 \begin{tikzpicture}[
@@ -86,12 +88,12 @@ La structuration d’un HDJ dédié permet d’assurer ces prises en charge dans
         fill=APHPsoft
     }
 ]
-\node[box] (tri) {Orientation vers l'HDJ \\[3pt] (hépatologie / urgences / MCO / ville)};
-\node[box, below=1.4cm of tri] (etape1) {Évaluation clinique initiale, biologie récente, imagerie ciblée si besoin ; vérification du statut vaccinal (pneumocoque, grippe, hépatites A et B)};
-\node[box, below=1.4cm of etape1] (etape2) {Acte programmé : \\[3pt] LVP+albumine, albumine seule, fer IV, transfusion de CGR};
+
+\node[box] (tri) {Orientation vers l’HDJ \\[3pt] (hépatologie / urgences / MCO / ville)};
+\node[box, below=1.4cm of tri] (etape1) {Évaluation clinique initiale, biologie récente, imagerie ciblée si besoin ; vérification du statut vaccinal (pneumocoque, grippe, hépatites~A et~B)};
+\node[box, below=1.4cm of etape1] (etape2) {Acte programmé : \\[3pt] LVP + albumine, albumine seule, fer IV, transfusion de CGR};
 \node[box, below=1.4cm of etape2] (etape3) {Surveillance spécialisée : \\[3pt] constantes, tolérance, complications};
 \node[box, below=1.4cm of etape3] (synth) {Synthèse médicale et programmation de la séance suivante};
-
 
 \draw[->, thick, APHPdark] (tri) -- (etape1);
 \draw[->, thick, APHPdark] (etape1) -- (etape2);
@@ -101,67 +103,89 @@ La structuration d’un HDJ dédié permet d’assurer ces prises en charge dans
 \end{tikzpicture}
 \end{figure}
 
+\footnotetext{
+\textbf{HDJ} : hôpital de jour ; 
+\textbf{MCO} : médecine–chirurgie–obstétrique ; 
+\textbf{LVP} : paracentèse évacuatrice (large volume paracentesis) ; 
+\textbf{CGR} : concentrés de globules rouges.
+}
+
 \clearpage
 
 % ============================================================
-% CODAGE ET GHS ASSOCIÉS
+% CODAGE, TARIFS ET VOLUMÉTRIE 2024
 % ============================================================
 
-\subsection{Codage et GHS associés}
-\needspace{8\baselineskip}
+\subsection{Codage, tarifs et volumétrie de référence}
+\needspace{12\baselineskip}
 
-\noindent\textbf{Cadre général.}  
-Codage conforme aux avis DIM 2024–2025.  
-Les actes d’albumine et de fer injectable relèvent de la réserve hospitalière (Z512).  
-Les hémogrammes post-transfusion nécessitent un codage distinct (Z5130).
-
-\medskip
-
-\begin{table}[h!]
+\begin{sidewaystable}[p]
 \centering
 \renewcommand{\arraystretch}{1.25}
 \rowcolors{2}{APHPsoft}{white}
 
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.8cm} 
-                                >{\raggedright\arraybackslash}X 
-                                >{\centering\arraybackslash}p{1.8cm}
-                                >{\centering\arraybackslash}p{1.8cm}
-                                >{\centering\arraybackslash}p{2cm}}
+\begin{tabularx}{\textwidth}{
+p{4.8cm}
+X
+>{\centering\arraybackslash}p{1.7cm}
+>{\centering\arraybackslash}p{1.6cm}
+>{\centering\arraybackslash}p{1.9cm}
+>{\centering\arraybackslash}p{1.8cm}
+>{\centering\arraybackslash}p{2.4cm}
+}
 \toprule
 \rowcolor{APHPsoft}
-\textbf{Type de séance} & \textbf{DP / DR / DAS} & \textbf{GHM} & \textbf{GHS} & \textbf{Tarif 2025} \\
+\textbf{Type de séance} &
+\textbf{DP / DR / DAS} &
+\textbf{GHM} &
+\textbf{GHS} &
+\textbf{Tarif 2025} &
+\textbf{Volume 2024} &
+\textbf{Recette 2024} \\
 \midrule
 
 Ponction d’ascite + albumine &
-DP : R18 (ascite) \newline
+DP : R18 (ascite)\newline
 DAS : K74.6, K76.6, ±N17.x, ±E87.1 &
-07M14T & 2559 & 603~€ \\
+07M14T & 2559 & 603~€ &
+160 &
+96\,480~€ \\
 
 Séance d’albumine seule &
-DP : Z512 (réserve) \newline
+DP : Z512 (réserve)\newline
 DR : R18 ou K76.6 &
-28Z17Z & 9616 & 440~€ \\
+28Z17Z & 9616 & 440~€ &
+18 &
+7\,920~€ \\
 
 Fer injectable (anémie HTP) &
-DP : Z512 \newline
-DR : D50.8 ou D64.9 \newline
+DP : Z512\newline
+DR : D50.8 ou D64.9\newline
 DAS : K74.6, K76.6 &
-28Z17Z & 9616 & 440~€ \\
+28Z17Z & 9616 & 440~€ &
+125 &
+55\,000~€ \\
 
 Transfusion de CGR &
-DP : Z5130 \newline
-DR : D50.8 ou D62 \newline
+DP : Z5130\newline
+DR : D50.8 ou D62\newline
 DAS : K74.6, K76.6 &
-28Z14Z & 9613 & 791~€ \\
+28Z14Z & 9613 & 791~€ &
+15 &
+11\,865~€ \\
+\midrule
+
+\textbf{Total annuel} & -- & -- & -- & -- &
+\textbf{319} &
+\textbf{171\,265~€} \\
+
 \bottomrule
 \end{tabularx}
 
-\caption{Codage et GHS associés — HDJ Cirrhoses Terminales}
-\end{table}
-
+\caption{Codage, tarifs et volumétrie — HDJ cirrhose avancée (2024)}
+\end{sidewaystable}
 
 \clearpage
-
 
 % ============================================================
 % TRACABILITÉ
@@ -180,8 +204,8 @@ DAS : K74.6, K76.6 &
 \textbf{Intervention} & \textbf{Éléments requis} \\
 \midrule
 
-Ponction d’ascite (HPHB003) &
-Fiche CCAM ; volume évacué ; repérage écho ; surveillance 4~h ; douleur ; hypotension ; biologie pré-acte \\
+Ponction d’ascite &
+Volume évacué ; repérage écho ; surveillance 4~h ; douleur ; hypotension ; biologie pré-acte \\
 
 Perfusion d’albumine &
 Prescription ; indication ; traçabilité du lot ; volume perfusé ; surveillance hémodynamique \\
@@ -203,51 +227,26 @@ Fiche de liaison ville–hôpital ; conseils HTP ; éducation sur signes d’ale
 \bottomrule
 \end{tabular}
 
-\caption{Traçabilité — HDJ Cirrhose terminale}
+\caption{Traçabilité — HDJ cirrhose avancée}
 \end{table}
 
 \clearpage
 
 % ============================================================
-% Organisation et ressources nécessaires
+% ORGANISATION
 % ============================================================
 
 \subsection{Organisation}
 \needspace{5\baselineskip}
 
 \begin{itemize}[leftmargin=1.1cm]
-    \item Direction: \textbf{Docteur Valérie D'Halluin-Venier}
-    \item Durée : 3--4 heures.
-    \item Lieu : Secteur HDJ — Service des maladies du foie.
-    \item Ressources : médecin sénior, infirmier expert/IPA, diététicien(ne), psychologue/addictologue.
-
+    \item Direction : \textbf{Dr Valérie D’Halluin-Venier}
+    \item Durée : 4--6~heures
+    \item Lieu : Secteur HDJ — Service des maladies du foie
+    \item Ressources : médecin sénior, infirmier expert/IPA, diététicien(ne), psychologue/addictologue
 \end{itemize}
 
 \bigskip
-
-% ============================================================
-% VOLUMÉTRIE 2024 (RÉFÉRENCE)
-% ============================================================
-
-\subsection{Volumétrie 2024 (référence HDJ hépatologie Cochin)}
-
-\begin{center}
-\begin{tabular}{lccc}
-\toprule
-\textbf{Type de séance} & \textbf{Volume 2024} & \textbf{Tarif unitaire} & \textbf{Recette estimée} \\
-\midrule
-Ponction d’ascite + albumine & 139 & 603~€ & 83\,817~€ \\
-Séance d’albumine seule      & 16  & 440~€ & 7\,040~€ \\
-Fer injectable               & 109 & 440~€ & 47\,960~€ \\
-Transfusion de CGR           & 13  & 791~€ & 10\,283~€ \\
-\midrule
-\textbf{Total}               & \textbf{277} & -- & \textbf{\textasciitilde149\,100~€} \\ 
-\bottomrule
-\end{tabular}
-\end{center}
-
-\clearpage
-
 
 % ============================================================
 % PROJECTIONS D’ACTIVITÉ
@@ -255,12 +254,17 @@ Transfusion de CGR           & 13  & 791~€ & 10\,283~€ \\
 
 \subsection{Projections d’activité et recettes prévisionnelles}
 
-\noindent Basé sur un tarif moyen pondéré : \textbf{\textasciitilde540 € / séance}.  
+\noindent Basé sur un tarif moyen pondéré : \textbf{\textasciitilde540~€ / séance}.  
 Hypothèse : \textbf{+50 patients par pallier} à partir de la volumétrie 2024 (277 actes).
 
-\begin{center}
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.18}
+\rowcolors{2}{APHPsoft}{white}
+
 \begin{tabular}{lccc}
 \toprule
+\rowcolor{APHPsoft}
 \textbf{Année} & \textbf{Volume estimé} & \textbf{Tarif moyen} & \textbf{Recette brute estimée} \\
 \midrule
 Amorce    & 327 & 540~€ & 176\,580~€ \\
@@ -268,11 +272,11 @@ Montée    & 377 & 540~€ & 203\,580~€ \\
 Croisière & 427 & 540~€ & 230\,580~€ \\
 \bottomrule
 \end{tabular}
-\end{center}
+
+\caption{Prévisions d’activité et recettes prévisionnelles — HDJ cirrhose avancée}
+\end{table}
 
 \clearpage
-
-
 
 % ============================================================
 % CONCLUSION
@@ -281,7 +285,10 @@ Croisière & 427 & 540~€ & 230\,580~€ \\
 \subsection{Conclusion}
 \needspace{6\baselineskip}
 
-Les HDJ dédiés à la cirrhose avancée offrent un cadre structuré pour les interventions indispensables à la stabilisation des patients les plus fragiles. En rassemblant ponctions d’ascite, albumine, fer injectable et transfusions dans un parcours sécurisé et standardisé, ils contribuent à réduire les hospitalisations évitables, à prévenir les décompensations sévères et à optimiser la continuité des soins entre ville, urgences et hépatologie.
+Les HDJ dédiés à la cirrh\-ose avancée offrent un cadre structuré pour les interventions indispensables à la stabilisation des patients les plus fragiles. En rassemblant ponctions d’ascite, albumine, fer injectable et transfusions dans un parcours sécurisé et standardisé, ils contribuent à réduire les hospitalisations évitables, à prévenir les décompensations sévères et à optimiser la continuité des soins entre ville, urgences et hépatologie.
+Pour les modalités techniques détaillées (ponction d’ascite, perfusion d’albumine, fer IV, transfusion),
+voir les annexes~\ref{sec:annexe_ascite}, \ref{sec:annexe_fer} et \ref{sec:annexe_cgr}.
+
 
 % ============================================================
 % VALIDATION
@@ -291,15 +298,14 @@ Les HDJ dédiés à la cirrhose avancée offrent un cadre structuré pour les in
 \begin{tabular}{p{4cm} p{7cm} p{4cm}}
 \toprule
 \rowcolor{APHPsoft}
-\textbf{Date d'envoie} & \textbf{Nom du relecteur} & \textbf{Date de validation} \\
+\textbf{Date d’envoi} & \textbf{Nom du relecteur} & \textbf{Date de validation} \\
 \midrule
-03/12/2025 & Pr V.\,Mallet & 03/12/2025 \\
+03/12/2025 & Pr V.\,Mallet & 08/12/2025 \\
 03/12/2025 & Dr S.\,Bouam & NA \\
-03/12/2025 & Dr V.\,D'Halluin & NA \\
+03/12/2025 & Dr V.\,D’Halluin-Venier & NA \\
 NA & Pr R.\,Coriat & NA \\
 \bottomrule
 \end{tabular}
 \end{center}
 
 \clearpage
-
