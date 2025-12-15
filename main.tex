@@ -9,8 +9,6 @@
 \usepackage{setspace}
 \usepackage{geometry}
 \usepackage{graphicx}
-\usepackage{xcolor}
-\usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{tikz}
@@ -25,6 +23,14 @@
 \usepackage{tabularx}
 \usepackage{pdflscape}
 \usepackage{rotating}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=APHPdark,
+  urlcolor=APHPblue,
+  citecolor=APHPdark
+}
+
 
 
 
@@ -33,6 +39,9 @@
 % FONT (XeLaTeX)
 % =======================
 \setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}    % équivalent Helvetica-like
+\setmonofont{TeX Gyre Cursor}   % équivalent Courier-like
+
 
 % =======================
 % COULEURS APHP
@@ -163,12 +172,11 @@ Document de Travail — Version 1}
 \tableofcontents
 \newpage
 
-
 % ==========================================
-% CHAPITRE X: Conclusion Générale
+% CHAPITRE 1 — E-SUMMARY
 % ==========================================
 \clearpage
-\section{Executive Summary}
+\section{E-summary — Synthèse Exécutive}
 
 \begin{refsection}
 \input{e_summary}
@@ -177,13 +185,48 @@ Document de Travail — Version 1}
 
 
 % ===============================================
-% CHAPITRE 0: Introduction
+% CHAPITRE 2 — INTRODUCTION GÉNÉRALE
 % ===============================================
 \clearpage
-\section*{Introduction Générale}
+\section{Introduction Générale}
 
 \begin{refsection}
 \input{introduction}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+
+% ============================================================
+% CHAPITRE 3 — PLATEAU HDJ DIGESTIF MUTUALISÉ
+% ============================================================
+\clearpage
+\section{Plateau des HDJ Digestifs mutualisés — Organisation Transversale}
+
+\begin{refsection}
+\input{plateau_hdj_mutualise}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+% ==========================================
+% CHAPITRE 4 — CONCLUSION GÉNÉRALE
+% ==========================================
+\clearpage
+\section{Conclusion Générale}
+
+\begin{refsection}
+\input{conclusion}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+
+% ===============================================
+% CHAPITRE 5: SOCLE MEDICAL AUX HDJ
+% ===============================================
+\clearpage
+\section{Socle Médical Transversal des HDJ Digestifs}
+
+\begin{refsection}
+\input{hdj/socle_hdj}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 
@@ -192,7 +235,7 @@ Document de Travail — Version 1}
 % CHAPITRE 1: PBH
 % ===============================================
 \clearpage
-\section{HDJ PBH}
+\section{HDJ Biopsies du Foie}
 
 \begin{refsection}
 \input{hdj/1_fiche_hdj_pbh}
@@ -277,93 +320,103 @@ Document de Travail — Version 1}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 
-% ==========================================
-% CHAPITRE X: Conclusion Générale
-% ==========================================
+% ============================================================
+% ANNEXES — PAGE DE GARDE
+% ============================================================
 \clearpage
-\section{Conclusion Générale}
+\phantomsection
+\section*{}
+\addcontentsline{toc}{section}{Procédures et documents associés}
 
-\begin{refsection}
-\input{conclusion}
-\printbibliography[heading=subbibliography,title={Références}]
-\end{refsection}
+\input{annexes/page_de_garde}
 
-
-% ================================
-% ANNEXES A — Hépatométabolique
-% ================================
 \clearpage
+
+% ============================================================
+% PASSAGE EN MODE ANNEXES (A, B, C…)
+% ============================================================
 \appendix
-\renewcommand{\thesection}{A.\arabic{section}}
 \setcounter{section}{0}
+\renewcommand{\thesection}{\Alph{section}}
 
+% ============================================================
+% ANNEXE A — BIOPSIE HÉPATIQUE
+% ============================================================
+\section{Procédure standardisée de biopsie hépatique percutanée en HDJ}
+\label{annexe:pbh}
+\input{annexes/annexe_pbh}
+
+\clearpage
+
+% ============================================================
+% ANNEXE B — PONCTION D’ASCITE
+% ============================================================
+\section{Ponction d’ascite avec perfusion d’albumine}
+\label{annexe:ponction_ascite}
+\input{annexes/annexe_ponction_ascite_perfusion_albumine}
+
+\clearpage
+
+% ============================================================
+% ANNEXE C — FER INJECTABLE
+% ============================================================
+\section{Séance de fer injectable}
+\label{annexe:fer_injectable}
+\input{annexes/annexe_fer_injectable}
+
+\clearpage
+
+% ============================================================
+% ANNEXE D — TRANSFUSION DE CGR
+% ============================================================
+\section{Transfusion de concentrés de globules rouges}
+\label{annexe:transfusion_cgr}
+\input{annexes/annexe_transfusion_sanguine}
+
+\clearpage
+
+% ============================================================
+% ANNEXE E — ÉCHOGRAPHIE MASLD
+% ============================================================
 \section{Grille échographique MASLD}
-\label{sec:annexe_echo}
-\addcontentsline{toc}{section}{Annexe A.1 — Grille échographique MASLD}
-\input{annexes/grille_echo_masld}
+\label{annexe:echo_masld}
+\input{annexes/annexe_grille_echo_masld}
 
+\clearpage
 
+% ============================================================
+% ANNEXE F — DIÉTÉTIQUE MASLD
+% ============================================================
 \section{Grille diététique MASLD}
-\label{sec:annexe_diete}
-\addcontentsline{toc}{section}{Annexe A.2 — Grille diététique MASLD}
-\input{annexes/grille_dietetique_masld}
+\label{annexe:dietetique_masld}
+\input{annexes/annexe_grille_dietetique_masld}
 
-
-\section{Grille psychologique / addictologique MASLD}
-\label{sec:annexe_psy}
-\addcontentsline{toc}{section}{Annexe A.3 — Grille psy / addictologie MASLD}
-\input{annexes/grille_psy_masld}
-
-
-% ============================================
-% ANNEXES B — Cirrhose avancée
-% ============================================
-\renewcommand{\thesection}{B.\arabic{section}}
-\setcounter{section}{0}
-
-% --- B.1 Ponction d’ascite + albumine ---
-\section{Fiche HDJ — Ponction d’ascite + perfusion d’albumine}
-\label{sec:annexe_ascite}
-\addcontentsline{toc}{section}{Annexe B.1 — Ponction d’ascite + albumine}
-\input{annexes/ponction_ascite_perfusion_albumine}
-
-% --- B.2 Fer injectable ---
-\section{Fiche HDJ — Fer injectable}
-\label{sec:annexe_fer}
-\addcontentsline{toc}{section}{Annexe B.2 — Fer injectable}
-\input{annexes/fer_injectable}
-
-% --- B.3 Transfusion de CGR ---
-\section{Fiche HDJ — Transfusion de CGR}
-\label{sec:annexe_cgr}
-\addcontentsline{toc}{section}{Annexe B.3 — Transfusion de CGR}
-\input{annexes/transfusion_sanguine}
-
-% ================================
-% ANNEXES C — Addictologie
-% ================================
 \clearpage
-\renewcommand{\thesection}{C.\arabic{section}}
-\setcounter{section}{0}
 
-\section{Grille d’évaluation somatique–addictologique}
-\addcontentsline{toc}{section}{Annexe C.1 — Grille d’évaluation somatique–addictologique}
-\input{annexes/annexe_activites_addictologie}
+% ============================================================
+% ANNEXE G — PSY / ADDICTOLOGIE MASLD
+% ============================================================
+\section{Grille psychologique et addictologique MASLD}
+\label{annexe:psy_masld}
+\input{annexes/annexe_grille_psy_masld}
 
-\section{Grille des programmes de médiation}
-\addcontentsline{toc}{section}{Annexe C.2 — Grille des médiations addictologie}
-\input{annexes/annexe_fiche_traçabilite}
-
-% ================================
-% ANNEXES D — Addictologie
-% ================================
 \clearpage
-\renewcommand{\thesection}{C.\arabic{section}}
-\setcounter{section}{0}
 
-\section{Fiche évaluation des cirrhoses}
-\addcontentsline{toc}{section}{Annexe D.1 — Fiche évaluation des cirrhoses}
-\input{annexes/evaluation_des_cirrhoses}
+% ============================================================
+% ANNEXE H — ACTIVITÉS HDJ ADDICTOLOGIE
+% ============================================================
+\section{Liste des activités réalisables en HDJ addictologie}
+\label{annexe:addicto_activites}
+\input{annexes/annexe_addicto_activites}
+
+\clearpage
+
+% ============================================================
+% ANNEXE I — TRAÇABILITÉ HDJ ADDICTOLOGIE
+% ============================================================
+\section{Fiche de traçabilité HDJ addictologie}
+\label{annexe:addicto_tracabilite}
+\input{annexes/annexe_addicto_traçabilite}
 
 
 \end{document}
