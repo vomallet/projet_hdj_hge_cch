@@ -3,6 +3,7 @@
 % =======================
 % PACKAGES DE BASE
 % =======================
+\usepackage[useregional]{datetime2}
 \usepackage{url}
 \usepackage{xurl} % permet la coupure automatique des longues URL
 \usepackage[french]{babel}
@@ -23,15 +24,8 @@
 \usepackage{tabularx}
 \usepackage{pdflscape}
 \usepackage{rotating}
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks=true,
-  linkcolor=APHPdark,
-  urlcolor=APHPblue,
-  citecolor=APHPdark
-}
-
-
+\usepackage{lineno}
+\linenumbers
 
 
 
@@ -124,6 +118,21 @@
 % =======================
 % DOCUMENT
 % =======================
+% ============================================================
+% HYPERREF — ANCRES UNIQUES PAR BLOC (évite collisions TOC)
+% ============================================================
+\usepackage{hyperref}
+\newcommand{\HsecPrefix}{main}
+\makeatletter
+\renewcommand*{\theHsection}{\HsecPrefix.\arabic{section}}
+\makeatother
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=APHPdark,
+  urlcolor=APHPblue,
+  citecolor=APHPdark
+}
 \begin{document}
 
 % ============================
@@ -132,8 +141,9 @@
 \begin{titlepage}
 \centering
 
-\vspace*{0.5cm}
+\vspace*{0.8cm}
 
+% Logos
 \begin{minipage}{0.49\textwidth}
     \raggedright
     \includegraphics[height=2.8cm]{logo/logo_cochin_portroyal.png}
@@ -145,26 +155,52 @@
 
 \vspace{2.5cm}
 
+% Titre principal
 {\fontsize{26pt}{30pt}\selectfont\bfseries\color{APHPdark}
-Programme des Hôpitaux de Jour\\[2mm]
-Digestifs et Addictologiques}
+Projet des Hôpitaux de Jour Mutualisés\\[2mm]
+d’Hépato-gastro-entérologie, d’Addictologie\\[2mm]
+et de Radiologie interventionnelle
+}
 
-\vspace{5mm}
+\vspace{6mm}
 
 \color{APHPblue}\rule{0.45\textwidth}{0.6pt}
 
-\vspace{4mm}
+\vspace{6mm}
 
+% Sous-titre
 {\fontsize{14pt}{18pt}\selectfont\bfseries\color{APHPgrey}
-Document de Travail — Version 1}
+Document de travail — Version 2
+}
 
 \vfill
 
-{\Large\bfseries AP-HP — Hôpital Cochin \\[2mm]}
-{\large\bfseries DMU DIGEST}\\[6mm]
-{\large Responsable : Professeur Vincent Mallet}
+% Métadonnées
+{\small\color{APHPgrey}
+Document compilé le \DTMtoday{} à \DTMcurrenttime
+}
+
+\vspace{1.2cm}
+
+% Responsables médicaux
+\begin{flushleft}
+\textbf{Responsable de l’unité :} Pr Vincent Mallet\\[3mm]
+
+\textbf{Hépatologie :} Dr Valérie D’Halluin\\
+\textbf{Addictologie :} Dr Marion Courouge\\
+\textbf{Gastroentérologie :} Pr Romain Coriat\\
+\textbf{Oncologie digestive :} Dr Anna Pellat\\
+\textbf{Radiologie interventionnelle :} Pr Anthony Dohan
+\end{flushleft}
+
+\vfill
+
+% Institution
+{\Large\bfseries GH AP--HP Centre — Site Cochin\\[3mm]}
+{\large\bfseries DMU Hématologie, Cancérologie et Spécialités Médico-Chirurgicales}\\[6mm]
 
 \end{titlepage}
+
 
 % ============================
 % TABLE DES MATIÈRES
@@ -173,10 +209,10 @@ Document de Travail — Version 1}
 \newpage
 
 % ==========================================
-% CHAPITRE 1 — E-SUMMARY
+% CHAPITRE E1 — E-SUMMARY
 % ==========================================
 \clearpage
-\section{E-summary — Synthèse Exécutive}
+\section{Synthèse Exécutive}
 
 \begin{refsection}
 \input{e_summary}
@@ -185,7 +221,7 @@ Document de Travail — Version 1}
 
 
 % ===============================================
-% CHAPITRE 2 — INTRODUCTION GÉNÉRALE
+% CHAPITRE E2 — INTRODUCTION GÉNÉRALE
 % ===============================================
 \clearpage
 \section{Introduction Générale}
@@ -197,10 +233,10 @@ Document de Travail — Version 1}
 
 
 % ============================================================
-% CHAPITRE 3 — PLATEAU HDJ DIGESTIF MUTUALISÉ
+% CHAPITRE E3 — PLATEAU HDJ DIGESTIF MUTUALISÉ
 % ============================================================
 \clearpage
-\section{Plateau des HDJ Digestifs mutualisés — Organisation Transversale}
+\section{Plateau des HDJ Mutualisés — Organisation Transversale}
 
 \begin{refsection}
 \input{plateau_hdj_mutualise}
@@ -208,7 +244,17 @@ Document de Travail — Version 1}
 \end{refsection}
 
 % ==========================================
-% CHAPITRE 4 — CONCLUSION GÉNÉRALE
+% CHAPITRE E4 — DIMENSIONNEMENT
+% ==========================================
+\clearpage
+\section{Dimensionnement et Capacité Cible des HDJ Digestifs Mutualisés}
+\begin{refsection}
+\input{capacitaire_finances}
+\printbibliography[heading=subbibliography,title={Références}]
+\end{refsection}
+
+% ==========================================
+% CHAPITRE E5 — CONCLUSION GÉNÉRALE
 % ==========================================
 \clearpage
 \section{Conclusion Générale}
@@ -219,24 +265,35 @@ Document de Travail — Version 1}
 \end{refsection}
 
 
-% ===============================================
-% CHAPITRE 5: SOCLE MEDICAL AUX HDJ
-% ===============================================
+% ============================================================
+% ORGANISATION OPÉRATIONNELLE DES HDJ
+% ============================================================
 \clearpage
-\section{Socle Médical Transversal des HDJ Digestifs}
+\phantomsection
+\part*{Organisation Opérationnelle des HDJ}
+\addcontentsline{toc}{part}{Organisation Opérationnelle des HDJ}
 
+% --- Début bloc HDJ : reset numérotation + ancres hyperref uniques
+\renewcommand{\HsecPrefix}{hdj}
+\setcounter{section}{0}
+
+\input{hdj/hdj_page_de_garde}
+\clearpage
+
+% ===============================================
+% CHAPITRE O0: SOCLE MEDICAL AUX HDJ
+% ===============================================
+\section{Socle Médical Transversal des HDJ Digestifs}
 \begin{refsection}
 \input{hdj/socle_hdj}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
-
 
 % ===============================================
 % CHAPITRE 1: PBH
 % ===============================================
 \clearpage
 \section{HDJ Biopsies du Foie}
-
 \begin{refsection}
 \input{hdj/1_fiche_hdj_pbh}
 \printbibliography[heading=subbibliography,title={Références}]
@@ -247,7 +304,6 @@ Document de Travail — Version 1}
 % ======================================
 \clearpage
 \section{HDJ Evaluation des Cirrhoses}
-
 \begin{refsection}
 \input{hdj/2_fiche_hdj_evalutation_cirrhoses}
 \printbibliography[heading=subbibliography,title={Références}]
@@ -258,7 +314,6 @@ Document de Travail — Version 1}
 % ======================================================
 \clearpage
 \section{HDJ Traitement des Cirrhoses Terminales}
-
 \begin{refsection}
 \input{hdj/3_fiche_hdj_cirrhose_terminale}
 \printbibliography[heading=subbibliography,title={Références}]
@@ -269,7 +324,6 @@ Document de Travail — Version 1}
 % ============================
 \clearpage
 \section{HDJ Hépatométabolique}
-
 \begin{refsection}
 \input{hdj/4_fiche_hdj_hepatometabolique}
 \printbibliography[heading=subbibliography,title={Références}]
@@ -280,7 +334,6 @@ Document de Travail — Version 1}
 % ============================
 \clearpage
 \section{HDJ Addictologie}
-
 \begin{refsection}
 \input{hdj/5_fiche_hdj_addictologie}
 \printbibliography[heading=subbibliography,title={Références}]
@@ -291,19 +344,16 @@ Document de Travail — Version 1}
 % ============================
 \clearpage
 \section{HDJ MICI}
-
 \begin{refsection}
 \input{hdj/6_fiche_hdj_mici}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
-
 
 % ========================================
 % CHAPITRE 7: Chimiothérapies des Cancers
 % ========================================
 \clearpage
 \section{HDJ Chimiothérapie des Cancers Digestifs}
-
 \begin{refsection}
 \input{hdj/7_fiche_hdj_chimiotherapies}
 \printbibliography[heading=subbibliography,title={Références}]
@@ -314,7 +364,6 @@ Document de Travail — Version 1}
 % ==========================================
 \clearpage
 \section{HDJ Radiologie Interventionnelle}
-
 \begin{refsection}
 \input{hdj/8_fiche_hdj_radiologie_interventionnelle}
 \printbibliography[heading=subbibliography,title={Références}]
@@ -325,19 +374,23 @@ Document de Travail — Version 1}
 % ============================================================
 \clearpage
 \phantomsection
-\section*{}
+\section*{Procédures et documents associés}
 \addcontentsline{toc}{section}{Procédures et documents associés}
-
 \input{annexes/page_de_garde}
-
 \clearpage
 
 % ============================================================
 % PASSAGE EN MODE ANNEXES (A, B, C…)
 % ============================================================
 \appendix
-\setcounter{section}{0}
+
+% --- Début bloc Annexes : reset + ancres hyperref uniques
+\renewcommand{\HsecPrefix}{app}
 \renewcommand{\thesection}{\Alph{section}}
+\makeatletter
+\renewcommand*{\theHsection}{\HsecPrefix.\Alph{section}}
+\makeatother
+\setcounter{section}{0}
 
 % ============================================================
 % ANNEXE A — BIOPSIE HÉPATIQUE
@@ -417,6 +470,7 @@ Document de Travail — Version 1}
 \section{Fiche de traçabilité HDJ addictologie}
 \label{annexe:addicto_tracabilite}
 \input{annexes/annexe_addicto_traçabilite}
+
 
 
 \end{document}

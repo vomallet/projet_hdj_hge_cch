@@ -1,0 +1,143 @@
+% ============================================================
+% PRINCIPES DE DIMENSIONNEMENT CAPACITAIRE ET IMPACT FINANCIER
+% ============================================================
+
+\titleformat{\subsection}[runin]
+  {\bfseries\color{APHPblue}}
+  {}
+  {0pt}
+  {}
+
+% ============================================================
+% PRINCIPE GÉNÉRAL
+% ============================================================
+
+\subsection*{Principe général de dimensionnement capacitaire}
+
+Le dimensionnement du plateau HDJ repose sur une approche capacitaire pragmatique, fondée sur l’intensité réelle de surveillance requise, la durée moyenne des prises en charge et les contraintes opérationnelles observées en pratique. Les hypothèses retenues correspondent volontairement à une \textbf{phase de démarrage prudente}, permettant une montée en charge progressive sans modification structurelle des locaux ni des effectifs.
+
+Le dimensionnement présenté définit une \textbf{capacité annuelle maximale théorique}, constituant un plafond organisationnel et une réserve d’absorption des fluctuations d’activité, et non un objectif de production immédiat.
+
+La capacité physique est structurée selon trois modalités d’accueil ambulatoire distinctes, correspondant à des niveaux croissants d’intensité de soins :
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Lits médicalisés} : surveillance continue, patient allongé, actes ou pathologies à risque.
+    \item \textbf{Fauteuils de soins} : surveillance infirmière directe pour prises en charge intermédiaires.
+    \item \textbf{Espace non allongé de type \emph{lounge}} : patients autonomes relevant de parcours coordonnés, multidisciplinaires et programmés, sans besoin de surveillance continue.
+\end{itemize}
+
+Cette segmentation permet d’adapter finement les ressources physiques et humaines aux besoins cliniques, tout en évitant un surdimensionnement hospitalier en lits conventionnels.
+
+% ============================================================
+% HYPOTHÈSES OPÉRATIONNELLES
+% ============================================================
+
+\subsection*{Traduction en capacité physique (hypothèses opérationnelles conservatrices)}
+
+La conversion des besoins en capacité physique repose sur des hypothèses volontairement conservatrices, intégrant :
+\begin{itemize}[leftmargin=1.1cm]
+    \item les aléas organisationnels (annulations, reports, \emph{no-show}) ;
+    \item les contraintes de ressources humaines spécialisées ;
+    \item la variabilité inter-individuelle des durées de prise en charge ;
+    \item les indisponibilités ponctuelles des plateaux techniques.
+\end{itemize}
+
+Le fonctionnement du plateau est estimé sur une base réaliste de \textbf{44 semaines réellement opérées par an}, à raison de \textbf{5 jours par semaine}, soit \textbf{220 jours ouvrés/an}.
+
+Les hypothèses de productivité retenues sont les suivantes :
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Lits médicalisés} : 1 patient/lit/jour, coefficient de réalisation \textbf{0,85}.
+    \item \textbf{Fauteuils de soins} : 2 patients/fauteuil/jour, coefficient \textbf{0,80}.
+    \item \textbf{Fauteuils lounge} : capacité théorique maximale de 3 patients/fauteuil/jour. La productivité opérationnelle retenue est de \textbf{2 patients/fauteuil/jour}, avec application d’un coefficient de réalisation \textbf{0,75}, intégrant la variabilité des durées de séjour, les temps non productifs et les aléas organisationnels.
+\end{itemize}
+
+La capacité annuelle théorique est estimée selon la relation :
+\[
+HDJ/an = 220 \times \big(
+N_L \times 1.0 \times 0.85
++ N_F \times 2.0 \times 0.80
++ N_{Lg} \times 2.0 \times 0.75
+\big).
+\]
+
+% ============================================================
+% DIMENSIONNEMENT CAPACITAIRE
+% ============================================================
+
+\subsection*{Dimensionnement capacitaire du plateau}
+
+Sur cette base, un dimensionnement initial permettant une \textbf{capacité annuelle maximale comprise entre 4\,700 et 5\,000 séances d’HDJ} est le suivant :
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{6 lits médicalisés},
+    \item \textbf{6 fauteuils de soins},
+    \item \textbf{5 fauteuils lounge} (capacité assise non allongée).
+\end{itemize}
+
+Ce calibrage correspond à une capacité annuelle théorique de :
+\[
+220 \times (6\times1.0\times0.85
++ 6\times2.0\times0.80
++ 5\times2.0\times0.75)
+= \textbf{4\,884 HDJ/an}.
+\]
+
+Cette capacité constitue un plafond organisationnel, cohérent avec une trajectoire d’activité projetée à maturité médico-économique inférieure, tout en laissant une marge d’absorption substantielle pour les fluctuations d’activité et l’évolution future des filières.
+
+% ============================================================
+% IMPACT MÉDICO-ÉCONOMIQUE
+% ============================================================
+
+\subsection*{Traduction médico-économique}
+
+La répartition capacitaire permet une allocation différenciée des activités selon leur intensité de soins et leur rendement médico-économique. Les lits médicalisés concentrent les prises en charge complexes à forte valeur ajoutée clinique, tandis que les fauteuils de soins et l’espace \emph{lounge} absorbent des volumes élevés d’actes programmés à forte efficience organisationnelle.
+
+\begin{sidewaystable}[p]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+
+\begin{tabular}{
+p{4.6cm}
+>{\centering\arraybackslash}p{1.6cm}
+>{\centering\arraybackslash}p{3.0cm}
+>{\centering\arraybackslash}p{3.0cm}
+>{\centering\arraybackslash}p{3.4cm}
+>{\centering\arraybackslash}p{3.4cm}
+}
+\toprule
+\textbf{Type de capacité} &
+\textbf{N} &
+\textbf{Hypothèse de flux} &
+\textbf{Capacité annuelle} &
+\textbf{Activités principales} &
+\textbf{Recettes annuelles estimées} \\
+\midrule
+Lits médicalisés &
+6 &
+1 patient/lit/jour $\times$ 0.85 &
+$\approx$ 1\,122 &
+PBH, cirrhoses avancées, chimiothérapies prolongées, RI post-acte &
+$\approx$ 1.5–1.7 M€ \\
+Fauteuils de soins &
+6 &
+2 patients/fauteuil/jour $\times$ 0.80 &
+$\approx$ 2\,112 &
+Fer IV, albumine, biothérapies courtes, chimiothérapies simples &
+$\approx$ 0.6–0.7 M€ \\
+Fauteuils lounge &
+5 &
+2 patients/fauteuil/jour $\times$ 0.75 &
+$\approx$ 1\,650 &
+Hépatométabolique, cirrhoses compensées, addictologie, parcours coordonnés &
+$\approx$ 0.6–0.8 M€ \\
+\midrule
+\textbf{Total plateau} &
+— &
+— &
+\textbf{$\approx$ 4\,884} &
+— &
+\textbf{$\approx$ 3 M€} \\
+\bottomrule
+\end{tabular}
+
+\caption{Synthèse capacitaire et médico-économique du plateau HDJ selon des hypothèses conservatrices. La capacité présentée correspond à un plafond organisationnel, la trajectoire d’activité cible étant volontairement inférieure. L’espace \emph{lounge} constitue une capacité assise non allongée optimisant les flux sans création de lits supplémentaires.}
+\end{sidewaystable}

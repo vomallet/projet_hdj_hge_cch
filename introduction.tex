@@ -1,6 +1,7 @@
 % ============================================================
-% CHAPITRE 0 : Introduction générale
+% CHAPITRE 2 — INTRODUCTION GÉNÉRALE
 % ============================================================
+
 \titleformat{\subsection}[runin]
   {\bfseries\color{APHPblue}}
   {}
@@ -12,53 +13,39 @@
 \subsection*{L’AP-HP et le virage ambulatoire}
 
 L’Assistance Publique–Hôpitaux de Paris (AP-HP), premier centre hospitalo-universitaire d’Europe, regroupe 39 hôpitaux organisés en GHU et assure des missions de soins, d’enseignement et de recherche pour près de 12 millions d’habitants.  
-Le plan stratégique médical 2023–2028 place le virage ambulatoire au cœur de la transformation de l’institution, afin d’améliorer l’accessibilité, les délais et la fluidité des parcours \cite{APHP2023Plan}.  
-L’hôpital de jour (HDJ) constitue l’un des leviers majeurs de cette évolution, en permettant la réalisation coordonnée, sur un temps court, d’évaluations diagnostiques et thérapeutiques complexes dans un cadre sécurisé et universitaire.
+Le plan stratégique médical 2023–2028 place le virage ambulatoire au cœur de la transformation de l’institution, avec pour objectifs l’amélioration de l’accessibilité aux soins, la réduction des délais et la fluidification des parcours \cite{APHP2023Plan}.  
+Dans ce contexte, l’HDJ constitue un levier structurant, permettant la réalisation coordonnée, sur un temps court, d’évaluations diagnostiques et thérapeutiques complexes dans un cadre sécurisé et universitaire.
 
 \subsection*{Le GHU AP–HP.Centre et le site Cochin}
 
-L’hôpital Cochin–Port-Royal (GHU AP–HP.Centre–Université Paris Cité) est un pôle hospitalo-universitaire de recours national. Il couvre un champ large d’expertises médico-chirurgicales — hépato-gastroentérologie et oncologie digestive, chirurgie digestive et hépatobiliaire, endocrinologie, rhumatologie, obstétrique, néonatologie, réanimation spécialisée — et dispose d’un plateau technique complet (imagerie spécialisée, radiologie interventionnelle, endoscopie interventionnelle, anatomopathologie, biologie spécialisée, traitements systémiques et loco-régionaux des cancers digestifs, préparation à la greffe de foie).  
-Les deux unités cliniques d’HGE (maladies du foie ; hépato-gastroentérologie et oncologie digestive) constituent des plateformes de recours régionales et nationales \cite{CollegialeHGE2023}.
+L’hôpital Cochin–Port-Royal (GHU AP–HP.Centre–Université Paris Cité) est un pôle hospitalo-universitaire de recours national. Il couvre un champ étendu d’expertises médico-chirurgicales — hépato-gastroentérologie et oncologie digestive, chirurgie digestive et hépatobiliaire, endocrinologie, obstétrique, néonatologie, réanimation spécialisée — et dispose d’un plateau technique complet incluant imagerie spécialisée, radiologie interventionnelle, endoscopie interventionnelle, anatomopathologie et traitements systémiques des cancers digestifs.  
+Les deux unités cliniques d’hépato-gastroentérologie (maladies du foie ; hépato-gastroentérologie et oncologie digestive) constituent des plateformes de recours régionales et nationales \cite{CollegialeHGE2023}.
 
 \subsection*{Poids épidémiologique des maladies digestives}
 
-Les maladies digestives demeurent la première cause d’hospitalisation en médecine–chirurgie–obstétrique en France \cite{DREES2021}. Les tendances récentes incluent :
-
+Les maladies digestives constituent la première cause d’hospitalisation en médecine–chirurgie–obstétrique en France \cite{DREES2021}. Les évolutions épidémiologiques récentes sont caractérisées par :
 \begin{itemize}
-\item une augmentation marquée des cancers pancréatiques et hépatiques, aujourd’hui parmi les principales causes de mortalité oncologique \cite{UEG2022DigestiveHealth} ;
-\item une stabilité de l’incidence du cancer colorectal, mais un besoin croissant d’endoscopies pour le traitement des lésions précancéreuses ;
-\item une progression continue des maladies du foie, avec une prévalence de la cirrhose autour de 0,3~\%, 150--200 nouveaux cas/million/an et près de 15\,000 décès annuels \cite{FrenchHepaticFailure_2020} ;
-\item une croissance rapide des maladies métaboliques du foie (MASLD/MASH), portée par l’épidémie d’obésité et de diabète \cite{EASL2024MASLD, RN597} ;
-\item une augmentation durable de la prévalence des MICI, avec environ 250\,000 patients en France et plus de 20\,000 suivis à l’AP-HP \cite{Ng2017, SNDS_MICI2022}.
+\item une augmentation de l’incidence et de la mortalité des cancers hépatiques et pancréatiques \cite{UEG2022DigestiveHealth} ;
+\item une progression continue des maladies chroniques du foie, avec une prévalence estimée de la cirrhose autour de 0,3~\% et près de 15\,000 décès annuels \cite{FrenchHepaticFailure_2020} ;
+\item une croissance rapide des maladies métaboliques du foie (MASLD/MASH), portée par l’augmentation de l’obésité et du diabète \cite{EASL2024MASLD, RN597} ;
+\item une prévalence élevée et durable des maladies inflammatoires chroniques de l’intestin (MICI), concernant environ 250\,000 patients en France \cite{Ng2017, SNDS_MICI2022}.
 \end{itemize}
 
-Les complications liées à l’alcool constituent par ailleurs un déterminant majeur de morbi-mortalité digestive, première cause de cirrhose et de carcinome hépatocellulaire, avec un poids important sur les hospitalisations \cite{FrenchHepaticFailure_2020}.
+Les pathologies liées à l’alcool demeurent par ailleurs un déterminant majeur de la morbi-mortalité digestive, constituant la première cause de cirrhose et de carcinome hépatocellulaire.
 
 \subsection*{Contraintes structurelles et nécessité du développement ambulatoire}
 
-L’intensification des prises en charge spécialisées survient dans un contexte capacitaire tendu (fermetures de lits, tensions en personnel). De nombreuses situations, autrefois prises en charge en hospitalisation conventionnelle, relèvent désormais de l’ambulatoire : initiation de biothérapies MICI, immunothérapies, bilans spécialisés, évaluations multidisciplinaires, actes interventionnels simples.  
-Le projet médical HGE 2023–2028 identifie le développement de l’HDJ comme un levier essentiel pour réduire les durées moyennes de séjour, absorber la croissance épidémiologique et renforcer l’attractivité du pôle \cite{CollegialeHGE2023}.
+L’augmentation des besoins en soins spécialisés s’inscrit dans un contexte durable de contraintes capacitaires, marqué par les fermetures de lits et les tensions sur les ressources humaines. De nombreuses situations auparavant prises en charge en hospitalisation conventionnelle relèvent désormais de modalités ambulatoires : bilans spécialisés, évaluations multidisciplinaires, traitements systémiques de courte durée ou actes interventionnels ciblés.
 
-\subsection*{Rôle structurant des Hôpitaux de Jour en HGE}
+Le projet médical HGE 2023–2028 identifie ainsi le développement structuré de l’hôpital de jour (HDJ) comme un levier essentiel pour réduire les durées moyennes de séjour, absorber la croissance épidémiologique et renforcer l’attractivité du pôle \cite{CollegialeHGE2023}.
 
-Les HDJ thématiques constituent une réponse opérationnelle et stratégique aux besoins du pôle. Ils permettent :
+\subsection*{Logique et objectifs du présent document}
 
-\begin{itemize}
-\item la standardisation et la sécurisation des filières diagnostiques et thérapeutiques ;
-\item la réalisation concentrée d’évaluations spécialisées sur une même journée ;
-\item la réduction des délais d’accès aux biothérapies, à l’imagerie ou à l’endoscopie ;
-\item l’intégration de compétences pluridisciplinaires (diététique, psychologie, IPA, ETP, addictologie) ;
-\item l’amélioration de la coordination ville–hôpital et la traçabilité universitaire.
-\end{itemize}
+Le développement d’HDJ mutualisés vise à garantir la dynamique propre à chacune des spécialités impliquées (activité clinique, essais thérapeutiques, parcours patients), à maintenir un haut niveau de qualité des prises en charge et à optimiser l’utilisation des moyens alloués, en particulier les capacités d’accueil du bâtiment Achard.
 
-Ils forment désormais une architecture cohérente, alignée sur les besoins épidémiologiques, organisationnels et capacitaires du CHU.
+Le présent document décrit l’activité actuelle des principales filières concernées (hépatologie, MICI, addictologie, hépatométabolique, radiologie interventionnelle, oncologie digestive) et prépare leur évolution vers une organisation consolidée, rendue possible par la libération des locaux anciennement occupés par l’hématologie (6eme étage du batiment Achard).
 
-\subsection*{Logique du présent document}
+Cette réorganisation a pour objectif d’améliorer l’accessibilité, la qualité et la fluidité des prises en charge ambulatoires au sein du GHU AP–HP.Centre.
 
-Ce document rassemble les fiches techniques standardisées des différents HDJ du pôle d’HGE et prépare la construction d’un HDJ mutualisé à horizon 2027.  
-Il décrit l’activité actuelle (hépatologie, MICI, addictologie, hépatométabolique, radiologie interventionnelle, oncologie digestive) et fonde l’ossature opérationnelle du futur HDJ commun.  
-
-La libération des locaux actuellement occupés par l’hématologie permettra la création d’un espace unique, regroupant des parcours spécialisés et pluridisciplinaires à proximité immédiate du plateau technique.  
-Ce repositionnement améliorera l’accessibilité, la qualité et la fluidité des prises en charge ambulatoires au sein du GHU AP–HP.Centre.
 
 \end{spacing}
