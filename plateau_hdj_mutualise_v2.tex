@@ -1,0 +1,807 @@
+% ============================================================
+% 3. PLATEAU HDJ DIGESTIF MUTUALISÉ — ORGANISATION TRANSVERSALE
+% ============================================================
+% VERSION CORRIGÉE ET CONSOLIDÉE
+% ────────────────────────────────────────────────────────────
+% Principales corrections apportées :
+%
+% 1. COEFFICIENTS DE RÉALISATION — harmonisés par niveau :
+%      Niveau 1 (lits)     : 0,85
+%      Niveau 2 (fauteuils): 0,80
+%      Niveau 3 (lounge)   : 0,75
+%    (L'ancienne version appliquait 0,85 uniformément.)
+%
+% 2. NOMBRE DE FAUTEUILS LOUNGE — porté à 6
+%    (Configuration symétrique 6+6+6=18 places)
+%
+% 3. CAPACITÉS ANNUELLES — recalculées :
+%      Niveau 2 : 2 244 → 2 112 séances/an
+%      Niveau 3 : « 2 2244 » (coquille) → 1 980 séances/an
+%      Total    : 5 610 → 5 214 séances/an
+%
+% 4. COQUILLE « 2\,2244 » supprimée (ligne N3 tableau synthèse)
+%
+% 5. SECTION AJOUTÉE — « Principes de dimensionnement capacitaire »
+%    (méthodologie, hypothèses conservatrices, formule)
+%
+% 6. SECTION AJOUTÉE — « Synthèse médico-économique »
+%    (tableau landscape avec recettes estimées ≈ 3,2 M€)
+%
+% 7. REDISTRIBUTION — note de cohérence (total = 100 % annuel)
+%    Fourchettes réalignées sur projections réelles
+%
+% 8. TABLEAU SYNTHÈSE — ajout d'une colonne « Coefficient »
+%    pour expliciter les hypothèses devant un public administratif
+%
+% 9. ÉCART PLAFOND/CROISIÈRE — paragraphe explicatif ajouté
+%    (90 % d'occupation, marge de 10 % pour fluctuations)
+% ────────────────────────────────────────────────────────────
+% Packages requis (vérifier le préambule Overleaf) :
+%   \usepackage{rotating}       % sidewaystable
+%   \usepackage{booktabs}       % \toprule, \midrule, \bottomrule
+%   \usepackage{colortbl}       % \rowcolors
+%   \usepackage{enumitem}       % leftmargin
+%   \usepackage{setspace}       % \begin{spacing}
+%   \usepackage{tikz}           % schéma fonctionnel
+%   \usepackage{amsmath}        % formules
+%   \usepackage{array}          % >{\centering\arraybackslash}
+%   \usepackage[table]{xcolor}  % couleurs (APHPblue, etc.)
+%   \usepackage{caption}        % \captionof
+% ============================================================
+
+\titleformat{\subsection}[runin]
+  {\bfseries\color{APHPblue}}
+  {}
+  {0pt}
+  {}
+\label{sec:plateau_hdj_mutualise}
+\begin{spacing}{1.3}
+
+% ------------------------------------------------------------
+% INTRODUCTION DU CHAPITRE
+% ------------------------------------------------------------
+Le plateau des HDJ digestifs mutualisé constitue un dispositif ambulatoire de nouvelle génération, regroupant sur un même site l'ensemble des filières digestives et interventionnelles du service. Dimensionné selon des hypothèses conservatrices, il offre une \textbf{capacité physique de 18 places} réparties sur trois niveaux de prise en charge, pour un \textbf{plafond organisationnel d'environ 5\,200 séances par an} et un \textbf{potentiel de recettes estimé à 3,2~M€}. Ce chapitre détaille son organisation, son dimensionnement et sa gouvernance.
+
+% ============================================================
+% 3.1 PRINCIPES D'ORGANISATION
+% ============================================================
+\subsection{Principes d'organisation —}
+L'organisation du plateau repose sur quatre principes structurants :
+
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Graduation des prises en charge} : adaptation des moyens humains, techniques et hôteliers à l'intensité réelle des besoins cliniques, selon trois niveaux formalisés.
+    \item \textbf{Mutualisation des ressources} : partage des espaces, des équipes soignantes et des circuits logistiques entre toutes les filières contributrices, afin de réduire les coûts fixes unitaires.
+    \item \textbf{Flexibilité capacitaire} : système de vases communicants entre filières, permettant une réallocation dynamique des places non utilisées et une optimisation du taux d'occupation global.
+    \item \textbf{Excellence hôtelière} : environnement de qualité garantissant confort, intimité et dignité des patients, positionné comme un élément différenciant au sein du GHU.
+\end{itemize}
+
+% ============================================================
+% 3.2 QUALITÉ HÔTELIÈRE ET INTIMITÉ DES PATIENTS
+% ============================================================
+\subsection{Qualité hôtelière et intimité des patients —}
+Le plateau HDJ est conçu pour offrir un environnement de soins haut de gamme, différenciant et attractif. L'intimité des patients constitue une exigence non négociable, traduite par des choix architecturaux et organisationnels structurants :
+
+\begin{itemize}[leftmargin=1.1cm]
+\item \textbf{Niveau 1 (Haute technicité) :} Sectorisation en \textbf{chambres individuelles} pour l'ensemble des lits médicalisés, garantissant une confidentialité absolue et une sécurité des soins optimale.
+\item \textbf{Niveau 2 (Ambulatoire) :} Utilisation de \textbf{boxes individuels ou semi-cloisonnés} pour les fauteuils de soins, conciliant ergonomie de travail pour les équipes et respect de l'intimité des patients.
+\item \textbf{Niveau 3 (Flux et orientation) :} Aménagement de \textbf{6 espaces lounge} avec dispositifs de rupture visuelle et acoustique. Ce niveau intègre des \textbf{box de consultation privés} et repose sur une \textbf{différenciation des flux} (patients entrants, sortants et en cours de prise en charge) pour maximiser la fluidité. L'environnement est valorisé par un apport en lumière naturelle, un mobilier contemporain et une signalétique intuitive facilitant l'orientation.
+\end{itemize}
+
+Cette approche répond à une double exigence : respecter la dignité de patients souvent fragilisés par des pathologies chroniques lourdes, et positionner le plateau comme une référence en termes de qualité perçue au sein du GHU.
+
+% ============================================================
+% 3.3 PARCOURS ET FLUX PATIENTS
+% ============================================================
+\subsection{Parcours patient —}
+Les patients suivent un parcours standardisé, modulé selon la filière et la complexité clinique :
+
+\begin{enumerate}[leftmargin=1.1cm]
+\begin{spacing}{2}
+    \item \textbf{Orientation} — consultation spécialisée, RCP, urgences, ville ou hospitalisation complète.
+    \item \textbf{Classification} — attribution d'un niveau de prise en charge (1, 2 ou 3) selon critères médicaux.
+    \item \textbf{Programmation} — affectation à une place et un créneau horaire.
+    \item \textbf{Accueil centralisé} — admission administrative et paramédicale unique.
+    \item \textbf{Prise en charge} — actes médicaux, techniques ou multidisciplinaires.
+    \item \textbf{Surveillance} — proportionnée au niveau de risque.
+    \item \textbf{Sortie sécurisée} — synthèse médicale, prescriptions et organisation du suivi.
+\end{spacing}
+\end{enumerate}
+
+% ============================================================
+% 3.4 PRINCIPES DE DIMENSIONNEMENT CAPACITAIRE
+% ============================================================
+\subsection{Principes de dimensionnement capacitaire —}
+
+Le dimensionnement du plateau repose sur une approche capacitaire pragmatique, fondée sur l'intensité réelle de surveillance requise, la durée moyenne des prises en charge et les contraintes opérationnelles observées en pratique. Les hypothèses retenues correspondent volontairement à une \textbf{phase de démarrage prudente}, permettant une montée en charge progressive sans modification structurelle des locaux ni des effectifs.
+
+\paragraph{Segmentation de la capacité physique —}
+La capacité est structurée selon trois modalités d'accueil ambulatoire, correspondant à des niveaux croissants d'intensité de soins :
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Lits médicalisés} : surveillance continue, patient allongé, actes ou pathologies à risque.
+    \item \textbf{Fauteuils de soins} : surveillance infirmière directe pour prises en charge intermédiaires.
+    \item \textbf{Espace lounge} : patients autonomes relevant de parcours coordonnés, multidisciplinaires et programmés, sans besoin de surveillance continue.
+\end{itemize}
+
+Cette segmentation permet d'adapter finement les ressources physiques et humaines aux besoins cliniques, tout en évitant un surdimensionnement en lits conventionnels.
+
+\paragraph{Hypothèses opérationnelles conservatrices —}
+La conversion des besoins en capacité physique intègre les aléas suivants : annulations et reports, contraintes de ressources humaines spécialisées, variabilité inter-individuelle des durées de prise en charge et indisponibilités ponctuelles des plateaux techniques.
+
+Le fonctionnement du plateau est estimé sur une base réaliste de \textbf{44 semaines réellement opérées par an}, à raison de \textbf{5 jours par semaine}, soit \textbf{220 jours ouvrés/an}.
+
+Les hypothèses de productivité retenues sont les suivantes :
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Lits médicalisés} : 1 patient/lit/jour, coefficient de réalisation \textbf{0,85}.
+    \item \textbf{Fauteuils de soins} : 2 patients/fauteuil/jour, coefficient de réalisation \textbf{0,80}.
+    \item \textbf{Fauteuils lounge} : productivité opérationnelle retenue de \textbf{2 patients/fauteuil/jour}, avec un coefficient de réalisation de \textbf{0,75} intégrant la variabilité des durées de séjour et les temps non productifs. La capacité théorique maximale est de 3 patients/fauteuil/jour.
+\end{itemize}
+
+\paragraph{Formule de capacité annuelle —}
+La capacité annuelle théorique est estimée selon la relation :
+\[
+\mbox{HDJ/an} = 220 \times \Big(
+N_L \times 1{,}0 \times 0{,}85
+\;+\; N_F \times 2{,}0 \times 0{,}80
+\;+\; N_{Lg} \times 2{,}0 \times 0{,}75
+\Big)
+\]
+
+\noindent Application numérique avec $N_L=6$, $N_F=6$, $N_{Lg}=6$ :
+\[
+220 \times \big(6 \times 0{,}85 + 6 \times 1{,}60 + 6 \times 1{,}50\big)
+= 220 \times \big(5{,}10 + 9{,}60 + 9{,}00\big)
+= 220 \times 23{,}70
+= \textbf{5\,214 \mbox{ séances/an}}.
+\]
+
+\noindent Cette capacité constitue un \textbf{plafond organisationnel} — une réserve d'absorption des fluctuations d'activité — et non un objectif de production immédiat. La trajectoire d'activité cible à maturité médico-économique est volontairement inférieure, laissant une marge substantielle pour l'évolution future des filières.
+
+% ============================================================
+% VALIDATION PMSI
+% ============================================================
+\subsection{Adéquation charge/capacité — Validation sur données historiques —}
+Le dimensionnement a été confronté aux données PMSI 2023–2024 des services contributeurs. 
+L'analyse rétrospective porte sur les séjours de 0 jour (CMD 07, 25, 28) et les actes 
+externes transférables en HDJ.
+
+\begin{table}[!ht]
+\centering\small
+\rowcolors{2}{APHPsoft}{white}
+\renewcommand{\arraystretch}{1.5 }
+\begin{tabular}{@{}p{4cm}p{2.5cm}p{2.5cm}p{3cm}@{}}
+\toprule
+\textbf{Filière} & \textbf{Séjours 0j 2024} & \textbf{Cible HDJ} & \textbf{Taux transfert} \\
+\midrule
+Maladies du Foie      & 1 420 & 1 100 & 77\% \\
+MICI + Oncologie      & 1 890 & 1 600 & 85\% \\
+Addictologie          & 310   & 700   & +125\% (création) \\
+Radiologie interv.    & 180   & 250   & 139\% \\
+\midrule
+\textbf{Total}        & \textbf{3 800} & \textbf{3 650} & — \\
+\bottomrule
+\end{tabular}
+\caption{Adéquation charge/capacité — Confrontation PMSI 2024 vs cible HDJ}
+\end{table}
+
+La capacité de 5 214 séances/an (plafond) couvre largement la demande projetée (3 650 séances cible), laissant une marge de 30\% pour la croissance et les aléas. La filière « Maladies du Foie » (35\% des flux) 
+dispose de 1 122 + 660 = 1 782 créneaux potentiels (N1 + part N3), cohérent avec la demande de 1 100 séances.
+
+\clearpage
+% ============================================================
+% 3.5 NIVEAUX DE PRISE EN CHARGE — VUE D'ENSEMBLE
+% ============================================================
+\subsection{Trois niveaux de prise en charge —}
+Le plateau HDJ est structuré autour de trois niveaux fonctionnels, définis selon l'intensité de surveillance requise et la durée de séjour. Cette graduation permet une allocation optimale des ressources et une rotation adaptée à chaque type de prise en charge.
+
+\vspace{0.8cm}
+
+\begin{table}[!ht]
+\centering
+\small
+\rowcolors{2}{APHPsoft}{white}
+\renewcommand{\arraystretch}{1.5 }
+\begin{tabular}{@{}p{2.5cm}p{2cm}p{1.8cm}p{2cm}p{1.5cm}p{2.5cm}@{}}
+\toprule
+\textbf{Niveau} & \textbf{Places} & \textbf{Durée} & \textbf{Rotation} & \textbf{Coeff.} & \textbf{Capacité/an} \\
+\midrule
+1 — Lits      & 6 chambres  & 6–8 h & 1 pat./jour & 0,85 & $\sim$1\,122 \\
+2 — Fauteuils & 6 fauteuils & 3–4 h & 2 pat./jour & 0,80 & $\sim$2\,112 \\
+3 — Lounge    & 6 fauteuils & 2–3 h & 2 pat./jour & 0,75 & $\sim$1\,980 \\
+\midrule
+\textbf{Total} & \textbf{18 places} & — & — & — & \textbf{$\sim$5\,214} \\
+\bottomrule
+\end{tabular}
+\caption{Synthèse des trois niveaux de prise en charge (base 220 jours/an, coefficients différenciés par niveau)}
+\label{tab:niveaux_synthese}
+\end{table}
+
+% ============================================================
+% 3.5.1 NIVEAU 1 — LITS MÉDICALISÉS
+% ============================================================
+\subsubsection*{Niveau 1 — Lits médicalisés en chambre individuelle}
+
+\paragraph{Principe —}
+Le niveau 1 accueille les patients nécessitant une surveillance médicale continue et/ou des actes invasifs à risque. Chaque patient occupe une \textbf{chambre individuelle} pour la journée entière, garantissant intimité, repos et conditions optimales de surveillance.
+
+\paragraph{Indications —}
+\begin{itemize}[leftmargin=1.1cm]
+    \item biopsies hépatiques transpariétales (repos strict post-procédure) ;
+    \item ponctions d'ascite grand volume ($>$5 litres, compensation albumine) ;
+    \item chimiothérapies prolongées ou à risque (surveillance continue) ;
+    \item surveillance post-radiologie interventionnelle (embolisation, drainage).
+\end{itemize}
+
+\paragraph{Organisation —}
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Capacité} : 6 chambres individuelles équipées (scope, oxygène, aspiration).
+    \item \textbf{Durée de séjour} : 6 à 8 heures (arrivée 8h00, sortie 16h00–18h00).
+    \item \textbf{Rotation} : 1 patient par lit par jour — pas de double rotation possible.
+    \item \textbf{Ratio IDE} : 1 IDE pour 3 patients (surveillance renforcée).
+    \item \textbf{Présence médicale} : médecin senior disponible sur le plateau.
+\end{itemize}
+
+\paragraph{Capacité annuelle —}
+Avec 6 lits $\times$ 220 jours $\times$ 1 patient/jour $\times$ coefficient 0,85 = \textbf{1\,122 séances/an}.
+
+% ============================================================
+% 3.5.2 NIVEAU 2 — FAUTEUILS DE SOINS
+% ============================================================
+\subsubsection*{Niveau 2 — Fauteuils de soins en box individuel}
+
+\paragraph{Principe —}
+Le niveau 2 accueille les patients nécessitant des soins techniques avec surveillance infirmière directe, mais sans nécessité de décubitus prolongé. Les fauteuils sont installés dans des \textbf{boxes individuels ou semi-cloisonnés}, préservant l'intimité tout en permettant une surveillance visuelle.
+
+\paragraph{Indications —}
+\begin{itemize}[leftmargin=1.1cm]
+    \item perfusions d'albumine (cirrhoses) ;
+    \item fer injectable IV (anémies ferriprives) ;
+    \item transfusions programmées ;
+    \item biothérapies IV (infliximab, vedolizumab, ustekinumab) ;
+    \item chimiothérapies digestives simples (durée $<$4h) ;
+    \item traitements IV divers (antibiotiques, immunoglobulines).
+\end{itemize}
+
+\paragraph{Organisation —}
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Capacité} : 6 fauteuils inclinables en boxes individuels.
+    \item \textbf{Durée de séjour} : 3 à 4 heures par passage.
+    \item \textbf{Rotation} : 2 patients par fauteuil par jour (matin + après-midi).
+    \item \textbf{Ratio IDE} : 1 IDE pour 4 patients.
+    \item \textbf{Présence médicale} : médecin joignable, passage systématique si besoin.
+\end{itemize}
+
+\paragraph{Capacité annuelle —}
+Avec 6 fauteuils $\times$ 220 jours $\times$ 2 patients/jour $\times$ coefficient 0,80 = \textbf{2\,112 séances/an}.
+
+% ============================================================
+% 3.5.3 NIVEAU 3 — PLATEAU AMBULATOIRE (LOUNGE)
+% ============================================================
+\subsubsection*{Niveau 3 — Plateau ambulatoire léger et multidisciplinaire}
+
+\paragraph{Principe — Une unité de coordination agile}
+Le Niveau 3 constitue un dispositif ambulatoire innovant, dédié aux parcours à \textbf{faible intensité de surveillance} mais à \textbf{haute valeur ajoutée évaluative}. Ce modèle repose sur le concept de l'expert au chevet du patient : ce dernier est installé dans un environnement lounge ergonomique, tandis que les différents professionnels gravitent autour de lui.
+
+Il ne s'agit pas d'un espace de soins continus, mais d'un \textbf{point d'ancrage stratégique} permettant de transformer le séjour en un \emph{One-Stop Shop} diagnostique et thérapeutique.
+
+\paragraph{Indications et files actives —}
+Ce plateau est dédié à quatre filières clés du service :
+\begin{itemize}[leftmargin=1.1cm, label=\textbullet]
+    \item \textbf{Bilan hépatique non-invasif complet :} échographie morphologique, élastographies (hépatique et splénique), quantification de la stéatose (CAP/LISA).
+    \item \textbf{Addictologie intégrée :} sevrage ambulatoire, suivi post-sevrage complexe et réduction des risques.
+    \item \textbf{MICI stables :} administration de biothérapies sous-cutanées et éducation thérapeutique du patient (ETP).
+    \item \textbf{Parcours pré-thérapeutiques :} bilans pré-inclusion en essais cliniques et initiation de traitements oraux complexes.
+\end{itemize}
+
+\paragraph{Paramètres opérationnels —}
+L'organisation est calibrée pour maximiser la rotation des actifs tout en garantissant la qualité de prise en charge :
+\begin{itemize}[leftmargin=1.1cm, label=\textbullet]
+    \item \textbf{Capacité :} 6 modules lounge avec isolations visuelle et acoustique.
+    \item \textbf{Rotation retenue :} 2 patients par fauteuil par jour (capacité théorique maximale : 3).
+    \item \textbf{Durée de séjour :} 2 à 3 heures par passage.
+    \item \textbf{Coefficient de réalisation :} 0,75 — intégrant la variabilité des durées de séjour, les temps non productifs et les aléas organisationnels.
+    \item \textbf{Ratio IDE :} 1 IDE pour 4 patients, permettant de concentrer les ressources soignantes sur les niveaux de plus haute technicité.
+\end{itemize}
+
+\paragraph{Logique de rotation multidisciplinaire —}
+Le fauteuil lounge constitue le point fixe autour duquel s'articulent les compétences :
+\begin{itemize}[leftmargin=1.1cm, label=\textbullet]
+    \item \textbf{Expertise médicale :} hépatologues, gastroentérologues, addictologues.
+    \item \textbf{Soutien paramédical :} diététicien(ne)s, psychologues.
+    \item \textbf{Coordination :} Infirmières en Pratique Avancée (IPA) pour le suivi et l'ETP.
+    \item \textbf{Actes techniques :} accès aux box dédiés (échographies, élastographies, prélèvements complexes).
+\end{itemize}
+
+\paragraph{Capacité annuelle prévisionnelle —}
+L'efficience du modèle permet d'envisager les volumes suivants (base 220 jours, coefficient 0,75) :
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Hypothèse retenue (2 rotations/j) :} 6 $\times$ 220 $\times$ 2 $\times$ 0,75 = \textbf{1\,980 séances/an}.
+    \item \textbf{Cible de performance (3 rotations/j) :} 6 $\times$ 220 $\times$ 3 $\times$ 0,75 = \textbf{2\,970 séances/an}.
+\end{itemize}
+
+\vspace{1.5 cm}
+% ============================================================
+% 3.6 SYNTHÈSE CAPACITAIRE ET IMPACT MÉDICO-ÉCONOMIQUE
+% ============================================================
+\subsection{Synthèse capacitaire et impact médico-économique —}
+\label{sec:synthese_medico_eco}
+
+La répartition capacitaire permet une allocation différenciée des activités selon leur intensité de soins et leur rendement médico-économique. Les lits médicalisés concentrent les prises en charge complexes à forte valeur ajoutée clinique, tandis que les fauteuils de soins et l'espace lounge absorbent des volumes élevés d'actes programmés à forte efficience organisationnelle.
+
+% NOTE : requiert \usepackage{rotating} et \usepackage{array}
+\begin{sidewaystable}[p]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{APHPsoft}{white}
+\begin{tabular}{
+  p{4.2cm}
+  >{\centering\arraybackslash}p{1.4cm}
+  >{\centering\arraybackslash}p{3.2cm}
+  >{\centering\arraybackslash}p{2.8cm}
+  >{\centering\arraybackslash}p{3.6cm}
+  >{\centering\arraybackslash}p{3.2cm}
+}
+\toprule
+\textbf{Type de capacité} &
+\textbf{N} &
+\textbf{Hypothèse de flux} &
+\textbf{Capacité annuelle} &
+\textbf{Activités principales} &
+\textbf{Recettes estimées} \\
+\midrule
+Lits médicalisés &
+6 &
+1 pat./lit/j $\times$ 0,85 &
+$\approx$ 1\,122 &
+PBH, cirrhoses avancées, chimiothérapies prolongées, RI post-acte &
+$\approx$ 1,5–1,7 M€ \\
+Fauteuils de soins &
+6 &
+2 pat./faut./j $\times$ 0,80 &
+$\approx$ 2\,112 &
+Fer IV, albumine, biothérapies IV, chimiothérapies simples &
+$\approx$ 0,6–0,7 M€ \\
+Fauteuils lounge &
+6 &
+2 pat./faut./j $\times$ 0,75 &
+$\approx$ 1\,980 &
+Hépatométabolique, cirrhoses compensées, addictologie, parcours coordonnés &
+$\approx$ 0,7–1,0 M€ \\
+\midrule
+\textbf{Total plateau} &
+\textbf{18} &
+— &
+\textbf{$\approx$ 5\,214} &
+— &
+\textbf{$\approx$ 3,2 M€} \\
+\bottomrule
+\end{tabular}
+\caption{Synthèse capacitaire et médico-économique du plateau HDJ (hypothèses conservatrices, 220 jours/an). La capacité présentée correspond à un plafond organisationnel ; la trajectoire d'activité cible est volontairement inférieure. L'espace lounge constitue une capacité assise non allongée optimisant les flux sans création de lits supplémentaires.}
+\label{tab:synthese_medico_eco}
+\end{sidewaystable}
+
+\clearpage
+
+\noindent\textbf{Écart entre plafond et projections opérationnelles —}
+À titre de comparaison, la somme des projections « croisière » des huit filières opérationnelles atteint environ 4\,700 séances et 2,9~M€, soit un taux d'occupation implicite de 90\,\%. Cette marge de 10\,\% constitue une réserve d'absorption des fluctuations saisonnières et des montées en charge futures.
+
+% ============================================================
+% 3.7 SYSTÈME DE VASES COMMUNICANTS
+% ============================================================
+\subsection{Flexibilité capacitaire — Système de vases communicants —}
+\label{sec:vases_communicants}
+
+L'organisation du plateau repose sur un principe fondamental de \textbf{flexibilité inter-filières} : les places non utilisées par une spécialité sont immédiatement réallouées aux autres filières selon un système de vases communicants.
+
+\paragraph{Principe —}
+Chaque filière dispose de créneaux réservés (cf.\ planning hebdomadaire), mais les places non programmées ou libérées (annulation, sortie anticipée) sont mises à disposition d'un pool commun, accessible à l'ensemble des spécialités contributrices.
+
+\paragraph{Mécanisme d'allocation —}
+La gestion des places repose sur un système de priorisation en trois temps :
+
+\begin{enumerate}[leftmargin=1.1cm]
+    \item \textbf{J-7 à J-3} — Créneaux réservés par filière selon le planning type. Chaque référent médical confirme ses patients programmés.
+    \item \textbf{J-2 à J-1} — Les places non confirmées basculent dans le \textbf{pool mutualisé}. L'IPA coordinateur les propose aux autres filières selon une liste d'attente partagée.
+    \item \textbf{Jour J} — Toute place libérée (annulation tardive, sortie précoce) est immédiatement signalée et réattribuée en temps réel par l'IDE coordinateur.
+\end{enumerate}
+
+\paragraph{Critères de priorisation du pool —}
+En cas de demandes concurrentes, l'allocation respecte les priorités suivantes :
+\begin{enumerate}[leftmargin=1.1cm]
+    \item urgences médicales relatives (décompensation, infection, anémie symptomatique) ;
+    \item patients en attente depuis plus de 7 jours ;
+    \item optimisation du taux d'occupation (remplissage des créneaux matin/après-midi) ;
+    \item équité entre filières sur la période glissante (suivi mensuel).
+\end{enumerate}
+
+\paragraph{Outils de gestion —}
+\begin{itemize}[leftmargin=1.1cm]
+    \item tableau de programmation partagé (Aghate) visible par tous les référents ;
+    \item liste d'attente mutualisée avec date de demande et niveau de priorité ;
+    \item alerte automatique en cas de place libérée (notification IPA/IDE coordinateur) ;
+    \item reporting hebdomadaire du taux d'occupation par filière et par niveau.
+\end{itemize}
+
+\paragraph{Bénéfices attendus —}
+\begin{itemize}[leftmargin=1.1cm]
+    \item optimisation du taux d'occupation global ($>$85\% cible) ;
+    \item réduction des délais de programmation pour toutes les filières ;
+    \item équité d'accès entre spécialités contributrices ;
+    \item absorption des variations saisonnières d'activité.
+\end{itemize}
+
+
+% ============================================================
+% 3.8 PLANNING HEBDOMADAIRE TYPE
+% ============================================================
+\subsection{Planning hebdomadaire type —}
+L'organisation des lits médicalisés (niveau 1) repose sur une programmation hebdomadaire structurée. Chaque filière dispose de créneaux réservés ; les places non confirmées à J-2 basculent dans le pool mutualisé.
+
+\vspace{0.4cm}
+
+\begin{table}[!ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.4}
+\rowcolors{2}{APHPsoft}{white}
+\begin{tabular}{@{}p{1.8cm}p{5.5cm}p{1.8cm}p{1.8cm}@{}}
+\toprule
+\textbf{Jour} & \textbf{Activités programmées} & \textbf{Réservé} & \textbf{Pool} \\
+\midrule
+Lundi    & PBH (2) + Ascite (3)                              & 5 lits & 1 lit  \\
+Mardi    & Radiologie interventionnelle (3–4) + Chimio lourde (1) & 4 lits & 2 lits \\
+Mercredi & MICI immunothérapies IV (4–5) + Chimio lourde (1) & 5 lits & 1 lit  \\
+Jeudi    & PBH (2) + Ascite (3)                              & 5 lits & 1 lit  \\
+Vendredi & Radiologie interventionnelle (3–4) + Chimio lourde (1) & 4 lits & 2 lits \\
+\bottomrule
+\end{tabular}
+\caption{Planning hebdomadaire — Lits médicalisés (niveau 1) : créneaux réservés et pool mutualisé}
+\label{tab:planning_hebdo_lits}
+\end{table}
+
+\vspace{0.5cm}
+
+\begin{table}[!ht]
+\centering
+\small
+\renewcommand{\arraystretch}{1.4}
+\rowcolors{2}{APHPsoft}{white}
+\begin{tabular}{@{}p{1.8cm}p{5.5cm}p{5.5cm}@{}}
+\toprule
+\textbf{Jour} & \textbf{Matin (8h–12h)} & \textbf{Après-midi (13h–17h)} \\
+\midrule
+Lundi    & Fer IV, Albumine, Transfusions & Biothérapies      \\
+Mardi    & Biothérapies                   & Chimio simples     \\
+Mercredi & Fer IV, Albumine, Transfusions & Biothérapies      \\
+Jeudi    & Chimio simples                 & Biothérapies       \\
+Vendredi & Biothérapies                   & Rattrapage / Pool  \\
+\bottomrule
+\end{tabular}
+\caption{Planning hebdomadaire — Fauteuils de soins (niveau 2)}
+\label{tab:planning_hebdo_fauteuils}
+\end{table}
+
+\vspace{0.4cm}
+
+\noindent L'espace lounge (niveau 3, 6 fauteuils) fonctionne quotidiennement sans contrainte de jour fixe, avec programmation adaptée aux disponibilités des intervenants (médecins, diététiciens, psychologues, IPA).
+
+% ============================================================
+% 3.9 ZONES FONCTIONNELLES
+% ============================================================
+\subsection{Zones fonctionnelles —}
+La traduction spatiale de l'organisation repose sur des zones clairement identifiées :
+
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Zone d'accueil} — admission centralisée, attente confortable, orientation.
+    \item \textbf{Zone niveau 1} — 6 chambres individuelles équipées (lits médicalisés).
+    \item \textbf{Zone niveau 2} — 6 boxes individuels avec fauteuils inclinables.
+    \item \textbf{Zone niveau 3} — espace lounge aménagé (6 fauteuils, séparations visuelles et acoustiques).
+    \item \textbf{Zone consultations} — bureaux intégrés (diététique, psychologie, addictologie, IPA).
+    \item \textbf{Zone technique} — échographie, élastographie, préparation traitements.
+    \item \textbf{Zone logistique} — pharmacie, stockage, circuits propres/sales.
+\end{itemize}
+
+\clearpage
+% ============================================================
+% 3.10 MUTUALISATION DES RESSOURCES HUMAINES
+% ============================================================
+\subsection{Ressources humaines mutualisées —}
+Le fonctionnement du plateau repose sur une équipe dédiée, polyvalente et formée à l'ensemble des niveaux de prise en charge.
+
+\hspace{1.5 cm}
+
+\begin{table}[!ht]
+\centering
+\small
+\rowcolors{2}{APHPsoft}{white}
+\begin{tabular}{@{}p{4.5cm}p{2.5cm}p{2.5cm}p{3.5cm}@{}}
+\toprule
+\textbf{Catégorie} & \textbf{Phase pilote} & \textbf{Maturité} & \textbf{Missions principales} \\
+\midrule
+IDE expertes        & 4–5 ETP  & 6–7 ETP   & Soins, surveillance, coordination \\
+IPA                 & 1 ETP    & 1,5 ETP   & Coordination, évaluation, ETP     \\
+Cadre de santé      & 0,5 ETP  & 1 ETP     & Management, organisation           \\
+Secrétariat médical & 0,5 ETP  & 1 ETP     & Programmation, accueil, DPI        \\
+Psychologue         & 0,3 ETP  & 0,5 ETP   & Soutien, addictologie              \\
+Diététicien(ne)     & 0,3 ETP  & 0,5 ETP   & Bilans nutritionnels, ETP          \\
+\midrule
+\textbf{Total PNM}  & \textbf{$\sim$7 ETP} & \textbf{$\sim$11,5 ETP} & — \\
+\bottomrule
+\end{tabular}
+\caption{Effectifs non médicaux (PNM) — Phase pilote et maturité}
+\label{tab:effectifs_pnm}
+\end{table}
+
+\vspace{2.5 cm}
+
+\begin{table}[H]
+\centering
+\small
+\rowcolors{2}{APHPsoft}{white}
+\begin{tabular}{@{}p{6.5cm}p{3cm}p{3cm}@{}}
+\toprule
+\textbf{Spécialité médicale} & \textbf{Phase pilote} & \textbf{Maturité} \\
+\midrule
+Hépatologie (PBH, cirrhose)    & 2 demi-j/sem & 4 demi-j/sem \\
+MICI (biothérapies)             & 2 demi-j/sem & 3 demi-j/sem \\
+Addictologie                    & 1 demi-j/sem & 2 demi-j/sem \\
+Oncologie digestive             & 1 demi-j/sem & 2 demi-j/sem \\
+Radiologie interventionnelle    & —            & 1 demi-j/sem \\
+\midrule
+\textbf{Total vacations/semaine} & \textbf{6 demi-j} & \textbf{12 demi-j} \\
+\bottomrule
+\end{tabular}
+\caption{Vacations médicales hebdomadaires (PM)}
+\label{tab:effectifs_pm}
+\end{table}
+
+\paragraph{Plan de formation à la polyvalence —}
+La mutualisation des IDE impose une montée en compétences croisée. Un plan de 
+formation sur 12 mois est prévu avant ouverture :
+
+\begin{table}[!ht]
+\centering\small
+\rowcolors{2}{APHPsoft}{white}
+\begin{tabular}{@{}p{4.5cm}p{3cm}p{2.5cm}p{2.5cm}@{}}
+\toprule
+\textbf{Compétence} & \textbf{Public cible} & \textbf{Durée} & \textbf{Validation} \\
+\midrule
+Surveillance post-RI (embolisation, drainage) & IDE addictologie, MICI & 3 jours & Attestation RI \\
+Chimiothérapies digestives & IDE non-oncologie & 5 jours & Habilitation URC \\
+Gestion des sevrages (CIWA, anxiolyse) & IDE non-addictologie & 2 jours & Attestation addicto \\
+Biothérapies IV (perfusion, EI) & Toutes IDE & 2 jours & Attestation MICI \\
+Surveillance post-PBH & IDE non-hépatologie & 1 jour & Compagnonnage \\
+\bottomrule
+\end{tabular}
+\caption{Plan de formation croisée — Polyvalence IDE du plateau HDJ}
+\end{table}
+
+\noindent \textbf{Principe de base :} Chaque IDE maîtrise son cœur de métier + 
+2 compétences transversales minimum. L'affectation quotidienne tient compte 
+des habilitations validées.
+
+\paragraph{Ratio de sécurité —}
+Les ratios IDE/patients sont différenciés par niveau et conformes aux 
+recommandations HAS/sociétés savantes :
+
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Niveau 1} : 1 IDE / 3 patients (surveillance renforcée post-acte)
+    \item \textbf{Niveau 2} : 1 IDE / 4 patients (soins techniques standards)
+    \item \textbf{Niveau 3} : 1 IDE / 6 patients (coordination, faible technicité)
+\end{itemize}
+
+\noindent En configuration maximale (18 patients simultanés), l'effectif requis 
+est de 2 + 1,5 + 1 = \textbf{4,5 IDE présentes}, cohérent avec le dimensionnement 
+de 6–7 ETP permettant la couverture des absences.
+
+% ============================================================
+% 3.11 SCHÉMA FONCTIONNEL
+% ============================================================
+\clearpage
+\subsection{Schéma fonctionnel du plateau —}
+
+\noindent Le schéma ci-dessous illustre le parcours patient depuis l'orientation initiale jusqu'à la sortie sécurisée, en passant par les trois niveaux de prise en charge et le pool mutualisé.
+
+\vspace*{\fill}
+
+\begin{center}
+\begin{tikzpicture}[
+    node distance=1.2cm,
+    box/.style={
+        rectangle,
+        rounded corners=3pt,
+        draw=APHPdark,
+        thick,
+        text width=5.2cm,
+        minimum height=1.1cm,
+        align=center,
+        fill=APHPsoft
+    },
+    levelbox/.style={
+        rectangle,
+        rounded corners=3pt,
+        draw=APHPblue,
+        thick,
+        text width=3.2cm,
+        minimum height=0.9cm,
+        align=center,
+        fill=white
+    },
+    arrow/.style={->, thick, APHPdark}
+]
+
+% Noeuds
+\node[box] (orientation) {Orientation \\ Consultation / Ville / Urgences};
+\node[box, below=of orientation] (classif) {Classification patient \\ Niveau 1, 2 ou 3};
+\node[box, below=of classif] (accueil) {Accueil centralisé \\ Admission unique};
+
+\node[levelbox, below left=1.5cm and -0.5cm of accueil] (n1) {Niveau 1 \\ 6 chambres};
+\node[levelbox, below=1.5cm of accueil] (n2) {Niveau 2 \\ 6 fauteuils};
+\node[levelbox, below right=1.5cm and -0.5cm of accueil] (n3) {Niveau 3 \\ 6 lounge};
+
+\node[box, below=3.5cm of accueil] (sortie) {Sortie sécurisée \\ Synthèse + Suivi};
+\node[box, right=2.5cm of classif] (pool) {Pool mutualisé \\ Vases communicants};
+% Ajouter dans le TikZ :
+\node[box, below right=2cm and 3cm of sortie, fill=red!10] (hospit) 
+    {HC\\ ou SAU};
+\draw[arrow, red, dashed] (n1) to[bend right=20] node[midway, right, font=\scriptsize] 
+    {Complication} (hospit);
+\draw[arrow, red, dashed] (n2) to[bend right=10] (hospit);
+
+% Flèches
+\draw[arrow] (orientation) -- (classif);
+\draw[arrow] (classif) -- (accueil);
+\draw[arrow] (accueil) -- (n1);
+\draw[arrow] (accueil) -- (n2);
+\draw[arrow] (accueil) -- (n3);
+\draw[arrow] (n1) -- (sortie);
+\draw[arrow] (n2) -- (sortie);
+\draw[arrow] (n3) -- (sortie);
+\draw[arrow, dashed] (pool) -- (accueil);
+
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.8cm}
+\begin{center}
+\captionof{figure}{Schéma fonctionnel du plateau HDJ avec classification par niveau et pool mutualisé}
+\label{fig:schema_fonctionnel}
+\end{center}
+
+\vspace*{\fill}
+\paragraph{Circuit de l'aval — Gestion des complications —}
+En cas de complication nécessitant une hospitalisation conventionnelle :
+
+\begin{enumerate}[leftmargin=1.1cm]
+    \item \textbf{Évaluation immédiate} par le médecin senior du plateau.
+    \item \textbf{Contact du service d'aval} : Maladies du Foie, 
+    Gastroentérologie, SAU, Réanimation médicale si défaillance vitale.
+    \item \textbf{Transfert sécurisé} avec dossier de liaison et transmission 
+    orale IDE-IDE.
+    \item \textbf{Traçabilité} : signalement EI si applicable, analyse en CODIR.
+\end{enumerate}
+
+\noindent \textbf{Objectif :} Taux de transfert non programmé 
+vers hospitalisation conventionnelle $<$ 0.5\% des séances.
+
+
+% ============================================================
+% 3.12 GOUVERNANCE
+% ============================================================
+\subsection{Gouvernance —}
+Le plateau est placé sous une responsabilité médicale unique. La gouvernance s'appuie sur deux instances complémentaires :
+
+\paragraph{Comité de pilotage stratégique (COPIL) — Trimestriel}
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Composition} : responsable médical, référents filières, cadre supérieur, direction des soins, direction médico-économique.
+    \item \textbf{Missions} : orientations stratégiques, arbitrages capacitaires, validation de la clé de redistribution des recettes.
+\end{itemize}
+
+\paragraph{Comité opérationnel (CODIR) — Mensuel}
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Composition} : responsable médical, cadre de santé, IPA, secrétariat, pharmacie.
+    \item \textbf{Missions} : suivi opérationnel, gestion des flux, résolution des dysfonctionnements.
+\end{itemize}
+
+\clearpage
+\clearpage
+\subsubsection*{Tableau de bord —}
+
+\begin{table}[H]
+\centering
+\caption{Indicateurs de pilotage}
+\label{tab:kpi}
+\small
+\rowcolors{2}{APHPsoft}{white}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{@{}p{3cm}p{7cm}p{2.5cm}@{}}
+\toprule
+\textbf{Domaine} & \textbf{Indicateurs} & \textbf{Fréquence} \\
+\midrule
+Activité           & Séances/filière/niveau, taux d'occupation, délais de programmation, annulations & Mensuel \\
+Médico-économique  & Recettes/filière, écart au budget, coût moyen par séance                        & Mensuel \\
+Qualité            & Complications, réhospitalisations à 30 j, satisfaction patients, EI              & Trimestriel \\
+RH                 & Absentéisme, vacances de postes, heures supplémentaires, formations réalisées     & Trimestriel \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\paragraph{Règlement intérieur de l'unité —}
+Un règlement intérieur, validé par le COPIL avant ouverture, définit les règles 
+d'arbitrage en cas de conflit de programmation :
+
+\begin{enumerate}[leftmargin=1.1cm]
+    \item \textbf{Priorisation médicale} — L'IDE coordinateur applique la grille 
+    de priorisation (cf.\ §3.7). En cas d'égalité, le médecin senior présent 
+    sur le plateau tranche.
+    \item \textbf{Escalade} — Si le conflit oppose deux filières (ex.\ urgence RI 
+    vs patient addictologie programmé), le responsable médical de l'UF ou son 
+    délégué est contacté sous 15 minutes.
+    \item \textbf{Traçabilité} — Tout arbitrage est consigné dans le DPI avec 
+    motif, décideur et solution retenue. Un reporting mensuel est présenté en CODIR.
+    \item \textbf{Recours} — Les litiges récurrents sont portés au COPIL trimestriel 
+    pour ajustement des créneaux réservés.
+\end{enumerate}
+
+\noindent Le règlement intérieur précise également : horaires d'ouverture, 
+procédure d'annulation tardive (<24h), gestion des urgences relatives, 
+circuit de signalement des EI.
+
+% ============================================================
+% 3.13 MODÈLE ÉCONOMIQUE UF
+% ============================================================
+\subsection{Modèle économique de l'unité fonctionnelle —}
+\label{sec:modele_economique_uf}
+
+Le plateau HDJ est constitué en \textbf{unité fonctionnelle (UF) distincte}, permettant une traçabilité des recettes et une redistribution équitable vers les UF cliniques contributrices.
+
+\paragraph{Centralisation —}
+L'ensemble des recettes T2A (GHS, suppléments, molécules onéreuses) est imputé à l'UF HDJ Digestif Mutualisé.
+
+\paragraph{Redistribution —}
+Les recettes sont redistribuées selon un mécanisme mixte validé annuellement en COPIL :
+\begin{itemize}[leftmargin=1.1cm]
+    \item \textbf{Base forfaitaire (60\%)} : enveloppe fixe par UF clinique, garantissant une prévisibilité budgétaire ;
+    \item \textbf{Part variable (40\%)} : au prorata de l'activité réellement réalisée, incitant à l'optimisation de la programmation.
+\end{itemize}
+
+\begin{table}[!ht]
+\centering
+\small
+\rowcolors{2}{APHPsoft}{white}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{@{}p{5cm}p{4.5cm}p{2.5cm}@{}}
+\toprule
+\textbf{UF bénéficiaire} & \textbf{Filières} & \textbf{\% indicatif} \\
+\midrule
+Maladies du Foie              & PBH, cirrhoses, hépatométabolique     & 30–35\% \\
+Gastroentérologie             & MICI, oncologie digestive             & 35–40\% \\
+Addictologie                  & HDJ addictologie                      & 15–20\% \\
+Radiologie interventionnelle  & Post-procédures RI                    & 10–15\% \\
+\bottomrule
+\end{tabular}
+\caption{Redistribution indicative des recettes (total ajusté à 100\% annuellement en COPIL)}
+\label{tab:redistribution}
+\end{table}
+
+\end{spacing}
+\clearpage
+\paragraph{Périmètre de la redistribution —}
+La clé de répartition (30–35 / 35–40 / 15–20 / 10–15\%) s'applique aux 
+\textbf{recettes T2A directes} (GHS, suppléments journaliers, molécules onéreuses 
+en sus). Elle ne concerne pas :
+
+\begin{itemize}[leftmargin=1.1cm]
+    \item les dotations MERRI (missions d'enseignement, recherche, recours, 
+    innovation), qui restent affectées aux UF cliniques selon les règles 
+    institutionnelles AP-HP ;
+    \item les enveloppes MIGAC (missions d'intérêt général), non redistribuables ;
+    \item les recettes liées aux essais cliniques, imputées à l'UF investigatrice.
+\end{itemize}
+
+\noindent La redistribution est calculée mensuellement par le DIM sur la base 
+des séjours clôturés, puis validée trimestriellement en COPIL avec ajustement 
+rétroactif si nécessaire.
+
+\clearpage

@@ -17,6 +17,7 @@
 \usepackage{tocloft}
 \usepackage{csquotes}
 \usepackage{booktabs}
+\usepackage{float}
 \usepackage{fontspec}
 \usepackage{needspace}
 \usepackage[table]{xcolor}
@@ -25,9 +26,14 @@
 \usepackage{pdflscape}
 \usepackage{rotating}
 \usepackage{lineno}
+\usepackage{caption}        % \captionof
+\usepackage{placeins}
+\usepackage{array}
+\usepackage{tcolorbox}
+
+
+
 \linenumbers
-
-
 
 % =======================
 % FONT (XeLaTeX)
@@ -44,6 +50,14 @@
 \definecolor{APHPdark}{RGB}{0,36,95}
 \definecolor{APHPgrey}{RGB}{90,90,90}
 \definecolor{APHPsoft}{RGB}{225,235,250}
+
+% =======================
+% TITRES
+% =======================
+\titleformat{\subsubsection}{\color{APHPdark}\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]{\color{APHPdark}\bfseries}{}{0pt}{}[.\;]
+\titlespacing*{\subsubsection}{0pt}{10pt}{6pt}
+\titlespacing*{\paragraph}{0pt}{6pt}{0pt}
 
 % =======================
 % CASES À COCHER
@@ -125,6 +139,8 @@
 \newcommand{\HsecPrefix}{main}
 \makeatletter
 \renewcommand*{\theHsection}{\HsecPrefix.\arabic{section}}
+\renewcommand*{\theHsubsection}{\theHsection.\arabic{subsection}}
+\renewcommand*{\theHsubsubsection}{\theHsubsection.\arabic{subsubsection}}
 \makeatother
 
 \hypersetup{
@@ -170,7 +186,7 @@ et de Radiologie interventionnelle
 
 % Sous-titre
 {\fontsize{14pt}{18pt}\selectfont\bfseries\color{APHPgrey}
-Document de travail — Version 2
+Document de travail — Version 3
 }
 
 \vfill
@@ -215,7 +231,7 @@ Document compilé le \DTMtoday{} à \DTMcurrenttime
 \section{Synthèse Exécutive}
 
 \begin{refsection}
-\input{e_summary}
+\input{e_summary_2}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 
@@ -239,19 +255,19 @@ Document compilé le \DTMtoday{} à \DTMcurrenttime
 \section{Plateau des HDJ Mutualisés — Organisation Transversale}
 
 \begin{refsection}
-\input{plateau_hdj_mutualise}
+\input{plateau_hdj_mutualise_v4}
 \printbibliography[heading=subbibliography,title={Références}]
 \end{refsection}
 
 % ==========================================
 % CHAPITRE E4 — DIMENSIONNEMENT
 % ==========================================
-\clearpage
-\section{Dimensionnement et Capacité Cible des HDJ Digestifs Mutualisés}
-\begin{refsection}
-\input{capacitaire_finances}
-\printbibliography[heading=subbibliography,title={Références}]
-\end{refsection}
+% \clearpage
+% \section{Dimensionnement et Capacité Cible des HDJ Digestifs Mutualisés}
+% \begin{refsection}
+% \input{capacitaire_finances}
+% \printbibliography[heading=subbibliography,title={Références}]
+% \end{refsection}
 
 % ==========================================
 % CHAPITRE E5 — CONCLUSION GÉNÉRALE
@@ -389,8 +405,11 @@ Document compilé le \DTMtoday{} à \DTMcurrenttime
 \renewcommand{\thesection}{\Alph{section}}
 \makeatletter
 \renewcommand*{\theHsection}{\HsecPrefix.\Alph{section}}
+\renewcommand*{\theHsubsection}{\theHsection.\arabic{subsection}}
+\renewcommand*{\theHsubsubsection}{\theHsubsection.\arabic{subsubsection}}
 \makeatother
 \setcounter{section}{0}
+
 
 % ============================================================
 % ANNEXE A — BIOPSIE HÉPATIQUE
